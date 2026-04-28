@@ -6,45 +6,45 @@
 <title>arxiv CV 日报 · 归档</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#05051a;color:#d0d0f0;font-size:15px;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#06101e;color:#c8ddf0;font-size:15px;min-height:100vh}
 #bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .hd,.summary,.content{position:relative;z-index:1}
 
-.hd{background:linear-gradient(160deg,rgba(0,15,40,.95),rgba(25,0,55,.95));backdrop-filter:blur(20px);color:#fff;padding:36px 20px 28px;text-align:center;border-bottom:1px solid rgba(0,200,255,.2);box-shadow:0 4px 30px rgba(0,0,0,.6)}
-.hd-title{font-size:28px;font-weight:800;letter-spacing:4px;background:linear-gradient(90deg,#00c8ff,#a855f7,#00ffaa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 14px rgba(0,200,255,.4))}
-.hd .tagline{margin-top:8px;color:#5070a0;font-size:13px;letter-spacing:2px}
-.hd .updated{margin-top:6px;font-size:12px;color:#2a4060}
+.hd{background:linear-gradient(160deg,rgba(4,18,42,.96),rgba(8,6,36,.96));backdrop-filter:blur(22px);color:#fff;padding:38px 20px 28px;text-align:center;border-bottom:1px solid rgba(56,182,255,.22);box-shadow:0 4px 32px rgba(0,0,0,.55)}
+.hd-title{font-size:30px;font-weight:800;letter-spacing:5px;background:linear-gradient(90deg,#38b6ff 0%,#a78bfa 45%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 16px rgba(56,182,255,.55))}
+.hd .tagline{margin-top:9px;color:#4a6a90;font-size:13px;letter-spacing:2.5px}
+.hd .updated{margin-top:6px;font-size:12px;color:#243850}
 
-.summary{background:rgba(5,5,26,.85);backdrop-filter:blur(10px);padding:12px 20px;border-bottom:1px solid rgba(0,200,255,.08);text-align:center;color:#3a5070;font-size:13px}
-.summary span{color:#00c8ff;font-weight:600}
+.summary{background:rgba(6,16,30,.85);backdrop-filter:blur(10px);padding:12px 20px;border-bottom:1px solid rgba(56,182,255,.09);text-align:center;color:#3a5878;font-size:13px}
+.summary span{color:#38b6ff;font-weight:600}
 
 .content{max-width:720px;margin:0 auto;padding:24px 16px}
 
 .month-section{margin-bottom:28px}
 .month-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;padding:0 4px}
-.month-title{font-size:16px;font-weight:700;color:#00c8ff;letter-spacing:1px;text-shadow:0 0 10px rgba(0,200,255,.3)}
-.month-count{font-size:12px;color:#2a4060}
-.month-cards{background:rgba(8,10,32,.78);backdrop-filter:blur(16px);border:1px solid rgba(0,200,255,.1);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.month-title{font-size:16px;font-weight:700;color:#38b6ff;letter-spacing:1px;text-shadow:0 0 12px rgba(56,182,255,.35)}
+.month-count{font-size:12px;color:#243850}
+.month-cards{background:rgba(10,24,52,.80);backdrop-filter:blur(18px);border:1px solid rgba(56,182,255,.15);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.04)}
 
-.day-card{display:flex;align-items:center;padding:14px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(0,200,255,.06);transition:background .15s;touch-action:manipulation}
+.day-card{display:flex;align-items:center;padding:15px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(56,182,255,.07);transition:background .15s;touch-action:manipulation}
 .day-card:last-child{border-bottom:none}
-.day-card:hover{background:rgba(0,200,255,.06);}
+.day-card:hover{background:rgba(56,182,255,.07)}
 
 .day-card-left{width:56px;flex-shrink:0;text-align:center}
-.day-date{font-size:15px;font-weight:700;color:#c0d8f0}
-.day-week{font-size:11px;color:#2a4060;margin-top:2px}
+.day-date{font-size:15px;font-weight:700;color:#c8ddf0}
+.day-week{font-size:11px;color:#243850;margin-top:2px}
 
 .day-card-body{flex:1;padding:0 14px}
-.day-total{font-size:13px;font-weight:600;color:#5080a0;margin-bottom:7px}
+.day-total{font-size:13px;font-weight:600;color:#4a6888;margin-bottom:7px}
 .day-cats{display:flex;flex-wrap:wrap;gap:5px}
-.cat-tag{padding:2px 8px;border-radius:8px;font-size:11px;font-weight:500;white-space:nowrap}
+.cat-tag{padding:2px 9px;border-radius:8px;font-size:11px;font-weight:500;white-space:nowrap}
 
 .day-arrow{color:#1a3050;font-size:22px;flex-shrink:0}
 
-.empty{text-align:center;padding:60px 20px;color:#2a3a5a;font-size:15px}
+.empty{text-align:center;padding:60px 20px;color:#1e3048;font-size:15px}
 
 @media(max-width:500px){
-  .hd-title{font-size:22px}
+  .hd-title{font-size:22px;letter-spacing:3px}
   .day-card-left{width:46px}
   .day-date{font-size:14px}
 }
@@ -54,13 +54,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <canvas id="bg"></canvas>
 
 <div class="hd">
-  <div class="hd-title">◈ ARXIV CV DAILY ◈</div>
-  <div class="tagline">COMPUTER VISION · DAILY PAPERS · AUTO UPDATE</div>
-  <div class="updated">最后更新：2026年04月28日 11:18</div>
+  <div class="hd-title">◈ ARXIV · REMOTE SENSING ◈</div>
+  <div class="tagline">SATELLITE · EARTH OBSERVATION · DAILY PAPERS</div>
+  <div class="updated">最后更新：2026年04月28日 12:02</div>
 </div>
-
 <div class="summary">共收录 <span>5</span> 天 · <span>857</span> 篇论文</div>
-
 <div class="content">
   
 <div class="month-section">
@@ -129,66 +127,127 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 
 <script>
 (function(){
-  var c=document.getElementById('bg');
-  if(!c)return;
-  var ctx=c.getContext('2d');
-  function resize(){c.width=innerWidth;c.height=innerHeight;}
-  resize();window.addEventListener('resize',resize);
+  var cv=document.getElementById('bg');
+  if(!cv)return;
+  var ctx=cv.getContext('2d');
+  var W,H,ER,ECX,ECY;
+  function resize(){
+    W=cv.width=innerWidth; H=cv.height=innerHeight;
+    ER=Math.min(W,H)*0.30; ECX=W*0.58; ECY=H*0.50;
+  }
+  resize(); window.addEventListener('resize',resize);
+
   var stars=[];
-  for(var i=0;i<200;i++)stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.2+.2,a:Math.random()*.8+.15,da:(Math.random()-.5)*.01});
-  var orbits=[
-    {cx:.5,cy:.45,rx:.42,ry:.11,tilt:-15,ang:0,spd:.004,col:'rgba(0,200,255,.7)',sz:2.5},
-    {cx:.5,cy:.55,rx:.30,ry:.08,tilt:25,ang:2.5,spd:-.003,col:'rgba(168,85,247,.7)',sz:2},
-    {cx:.5,cy:.5,rx:.52,ry:.13,tilt:-5,ang:4.2,spd:.0018,col:'rgba(0,255,170,.6)',sz:2},
+  for(var i=0;i<200;i++) stars.push({
+    x:Math.random(),y:Math.random(),r:Math.random()*1.4+0.3,
+    a:Math.random()*0.75+0.15,da:(Math.random()-0.5)*0.009
+  });
+
+  var sats=[
+    {ang:0.0, spd:0.0055, rm:1.42, tilt:-28, r:9, col:'#38b6ff', bcol:'rgba(56,182,255,'},
+    {ang:2.2, spd:-0.004, rm:1.72, tilt: 40, r:7, col:'#ff9a42', bcol:'rgba(255,154,66,'},
+    {ang:4.1, spd:0.003,  rm:2.05, tilt: 10, r:8, col:'#34d399', bcol:'rgba(52,211,153,'},
   ];
-  var rAng=0;
+  var eRot=0;
+
+  function drawEarth(){
+    eRot+=0.0008;
+    var r=ER,cx=ECX,cy=ECY;
+    var atm=ctx.createRadialGradient(cx,cy,r*0.88,cx,cy,r*1.38);
+    atm.addColorStop(0,'rgba(56,140,255,0.22)');
+    atm.addColorStop(0.5,'rgba(30,100,200,0.09)');
+    atm.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.beginPath();ctx.arc(cx,cy,r*1.38,0,Math.PI*2);ctx.fillStyle=atm;ctx.fill();
+    var ocean=ctx.createRadialGradient(cx-r*.28,cy-r*.22,0,cx,cy,r);
+    ocean.addColorStop(0,'#1e72c8');ocean.addColorStop(0.55,'#0d4585');ocean.addColorStop(1,'#051c40');
+    ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=ocean;ctx.fill();ctx.clip();
+    var t=eRot;
+    [{'dx':0.14,'dy':-0.08,'rw':0.30,'rh':0.17,'a':0},
+     {'dx':0.06,'dy':0.22,'rw':0.11,'rh':0.24,'a':0.2},
+     {'dx':-0.24,'dy':0.04,'rw':0.09,'rh':0.24,'a':0.52},
+     {'dx':-0.16,'dy':-0.14,'rw':0.14,'rh':0.10,'a':0.52},
+     {'dx':0.25,'dy':0.30,'rw':0.13,'rh':0.09,'a':0.12}
+    ].forEach(function(l){
+      ctx.save();ctx.translate(cx+l.dx*r,cy+l.dy*r);ctx.rotate(t+l.a);
+      ctx.beginPath();ctx.ellipse(0,0,l.rw*r,l.rh*r,0,0,Math.PI*2);
+      ctx.fillStyle='rgba(28,108,52,0.52)';ctx.fill();ctx.restore();
+    });
+    ctx.strokeStyle='rgba(90,160,255,0.11)';ctx.lineWidth=0.6;
+    for(var lat=-3;lat<=3;lat++){
+      var ly=cy+(lat/3.8)*r,hw=Math.sqrt(Math.max(0,r*r-(ly-cy)*(ly-cy)));
+      ctx.beginPath();ctx.moveTo(cx-hw,ly);ctx.lineTo(cx+hw,ly);ctx.stroke();
+    }
+    for(var lon=0;lon<7;lon++){
+      var a2=(lon/7)*Math.PI+eRot*0.12;
+      ctx.save();ctx.translate(cx,cy);ctx.rotate(a2);
+      ctx.scale(Math.abs(Math.cos(a2*0.7))*0.45+0.06,1);
+      ctx.beginPath();ctx.arc(0,0,r,-Math.PI/2,Math.PI/2);ctx.restore();ctx.stroke();
+    }
+    ctx.restore();
+    ctx.save();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+    var shd=ctx.createLinearGradient(cx+r*0.05,cy,cx+r*0.9,cy);
+    shd.addColorStop(0,'rgba(0,0,0,0)');shd.addColorStop(0.65,'rgba(0,5,20,0.72)');shd.addColorStop(1,'rgba(0,2,12,0.88)');
+    ctx.fillStyle=shd;ctx.fillRect(cx-r,cy-r,r*2,r*2);ctx.restore();
+    var rim=ctx.createRadialGradient(cx,cy,r*0.84,cx,cy,r*1.04);
+    rim.addColorStop(0,'rgba(56,140,255,0)');rim.addColorStop(0.6,'rgba(56,160,255,0.18)');rim.addColorStop(1,'rgba(110,200,255,0.40)');
+    ctx.beginPath();ctx.arc(cx,cy,r*1.04,0,Math.PI*2);ctx.fillStyle=rim;ctx.fill();
+    var spec=ctx.createRadialGradient(cx-r*.32,cy-r*.30,0,cx,cy,r);
+    spec.addColorStop(0,'rgba(255,255,255,0.10)');spec.addColorStop(0.45,'rgba(255,255,255,0.02)');spec.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=spec;ctx.fill();
+  }
+
+  function drawSat(wx,wy,sz,col,bcol,velAng){
+    var toEx=ECX-wx,toEy=ECY-wy,beamLen=Math.sqrt(toEx*toEx+toEy*toEy)*0.55,ba=Math.atan2(toEy,toEx),hw=0.22;
+    ctx.save();ctx.translate(wx,wy);ctx.rotate(ba);
+    ctx.beginPath();ctx.moveTo(0,0);
+    ctx.lineTo(beamLen*Math.cos(hw),beamLen*Math.sin(hw));
+    ctx.lineTo(beamLen*Math.cos(-hw),beamLen*Math.sin(-hw));ctx.closePath();
+    var bg2=ctx.createLinearGradient(0,0,beamLen,0);
+    bg2.addColorStop(0,bcol+'0.18)');bg2.addColorStop(1,bcol+'0)');
+    ctx.fillStyle=bg2;ctx.fill();ctx.restore();
+    ctx.save();ctx.translate(wx,wy);ctx.rotate(velAng);
+    var pw=sz*2.6,ph=sz*0.5;
+    ctx.fillStyle=bcol+'0.55)';
+    ctx.fillRect(-sz/2-pw,-ph/2,pw,ph);ctx.fillRect(sz/2,-ph/2,pw,ph);
+    ctx.strokeStyle=bcol+'0.3)';ctx.lineWidth=0.6;
+    for(var gi=1;gi<3;gi++){
+      ctx.beginPath();ctx.moveTo(-sz/2-pw+gi*pw/3,-ph/2);ctx.lineTo(-sz/2-pw+gi*pw/3,ph/2);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(sz/2+gi*pw/3,-ph/2);ctx.lineTo(sz/2+gi*pw/3,ph/2);ctx.stroke();
+    }
+    ctx.fillStyle=col;ctx.fillRect(-sz/2,-sz/2,sz,sz);
+    ctx.strokeStyle=bcol+'0.8)';ctx.lineWidth=1.2;
+    ctx.beginPath();ctx.moveTo(0,-sz/2);ctx.lineTo(0,-sz*1.8);ctx.stroke();
+    ctx.beginPath();ctx.arc(0,-sz*1.8,1.5,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();
+    ctx.restore();
+    var g=ctx.createRadialGradient(wx,wy,0,wx,wy,sz*4.5);
+    g.addColorStop(0,bcol+'0.45)');g.addColorStop(1,bcol+'0)');
+    ctx.beginPath();ctx.arc(wx,wy,sz*4.5,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
+  }
+
+  function drawSatellites(){
+    sats.forEach(function(s){
+      s.ang+=s.spd;
+      var orx=ER*s.rm,ory=orx*0.34,tiltR=s.tilt*Math.PI/180;
+      ctx.save();ctx.translate(ECX,ECY);ctx.rotate(tiltR);
+      ctx.beginPath();ctx.ellipse(0,0,orx,ory,0,0,Math.PI*2);
+      ctx.strokeStyle=s.bcol+'0.13)';ctx.lineWidth=1.2;ctx.setLineDash([4,6]);ctx.stroke();ctx.setLineDash([]);ctx.restore();
+      var lx=Math.cos(s.ang)*orx,ly=Math.sin(s.ang)*ory;
+      var cosT=Math.cos(tiltR),sinT=Math.sin(tiltR);
+      var wx=ECX+lx*cosT-ly*sinT,wy=ECY+lx*sinT+ly*cosT;
+      var vx=-Math.sin(s.ang)*orx,vy=Math.cos(s.ang)*ory;
+      var velAng=Math.atan2(vx*sinT+vy*cosT,vx*cosT-vy*sinT);
+      drawSat(wx,wy,s.r,s.col,s.bcol,velAng);
+    });
+  }
+
   function frame(){
-    ctx.clearRect(0,0,c.width,c.height);
-    var W=c.width,H=c.height;
-    /* grid */
-    ctx.strokeStyle='rgba(0,180,255,.025)';ctx.lineWidth=1;
-    for(var x=0;x<W;x+=90){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
-    for(var y=0;y<H;y+=90){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
-    /* stars */
+    ctx.clearRect(0,0,W,H);
     stars.forEach(function(s){
-      s.a+=s.da;if(s.a>1||s.a<.1)s.da*=-1;
+      s.a+=s.da;if(s.a>0.88||s.a<0.1)s.da*=-1;
       ctx.beginPath();ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(180,190,255,'+s.a+')';ctx.fill();
+      ctx.fillStyle='rgba(200,215,255,'+s.a+')';ctx.fill();
     });
-    /* orbits */
-    orbits.forEach(function(o){
-      o.ang+=o.spd;
-      var cx=o.cx*W,cy=o.cy*H,rx=o.rx*W,ry=o.ry*H;
-      ctx.save();ctx.translate(cx,cy);ctx.rotate(o.tilt*Math.PI/180);
-      ctx.beginPath();ctx.ellipse(0,0,rx,ry,0,0,Math.PI*2);
-      ctx.strokeStyle=o.col.replace('.7','0.1').replace('.6','0.08');ctx.lineWidth=1;ctx.stroke();
-      var sx=Math.cos(o.ang)*rx,sy=Math.sin(o.ang)*ry;
-      var g=ctx.createRadialGradient(sx,sy,0,sx,sy,10);
-      g.addColorStop(0,o.col);g.addColorStop(1,'transparent');
-      ctx.beginPath();ctx.arc(sx,sy,10,0,Math.PI*2);ctx.fillStyle=g;ctx.fill();
-      ctx.beginPath();ctx.arc(sx,sy,o.sz,0,Math.PI*2);ctx.fillStyle=o.col;ctx.fill();
-      ctx.restore();
-    });
-    /* radar */
-    rAng+=.02;
-    var cx=W*.88,cy=H*.16,r=Math.min(W,H)*.068;
-    [1,.66,.33].forEach(function(f){
-      ctx.beginPath();ctx.arc(cx,cy,r*f,0,Math.PI*2);
-      ctx.strokeStyle=f===1?'rgba(0,255,150,.25)':'rgba(0,255,150,.1)';
-      ctx.lineWidth=f===1?1:.5;ctx.stroke();
-    });
-    ctx.strokeStyle='rgba(0,255,150,.1)';ctx.lineWidth=.5;
-    ctx.beginPath();ctx.moveTo(cx-r,cy);ctx.lineTo(cx+r,cy);
-    ctx.moveTo(cx,cy-r);ctx.lineTo(cx,cy+r);ctx.stroke();
-    ctx.save();ctx.beginPath();ctx.moveTo(cx,cy);
-    ctx.arc(cx,cy,r,rAng-1.3,rAng);ctx.closePath();
-    var sg=ctx.createRadialGradient(cx,cy,0,cx,cy,r);
-    sg.addColorStop(0,'rgba(0,255,150,.3)');sg.addColorStop(1,'rgba(0,255,150,0)');
-    ctx.fillStyle=sg;ctx.fill();ctx.restore();
-    ctx.beginPath();ctx.moveTo(cx,cy);
-    ctx.lineTo(cx+Math.cos(rAng)*r,cy+Math.sin(rAng)*r);
-    ctx.strokeStyle='rgba(0,255,150,.85)';ctx.lineWidth=1.5;ctx.stroke();
-    ctx.beginPath();ctx.arc(cx,cy,2.5,0,Math.PI*2);ctx.fillStyle='#00ff96';ctx.fill();
+    drawEarth();drawSatellites();
     requestAnimationFrame(frame);
   }
   frame();
