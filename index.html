@@ -6,42 +6,42 @@
 <title>arxiv CV 日报 · 归档</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0c1d38;color:#d8eaf8;font-size:15px;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1a3a6e;color:#eef6ff;font-size:15px;min-height:100vh}
 #bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .hd,.summary,.content{position:relative;z-index:1}
 
-.hd{background:linear-gradient(160deg,rgba(10,30,68,.95),rgba(14,12,52,.95));backdrop-filter:blur(22px);color:#fff;padding:38px 20px 28px;text-align:center;border-bottom:1px solid rgba(56,182,255,.25);box-shadow:0 4px 32px rgba(0,0,0,.40)}
+.hd{background:rgba(255,255,255,.10);backdrop-filter:blur(24px);color:#fff;padding:38px 20px 28px;text-align:center;border-bottom:1px solid rgba(255,255,255,.18);box-shadow:0 4px 32px rgba(0,0,0,.18)}
 .hd-title{font-size:30px;font-weight:800;letter-spacing:5px;background:linear-gradient(90deg,#38b6ff 0%,#a78bfa 45%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 16px rgba(56,182,255,.55))}
-.hd .tagline{margin-top:9px;color:#7a9ec4;font-size:13px;letter-spacing:2.5px}
-.hd .updated{margin-top:6px;font-size:12px;color:#5a88aa}
+.hd .tagline{margin-top:9px;color:rgba(255,255,255,.70);font-size:13px;letter-spacing:2.5px}
+.hd .updated{margin-top:6px;font-size:12px;color:rgba(255,255,255,.50)}
 
-.summary{background:rgba(12,28,56,.78);backdrop-filter:blur(10px);padding:12px 20px;border-bottom:1px solid rgba(56,182,255,.11);text-align:center;color:#6a9ab8;font-size:13px}
-.summary span{color:#38b6ff;font-weight:600}
+.summary{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.12);text-align:center;color:rgba(255,255,255,.70);font-size:13px}
+.summary span{color:#7dd8ff;font-weight:600}
 
 .content{max-width:720px;margin:0 auto;padding:24px 16px}
 
 .month-section{margin-bottom:28px}
 .month-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;padding:0 4px}
-.month-title{font-size:16px;font-weight:700;color:#38b6ff;letter-spacing:1px;text-shadow:0 0 12px rgba(56,182,255,.35)}
-.month-count{font-size:12px;color:#5a88aa}
-.month-cards{background:rgba(16,36,72,.78);backdrop-filter:blur(18px);border:1px solid rgba(56,182,255,.18);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.05)}
+.month-title{font-size:16px;font-weight:700;color:#7dd8ff;letter-spacing:1px;text-shadow:0 0 12px rgba(56,182,255,.35)}
+.month-count{font-size:12px;color:rgba(255,255,255,.55)}
+.month-cards{background:rgba(255,255,255,.10);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.20);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.12)}
 
-.day-card{display:flex;align-items:center;padding:15px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(56,182,255,.09);transition:background .15s;touch-action:manipulation}
+.day-card{display:flex;align-items:center;padding:15px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(255,255,255,.10);transition:background .15s;touch-action:manipulation}
 .day-card:last-child{border-bottom:none}
-.day-card:hover{background:rgba(56,182,255,.09)}
+.day-card:hover{background:rgba(255,255,255,.08)}
 
 .day-card-left{width:56px;flex-shrink:0;text-align:center}
-.day-date{font-size:15px;font-weight:700;color:#d8eaf8}
-.day-week{font-size:11px;color:#5a88aa;margin-top:2px}
+.day-date{font-size:15px;font-weight:700;color:#eef6ff}
+.day-week{font-size:11px;color:rgba(255,255,255,.55);margin-top:2px}
 
 .day-card-body{flex:1;padding:0 14px}
-.day-total{font-size:13px;font-weight:600;color:#7aaecc;margin-bottom:7px}
+.day-total{font-size:13px;font-weight:600;color:rgba(255,255,255,.80);margin-bottom:7px}
 .day-cats{display:flex;flex-wrap:wrap;gap:5px}
 .cat-tag{padding:2px 9px;border-radius:8px;font-size:11px;font-weight:500;white-space:nowrap}
 
-.day-arrow{color:#4a7090;font-size:22px;flex-shrink:0}
+.day-arrow{color:rgba(255,255,255,.40);font-size:22px;flex-shrink:0}
 
-.empty{text-align:center;padding:60px 20px;color:#4a6888;font-size:15px}
+.empty{text-align:center;padding:60px 20px;color:rgba(255,255,255,.40);font-size:15px}
 
 @media(max-width:500px){
   .hd-title{font-size:22px;letter-spacing:3px}
@@ -56,7 +56,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <div class="hd">
   <div class="hd-title">◈ ARXIV · REMOTE SENSING ◈</div>
   <div class="tagline">SATELLITE · EARTH OBSERVATION · DAILY PAPERS</div>
-  <div class="updated">最后更新：2026年04月28日 12:20</div>
+  <div class="updated">最后更新：2026年04月28日 12:32</div>
 </div>
 <div class="summary">共收录 <span>5</span> 天 · <span>857</span> 篇论文</div>
 <div class="content">
