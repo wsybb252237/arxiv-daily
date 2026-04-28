@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>arxiv CV 日报 · 2026年04月28日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f0f2f5;color:#222;font-size:15px}
+
+/* back button */
+.back-bar{background:#fff;padding:10px 16px;border-bottom:1px solid #eee}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:#667eea;font-size:14px;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:8px;background:#f0f0ff;transition:background .2s}
+.back-btn:hover{background:#e0e0ff}
+
+/* header */
+.hd{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:24px 20px;text-align:center}
+.hd h1{font-size:22px;letter-spacing:1px}
+.hd .sub{margin-top:6px;opacity:.85;font-size:14px}
+.hd .tot{margin-top:10px;font-size:20px;font-weight:700}
+
+/* stats */
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:14px 16px;background:#fff;border-bottom:1px solid #e4e4e4}
+.stat-item{display:flex;align-items:center;gap:6px;font-size:13px}
+.stat-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+
+/* sticky controls */
+.ctrl{background:#fff;padding:10px 16px;border-bottom:1px solid #e4e4e4;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.search{width:100%;padding:10px 18px;border:2px solid #ddd;border-radius:24px;font-size:15px;outline:none;transition:border-color .2s}
+.search:focus{border-color:#667eea}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.filter-btn{padding:7px 14px;border:2px solid #ddd;border-radius:18px;background:#fff;cursor:pointer;font-size:13px;transition:all .2s;touch-action:manipulation}
+.filter-btn:hover{border-color:var(--cc,#667eea);color:var(--cc,#667eea)}
+.filter-btn.active{background:#667eea;color:#fff;border-color:#667eea}
+
+/* main */
+.main{max-width:980px;margin:0 auto;padding:16px}
+.count{color:#888;font-size:13px;margin-bottom:12px}
+
+/* card */
+.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.12)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{padding:3px 10px;border-radius:10px;color:#fff;font-size:11px;font-weight:600}
+.pub-date{color:#aaa;font-size:12px;white-space:nowrap;margin-left:8px}
+
+.title-en{font-size:15px;line-height:1.55;margin-bottom:5px}
+.title-en a{color:#1a1a2e;text-decoration:none}
+.title-en a:hover{color:#667eea}
+.title-zh{color:#555;font-size:14px;line-height:1.65;margin-bottom:8px}
+.authors{color:#999;font-size:12px;margin-bottom:12px}
+
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
+.btn{padding:7px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:500;transition:opacity .2s;touch-action:manipulation}
+.btn:hover{opacity:.8}
+.btn-abs{background:#667eea;color:#fff}
+.btn-pdf{background:#e74c3c;color:#fff}
+.github-link{color:#27ae60;font-size:13px;font-weight:600;text-decoration:none}
+.github-link:hover{text-decoration:underline}
+.no-github{color:#ccc;font-size:12px}
+
+.toggle{background:none;border:1px solid #ddd;padding:7px 14px;border-radius:8px;cursor:pointer;font-size:13px;color:#777;touch-action:manipulation;width:100%}
+.toggle:hover{background:#f5f5f5}
+.abs-body{margin-top:10px}
+.abs-en{color:#444;font-size:13px;line-height:1.75;padding:10px 14px;background:#fafafa;border-radius:6px;margin-bottom:8px}
+.abs-zh{color:#333;font-size:13px;line-height:1.85;padding:10px 14px;background:#f0f7ff;border-radius:6px}
+
+.no-result{text-align:center;padding:60px;color:#bbb;font-size:15px}
+
+@media(max-width:600px){
+  .hd h1{font-size:20px}
+  .card{padding:14px}
+  .title-en{font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="../index.html" class="back-btn">← 返回首页</a>
+</div>
+
+<div class="hd">
+  <h1>📄 arxiv CV 日报</h1>
+  <div class="sub">2026年04月28日</div>
+  <div class="tot">共收录 33 篇论文</div>
+</div>
+
+<div class="stats"><div class="stat-item"><span class="stat-dot" style="background:#e74c3c"></span>目标检测/分割: 15篇</div><div class="stat-item"><span class="stat-dot" style="background:#3498db"></span>多模态/VLM: 12篇</div><div class="stat-item"><span class="stat-dot" style="background:#9b59b6"></span>生成模型/扩散: 2篇</div><div class="stat-item"><span class="stat-dot" style="background:#1abc9c"></span>3D视觉: 4篇</div><div class="stat-item"><span class="stat-dot" style="background:#e67e22"></span>视频理解: 1篇</div><div class="stat-item"><span class="stat-dot" style="background:#27ae60"></span>机器人视觉: 24篇</div><div class="stat-item"><span class="stat-dot" style="background:#e91e63"></span>医学图像: 1篇</div><div class="stat-item"><span class="stat-dot" style="background:#f39c12"></span>遥感: 3篇</div><div class="stat-item"><span class="stat-dot" style="background:#95a5a6"></span>其他: 2篇</div></div>
+
+<div class="ctrl">
+  <input class="search" type="text" placeholder="🔍 搜索论文标题关键词…" oninput="onSearch(this.value)">
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterBy('all',this)">全部 (33)</button>
+<button class="filter-btn" onclick="filterBy('目标检测/分割',this)" style="--cc:#e74c3c">目标检测/分割 (15)</button>
+<button class="filter-btn" onclick="filterBy('多模态/VLM',this)" style="--cc:#3498db">多模态/VLM (12)</button>
+<button class="filter-btn" onclick="filterBy('生成模型/扩散',this)" style="--cc:#9b59b6">生成模型/扩散 (2)</button>
+<button class="filter-btn" onclick="filterBy('3D视觉',this)" style="--cc:#1abc9c">3D视觉 (4)</button>
+<button class="filter-btn" onclick="filterBy('视频理解',this)" style="--cc:#e67e22">视频理解 (1)</button>
+<button class="filter-btn" onclick="filterBy('机器人视觉',this)" style="--cc:#27ae60">机器人视觉 (24)</button>
+<button class="filter-btn" onclick="filterBy('医学图像',this)" style="--cc:#e91e63">医学图像 (1)</button>
+<button class="filter-btn" onclick="filterBy('遥感',this)" style="--cc:#f39c12">遥感 (3)</button>
+<button class="filter-btn" onclick="filterBy('其他',this)" style="--cc:#95a5a6">其他 (2)</button>
+
+  </div>
+</div>
+
+<div class="main">
+  <div class="count" id="cnt">显示 33 篇论文</div>
+  <div id="papers">
+    
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22724v1" target="_blank">GCImOpt: Learning efficient goal-conditioned policies by imitating optimal trajectories</a></h3>
+  <p  class="title-zh">GCImOpt：通过模仿最优轨迹来学习有效的目标条件策略</p>
+  <p  class="authors">Jon Goikoetxea、Jesús F. Palacián</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22724v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22724v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Imitation learning is a well-established approach for machine-learning-based control. However, its applicability depends on having access to demonstrations, which are often expensive to collect and/or suboptimal for solving the task. In this work, we present GCImOpt, an approach to learn efficient goal-conditioned policies by training on datasets generated by trajectory optimization. Our approach for dataset generation is computationally efficient, can generate thousands of optimal trajectories in minutes on a laptop computer, and produces high-quality demonstrations. Further, by means of a data augmentation scheme that treats intermediate states as goals, we are able to increase the training dataset size by an order of magnitude. Using our generated datasets, we train goal-conditioned neural network policies that can control the system towards arbitrary goals. To demonstrate the generality of our approach, we generate datasets and then train policies for various control tasks, namely cart-pole stabilization, planar and three-dimensional quadcopter stabilization, and point reaching using a 6-DoF robot arm. We show that our trained policies can achieve high success rates and near-optimal control profiles, all while being small (less than 80,000 neural network parameters) and fast enough (up to more than 6,000 times faster than a trajectory optimization solver) that they could be deployed onboard resource-constrained controllers. We provide videos, code, datasets and pre-trained policies under a free software license; see our project website https://jongoiko.github.io/gcimopt/.</p>
+      <p class="abs-zh">模仿学习是一种行之有效的基于机器学习的控制方法。然而，它的适用性取决于能否获得演示，而这些演示的收集成本通常很高并且/或者对于解决任务来说不是最佳的。在这项工作中，我们提出了 GCImOpt，一种通过对轨迹优化生成的数据集进行训练来学习有效的目标条件策略的方法。我们的数据集生成方法计算效率高，可以在笔记本电脑上在几分钟内生成数千个最佳轨迹，并生成高质量的演示。此外，通过将中间状态视为目标的数据增强方案，我们能够将训练数据集的大小增加一个数量级。使用我们生成的数据集，我们训练目标条件神经网络策略，可以控制系统实现任意目标。为了证明我们方法的通用性，我们生成数据集，然后训练各种控制任务的策略，即车杆稳定、平面和三维四轴飞行器稳定以及使用 6-DoF 机器人臂进行点到达。我们表明，我们训练有素的策略可以实现高成功率和接近最优的控制配置文件，同时又小（少于 80,000 个神经网络参数）且足够快（比轨迹优化求解器快 6,000 倍以上），可以部署在资源受限的控制器上。我们根据免费软件许可提供视频、代码、数据集和预训练策略；请参阅我们的项目网站 https://jongoiko.github.io/gcimopt/。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22615v1" target="_blank">GazeVLA: Learning Human Intention for Robotic Manipulation</a></h3>
+  <p  class="title-zh">GazeVLA：学习机器人操作的人类意图</p>
+  <p  class="authors">Chengyang Li、Kaiyi Xiong、Yuan Xu、Lei Qian、Yizhou Wang 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22615v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22615v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Embodied foundation models have achieved significant breakthroughs in robotic manipulation, yet they still depend heavily on large-scale robot demonstrations. Although recent works have explored leveraging human data to alleviate this dependency, effectively extracting transferable knowledge remains a significant challenge due to the inherent embodiment gap between human and robot. We argue that the intention underlying human actions can serve as a powerful intermediate representation for bridging this gap. In this paper, we introduce a novel framework that explicitly learns and transfers human intention to facilitate robotic manipulation. Specifically, we model intention through gaze, as it naturally precedes physical actions and serves as an observable proxy for human intent. Our model is first pretrained on a large-scale egocentric human dataset to capture human intention and its synergy with action, followed by finetuning on a small set of robot and human data. During inference, the model adopts a Chain-of-Thought reasoning paradigm, sequentially predicting intention before executing the action. Extensive evaluations in simulation and real-world settings, across long-horizon and fine-grained tasks, and under few-shot and robustness benchmarks, show that our method consistently outperforms strong baselines, generalizes better, and achieves state-of-the-art performance.</p>
+      <p class="abs-zh">实体化基础模型在机器人操作方面取得了重大突破，但仍然严重依赖大规模机器人演示。尽管最近的工作已经探索利用人类数据来减轻这种依赖性，但由于人类和机器人之间固有的体现差距，有效提取可转移的知识仍然是一个重大挑战。我们认为，人类行为背后的意图可以作为弥合这一差距的强大中间表征。在本文中，我们介绍了一种新颖的框架，该框架可以明确地学习和转移人类意图以促进机器人操作。具体来说，我们通过凝视来模拟意图，因为它自然先于身体动作，并作为人类意图的可观察代理。我们的模型首先在大规模以自我为中心的人类数据集上进行预训练，以捕获人类意图及其与行动的协同作用，然后对一小组机器人和人类数据进行微调。在推理过程中，模型采用思想链推理范式，在执行动作之前顺序预测意图。在模拟和现实环境中、跨长期和细粒度任务以及在少数样本和鲁棒性基准下进行的广泛评估表明，我们的方法始终优于强大的基线，概括得更好，并实现了最先进的性能。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="其他" style="border-left:4px solid #95a5a6">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#95a5a6">其他</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.21989v1" target="_blank">Model Predictive Control of Hybrid Dynamical Systems</a></h3>
+  <p  class="title-zh">混合动力系统的模型预测控制</p>
+  <p  class="authors">Ricardo G. Sanfelice、Berk Altin</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.21989v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.21989v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">The problem of controlling hybrid dynamical systems using model predictive control (MPC) is formulated and sufficient conditions for asymptotic stability of a set are provided. Hybrid dynamical systems are modeled in terms of hybrid equations, involving a differential equation and a difference equation with inputs and constraints. The proposed hybrid MPC algorithm uses a suitable prediction and control horizon construction inspired by hybrid time domains. Structural properties of the hybrid optimization problem, its feasible set, and its value function are provided. Checkable conditions to guarantee asymptotic stability of a set are provided. These conditions are given in terms of properties on the stage cost, terminal cost, and the existence of static state-feedback laws, related through a control Lyapunov function condition. Examples illustrate the results throughout the paper.</p>
+      <p class="abs-zh">阐述了使用模型预测控制（MPC）控制混合动力系统的问题，并提供了集合渐近稳定性的充分条件。混合动力系统根据混合方程进行建模，包括微分方程和带有输入和约束的差分方程。所提出的混合 MPC 算法使用受混合时域启发的合适的预测和控制范围构造。提供了混合优化问题的结构性质、其可行集及其价值函数。提供了保证集合渐近稳定性的可检查条件。这些条件以阶段成本、终端成本和静态状态反馈定律的存在性等属性给出，并通过控制李雅普诺夫函数条件相关。示例说明了整篇论文的结果。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.21952v1" target="_blank">Focus Session: Hardware and Software Techniques for Accelerating Multimodal Foundation Models</a></h3>
+  <p  class="title-zh">焦点会议：加速多模式基础模型的硬件和软件技术</p>
+  <p  class="authors">Muhammad Shafique、Abdul Basit、Muhammad Abdullah Hanif、Alberto Marchisio、Rachmad Vidya Wicaksana Putra 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.21952v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.21952v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">This work presents a multi-layered methodology for efficiently accelerating multimodal foundation models (MFMs). It combines hardware and software co-design of transformer blocks with an optimization pipeline that reduces computational and memory requirements. During model development, it employs performance enhancements through fine-tuning for domain-specific adaptation. Our methodology further incorporates hardware and software techniques for optimizing MFMs. Specifically, it employs MFM compression using hierarchy-aware mixed-precision quantization and structural pruning for transformer blocks and MLP channels. It also optimizes operations through speculative decoding, model cascading that routes queries through a small-to-large cascade and uses lightweight self-tests to determine when to escalate to larger models, as well as co-optimization of sequence length, visual resolution &amp; stride, and graph-level operator fusion. To efficiently execute the model, the processing dataflow is optimized based on the underlying hardware architecture together with memory-efficient attention to meet on-chip bandwidth and latency budgets. To support this, a specialized hardware accelerator for the transformer workloads is employed, which can be developed through expert design or an LLM-aided design approach. We demonstrate the effectiveness of the proposed methodology on medical-MFMs and on code generation tasks, and conclude with extensions toward energy-efficient spiking-MFMs.</p>
+      <p class="abs-zh">这项工作提出了一种有效加速多模式基础模型（MFM）的多层方法。它将变压器块的硬件和软件协同设计与优化管道相结合，减少计算和内存需求。在模型开发过程中，它通过针对特定领域的适应进行微调来增强性能。我们的方法进一步结合了用于优化 MFM 的硬件和软件技术。具体来说，它采用 MFM 压缩，使用层次结构感知的混合精度量化和变压器块和 MLP 通道的结构修剪。它还通过推测性解码、模型级联（通过从小到大的级联路由查询）和使用轻量级自测试来确定何时升级到更大的模型以及序列长度、视觉分辨率和步幅以及图级运算符融合的共同优化来优化操作。为了有效地执行模型，处理数据流根据底层硬件架构以及内存高效关注进行了优化，以满足片上带宽和延迟预算。为了支持这一点，采用了用于变压器工作负载的专用硬件加速器，可以通过专家设计或法学硕士辅助设计方法来开发。我们证明了所提出的方法在医疗 MFM 和代码生成任务上的有效性，并最终对节能尖峰 MFM 进行了扩展。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22065v1" target="_blank">SNGR: Selective Non-Gaussian Refinement for Ambiguous SLAM Factor Graphs</a></h3>
+  <p  class="title-zh">SNGR：模糊 SLAM 因子图的选择性非高斯细化</p>
+  <p  class="authors">Anushka Kulkarni、Sarthak Dubey</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22065v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22065v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">We present Selective Non-Gaussian Refinement (SNGR), a SLAM framework that augments iSAM2 with targeted nested sampling on windows where Gaussian approximations are likely to fail. We detect such regions using the condition number of joint marginal covariances and selectively refine them using the full nonlinear factor graph likelihood, with a gating mechanism to avoid degradation in multimodal cases. Experiments on range-only SLAM with wrong data association show that SNGR achieves high-precision failure detection and consistent local likelihood improvements while reducing computational cost relative to exhaustive non-Gaussian inference. These results highlight both the promise and the limitations of selective refinement for approximate SLAM posteriors.</p>
+      <p class="abs-zh">我们提出选择性非高斯细化 (SNGR)，这是一种 SLAM 框架，它通过在高斯近似可能失败的窗口上进行有针对性的嵌套采样来增强 iSAM2。我们使用联合边际协方差的条件数来检测这些区域，并使用完全非线性因子图似然来选择性地细化它们，并使用门控机制来避免多模态情况下的退化。对具有错误数据关联的仅范围 SLAM 进行的实验表明，SNGR 实现了高精度故障检测和一致的局部似然改进，同时相对于详尽的非高斯推理降低了计算成本。这些结果凸显了近似 SLAM 后验选择性细化的前景和局限性。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|3D视觉|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#1abc9c">3D视觉</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22378v1" target="_blank">Adaptive vs. Static Robot-to-Human Handover: A Study on Orientation and Approach Direction</a></h3>
+  <p  class="title-zh">自适应与静态机器人与人类的切换：定向和接近方向的研究</p>
+  <p  class="authors">Federico Biagi、Dario Onfiani、Simone Silenzi、Cristina Iani、Luigi Biagiotti 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22378v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22378v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Robot-to-human handovers often rely on static, open-loop strategies (or, at best, approaches that adapt only the position), which generally do not consider how the object will be grasped by the human, thus requiring the user to adapt. This work presents a novel adaptive framework that dynamically adjusts the object's delivery pose in real time based on the user's hand pose and the intended downstream task. By integrating AI-based hand pose estimation with smooth, kinematically constrained trajectories, the system ensures a safe approach and an optimal handover orientation. A comprehensive user study compares the proposed adaptive approach against a static baseline across multiple tasks, evaluating both subjective metrics (NASA-TLX, Human-Robot Trust Scale) and objective physiological data (blink rate measured via wearable eye-trackers). The results demonstrate that dynamic alignment significantly reduces users' cognitive workload and physiological stress, while increasing perceived trust in the robot's reliability. These findings highlight the potential of task- and pose-aware systems for enabling fluid and ergonomic human-robot collaboration.</p>
+      <p class="abs-zh">机器人与人类的切换通常依赖于静态的开环策略（或者最多是仅适应位置的方法），这些策略通常不考虑人类将如何抓取物体，因此需要用户进行适应。这项工作提出了一种新颖的自适应框架，可以根据用户的手部姿势和预期的下游任务实时动态调整物体的交付姿势。通过将基于人工智能的手势估计与平滑、运动学约束的轨迹相结合，该系统确保了安全的接近和最佳的切换方向。一项全面的用户研究将所提出的自适应方法与多个任务的静态基线进行比较，评估主观指标（NASA-TLX，人机信任量表）和客观生理数据（通过可穿戴眼动仪测量的眨眼率）。结果表明，动态对准显着减少了用户的认知工作量和生理压力，同时增加了对机器人可靠性的感知信任。这些发现凸显了任务和姿势感知系统在实现流畅且符合人体工程学的人机协作方面的潜力。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM|遥感" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#f39c12">遥感</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22274v2" target="_blank">CAGE-SGG: Counterfactual Active Graph Evidence for Open-Vocabulary Scene Graph Generation</a></h3>
+  <p  class="title-zh">CAGE-SGG：用于开放词汇场景图生成的反事实活动图证据</p>
+  <p  class="authors">Suiyang Guang、Chenyu Liu、Ruohan Zhang、Siyuan Chen</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22274v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22274v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Open-vocabulary scene graph generation (SGG) aims to describe visual scenes with flexible and fine-grained relation phrases beyond a fixed predicate vocabulary. While recent vision-language models greatly expand the semantic coverage of SGG, they also introduce a critical reliability issue: predicted relations may be driven by language priors or object co-occurrence rather than grounded visual evidence. In this paper, we propose an evidence-rounded open-vocabulary SGG framework based on counterfactual relation verification. Instead of directly accepting plausible relation proposals, our method verifies whether each candidate relation is supported by relation-pecific visual, geometric, and contextual evidence. Specifically, we first generate open-vocabulary relation candidates with a vision-language proposer, then decompose predicate phrases into soft evidence bases such as support, contact, containment, depth, motion, and state. A relation-conditioned evidence encoder extracts predicate-relevant cues, while a counterfactual verifier tests whether the relation score decreases when necessary vidence is removed and remains stable under irrelevant perturbations. We further introduce contradiction-aware predicate learning and graph-level preference optimization to improve fine-grained discrimination and global graph consistency. Experiments on conventional, open-vocabulary, and panoptic SGG benchmarks show that our method consistently improves standard recall-based metrics, unseen predicate generalization, and counterfactual grounding quality. These results demonstrate that moving from relation generation to relation verification leads to more reliable, interpretable, and evidence-grounded scene graphs.</p>
+      <p class="abs-zh">开放词汇场景图生成（SGG）旨在使用超出固定谓词词汇的灵活且细粒度的关系短语来描述视觉场景。虽然最近的视觉语言模型极大地扩展了 SGG 的语义覆盖范围，但它们也引入了一个关键的可靠性问题：预测关系可能是由语言先验或对象共现驱动的，而不是由有根据的视觉证据驱动的。在本文中，我们提出了一种基于反事实关系验证的证据全面的开放词汇SGG框架。我们的方法不是直接接受合理的关系建议，而是验证每个候选关系是否得到特定于关系的视觉、几何和上下文证据的支持。具体来说，我们首先使用视觉语言提议者生成开放词汇关系候选，然后将谓词短语分解为软证据基础，例如支持、接触、包含、深度、运动和状态。关系条件证据编码器提取与谓词相关的线索，而反事实验证器测试当必要的证据被删除时关系分数是否会下降，并在不相关的扰动下保持稳定。我们进一步引入矛盾感知谓词学习和图级偏好优化，以提高细粒度辨别和全局图一致性。对传统、开放词汇和全景 SGG 基准的实验表明，我们的方法持续改进了基于标准召回的指标、未见谓词泛化和反事实基础质量。这些结果表明，从关系生成转向关系验证会产生更可靠、可解释且有证据支持的场景图。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|3D视觉|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#1abc9c">3D视觉</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22196v1" target="_blank">V-STC: A Time-Efficient Multi-Vehicle Coordinated Trajectory Planning Approach</a></h3>
+  <p  class="title-zh">V-STC：一种高效的多车辆协调轨迹规划方法</p>
+  <p  class="authors">Pengfei Liu、Jialing Zhou、Yuezu Lv、Guanghui Wen、Tingwen Huang 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22196v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22196v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Coordinating the motions of multiple autonomous vehicles (AVs) requires planning frameworks that ensure safety while making efficient use of space and time. This paper presents a new approach, termed variable-time-step spatio-temporal corridor (V-STC), that enhances the temporal efficiency of multi-vehicle coordination. An optimization model is formulated to construct a V-STC for each AV, in which both the spatial configuration of the corridor cubes and their time durations are treated as decision variables. By allowing the corridor's spatial position and time step to vary, the constructed V-STC reduces the overall temporal occupancy of each AV while maintaining collision-free separation in the spatio-temporal domain. Based on the generated V-STC, a dynamically feasible trajectory is then planned independently for each AV. Simulation studies demonstrate that the proposed method achieves safe multi-vehicle coordination and yields more time-efficient motion compared with existing STC approaches.</p>
+      <p class="abs-zh">协调多辆自动驾驶车辆 (AV) 的运动需要规划框架，以确保安全，同时有效利用空间和时间。本文提出了一种称为可变时间步长时空走廊（V-STC）的新方法，可以提高多车辆协调的时间效率。制定了优化模型来为每个 AV 构建 V-STC，其中走廊立方体的空间配置及其持续时间都被视为决策变量。通过允许走廊的空间位置和时间步长变化，构建的 V-STC 减少了每个 AV 的总体时间占用，同时保持时空域中的无碰撞分离。基于生成的 V-STC，为每个 AV 独立规划动态可行的轨迹。仿真研究表明，与现有的 STC 方法相比，所提出的方法可以实现安全的多车辆协调，并产生更省时的运动。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉|遥感" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span><span class="tag" style="background:#f39c12">遥感</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22189v1" target="_blank">Energy-Efficient Multi-Robot Coverage Path Planning of Non-Convex Regions of Interests</a></h3>
+  <p  class="title-zh">非凸兴趣区域的节能多机器人覆盖路径规划</p>
+  <p  class="authors">Sourav Raxit、Jose Fuentes、Paulo Padrao、Abdullah Al Redwan Newaz、Md Tamjidul Hoque 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22189v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22189v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">This letter presents an energy-efficient multi-robot coverage path planning (MRCPP) framework for large, nonconvex Regions of Interest (ROI) containing obstacles and no-fly zones (NFZ). Existing minimum-energy coverage planning algorithms utilize meta-heuristic boustrophedon workspace decomposition. Therefore, even with minimum energy objectives and energy consumption constraints, they cannot achieve optimal energy efficiency. Moreover, most existing frameworks support only a single type of robotic platform. MRCPP overcomes these limitations by: generating globally-informed swath generation, creating parallel sweeping paths with minimal turns, calculating safety buffers to ensure safe turning clearance, using an efficient mTSP solver to balance workloads and minimize mission time, and connecting disjoint segments via a modified visibility graph that tracks heading angles while maintaining transitions within safe regions. The efficacy of the proposed MRCPP framework is demonstrated through real-world experiments involving autonomous aerial vehicles (AAVs) and autonomous surface vehicles (ASVs). Evaluations demonstrate that the proposed MRCPP consistently outperforms state-of-the-art planners, reducing average total energy consumption by 3\% to 40\% for a team of 3 robots and computation time by an order of magnitude, while maintaining balanced workload distribution and strong scalability across increasing fleet sizes. The MRCPP framework is released as an open-source package and videos of real-world and simulated experiments are available at https://mrc-pp.github.io.</p>
+      <p class="abs-zh">这封信提出了一种节能的多机器人覆盖路径规划（MRCPP）框架，适用于包含障碍物和禁飞区（NFZ）的大型非凸感兴趣区域（ROI）。现有的最小能量覆盖规划算法利用元启发式双足工作空间分解。因此，即使有最低的能源目标和能源消耗限制，他们也无法实现最佳的能源效率。此外，大多数现有框架仅支持单一类型的机器人平台。 MRCPP 通过以下方式克服了这些限制：生成全局信息的条带生成、创建具有最小转弯的平行清扫路径、计算安全缓冲区以确保安全转弯间隙、使用高效的 mTSP 求解器来平衡工作负载并最大限度地减少任务时间，以及通过修改后的可见性图连接不相交的段，该可见性图跟踪航向角，同时保持安全区域内的过渡。所提出的 MRCPP 框架的有效性通过涉及自主飞行器（AAV）和自主地面车辆（ASV）的实际实验得到了证明。评估表明，所提出的 MRCPP 始终优于最先进的规划器，将 3 个机器人组成的团队的平均总能耗降低 3% 至 40%，并将计算时间降低一个数量级，同时在不断增加的车队规模中保持平衡的工作负载分配和强大的可扩展性。 MRCPP 框架作为开源包发布，真实世界和模拟实验的视频可在 https://mrc-pp.github.io 上获取。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|3D视觉|机器人视觉|遥感" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#1abc9c">3D视觉</span><span class="tag" style="background:#27ae60">机器人视觉</span><span class="tag" style="background:#f39c12">遥感</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22040v1" target="_blank">Robust Localization for Autonomous Vehicles in Highway Scenes</a></h3>
+  <p  class="title-zh">公路场景中自动驾驶车辆的鲁棒定位</p>
+  <p  class="authors">Daqian Cheng、Xuchu Ding、Yujia Wu、Xiang Zhang、Lei Wang 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22040v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22040v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Localization for autonomous vehicles on highways remains under-explored compared to urban roads, and state-of-the-art methods for urban scenes degrade when directly applied to highways. We identify key challenges including environment changes under information homogeneity, heavy occlusion, degraded GNSS signals, and stringent downstream requirements on accuracy and latency. We propose a robust localization system to address highway challenges, which uses a dual-likelihood LiDAR front end that decouples 3D geometric structures and 2D road-texture cues to handle environment changes; a Control-EKF further leverages steering and acceleration commands to reduce lag and improve closed-loop behavior. An automated offline mapping and ground-truth pipeline keep maps fresh at high cadence for optimal localization performance. To catalyze progress, we release a public dataset covering both urban roads and highways while focusing on representative challenging highway clips, totaling 163 km; benchmarking is standardized using product-oriented accuracy metrics and certified ground truth. Compared to Apollo and Autoware, our system performs similarly on urban roads but shows superior robustness on challenging highway scenarios. The system has been validated by more than one million kilometers of road testing.</p>
+      <p class="abs-zh">与城市道路相比，高速公路上自动驾驶车辆的定位仍处于探索之中，并且当直接应用于高速公路时，最先进的城市场景方法会退化。我们确定了关键挑战，包括信息同质性下的环境变化、严重遮挡、GNSS 信号退化以及下游对准确性和延迟的严格要求。我们提出了一个强大的定位系统来应对高速公路挑战，该系统使用双似然 LiDAR 前端来解耦 3D 几何结构和 2D 道路纹理线索来处理环境变化； Control-EKF 进一步利用转向和加速命令来减少滞后并改善闭环行为。自动离线地图和地面实况管道使地图以高节奏保持新鲜，以实现最佳的定位性能。为了促进进展，我们发布了一个涵盖城市道路和高速公路的公共数据集，同时重点关注具有代表性的具有挑战性的高速公路片段，总计 163 公里；使用面向产品的准确性指标和经过认证的基本事实来标准化基准测试。与 Apollo 和 Autoware 相比，我们的系统在城市道路上的表现相似，但在具有挑战性的高速公路场景中表现出卓越的鲁棒性。该系统已经过超过100万公里的道路测试验证。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22491v1" target="_blank">Point &amp; Grasp: Flexible Selection of Out-of-Reach Objects Through Probabilistic Cue Integration</a></h3>
+  <p  class="title-zh">Point &amp; Grasp：通过概率提示集成灵活选择超出范围的对象</p>
+  <p  class="authors">Xuejing Luo、Hee-Seung Moon、Christian Holz、Antti Oulasvirta</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22491v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22491v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://github.com/drlxj/point-and-grasp" target="_blank" class="github-link">⭐ GitHub 开源</a>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Selecting out-of-reach objects is a fundamental task in mixed reality (MR). Existing methods rely on a single cue or deterministically fuse multiple cues, leading to performance degradation when the dominant cue becomes unreliable. In this work, we introduce a probabilistic cue integration framework that enables flexible combination of multiple user-generated cues for intent inference. Inspired by natural grasping behavior, we instantiate the framework with pointing direction and grasp gestures as a new interaction technique, Point&amp;Grasp. To this end, we collect the Out-of-Reach Grasping (ORG) dataset to train a robust likelihood model of the gestural cue, which captures grasping patterns not present in existing in-reach datasets. User studies demonstrate that our selection method with cue integration not only improves accuracy and speed over single-cue baselines, but also remains practically effective compared to state-of-the-art methods across various sources of ambiguity. The dataset and code are available at https://github.com/drlxj/point-and-grasp.</p>
+      <p class="abs-zh">选择超出范围的对象是混合现实 (MR) 中的一项基本任务。现有的方法依赖于单个线索或确定性地融合多个线索，当主要线索变得不可靠时，会导致性能下降。在这项工作中，我们引入了一种概率线索集成框架，该框架可以灵活组合多个用户生成的线索以进行意图推断。受自然抓取行为的启发，我们将指向方向和抓取手势的框架实例化为一种新的交互技术——Point&amp;Grasp。为此，我们收集了超出范围抓取（ORG）数据集来训练手势提示的稳健似然模型，该模型捕获现有可达数据集中不存在的抓取模式。用户研究表明，我们的带有提示集成的选择方法不仅比单提示基线提高了准确性和速度，而且与各种模糊源的最先进方法相比仍然保持实际有效。数据集和代码可在 https://github.com/drlxj/point-and-grasp 获取。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22546v2" target="_blank">ReLIC-SGG: Relation Lattice Completion for Open-Vocabulary Scene Graph Generation</a></h3>
+  <p  class="title-zh">ReLIC-SGG：用于开放词汇场景图生成的关系格完成</p>
+  <p  class="authors">Amir Hosseini、Sara Farahani、Xinyi Li、Suiyang Guang</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22546v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22546v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Open-vocabulary scene graph generation (SGG) aims to describe visual scenes with flexible relation phrases beyond a fixed predicate set. Existing methods usually treat annotated triplets as positives and all unannotated object-pair relations as negatives. However, scene graph annotations are inherently incomplete: many valid relations are missing, and the same interaction can be described at different granularities, e.g., \textit{on}, \textit{standing on}, \textit{resting on}, and \textit{supported by}. This issue becomes more severe in open-vocabulary SGG due to the much larger relation space. We propose \textbf{ReLIC-SGG}, a relation-incompleteness-aware framework that treats unannotated relations as latent variables rather than definite negatives. ReLIC-SGG builds a semantic relation lattice to model similarity, entailment, and contradiction among open-vocabulary predicates, and uses it to infer missing positive relations from visual-language compatibility, graph context, and semantic consistency. A positive-unlabeled graph learning objective further reduces false-negative supervision, while lattice-guided decoding produces compact and semantically consistent scene graphs. Experiments on conventional, open-vocabulary, and panoptic SGG benchmarks show that ReLIC-SGG improves rare and unseen predicate recognition and better recovers missing relations.</p>
+      <p class="abs-zh">开放词汇场景图生成（SGG）旨在使用超出固定谓词集的灵活关系短语来描述视觉场景。现有方法通常将带注释的三元组视为正数，将所有未注释的对象对关系视为负数。然而，场景图注释本质上是不完整的：缺少许多有效的关系，并且可以以不同的粒度描述相同的交互，例如 \textit{on}、\textit{stand on}、\textit{resting on} 和 \textit{supported by}。由于关系空间更大，这个问题在开放词汇 SGG 中变得更加严重。我们提出 \textbf{ReLIC-SGG}，一个关系不完整性感知框架，它将未注释​​的关系视为潜在变量而不是明确的负数。 ReLIC-SGG 构建了一个语义关系格来对开放词汇谓词之间的相似性、蕴涵和矛盾进行建模，并使用它从视觉语言兼容性、图形上下文和语义一致性中推断缺失的正关系。正未标记图学习目标进一步减少了假负监督，而格引导解码则产生紧凑且语义一致的场景图。在传统、开放词汇和全景 SGG 基准上的实验表明，ReLIC-SGG 提高了罕见和未见过的谓词识别，并更好地恢复丢失的关系。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22251v1" target="_blank">False Feasibility in Variable Impedance MPC for Legged Locomotion</a></h3>
+  <p  class="title-zh">用于腿式运动的可变阻抗 MPC 的错误可行性</p>
+  <p  class="authors">Vishal Ramesh</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22251v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22251v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Variable impedance model predictive control (MPC) formulations that treat joint stiffness as an instantaneous decision variable operate on a feasible set strictly larger than the physically realizable set under first-order actuator dynamics. We identify this as a formulation error rather than a modeling approximation, formalize the distinction between the parameter-based feasible set Fparam and the realizable set Freal, and characterize the regime of mismatch via the dimensionless parameter alpha = omega_sT (actuator bandwidth times task timescale). For the 1D hopping monoped, we prove that below an analytical threshold alpha_crit derived in closed form from task physics, no admissible stiffness command realizes the parameter-based prediction. Numerical validation in 1D shows monotonic deviation growth as alpha decreases, with the predicted scaling holding across ten parameter combinations (log-log R2 = 0.99). Mechanism transfer to planar spring-loaded inverted pendulum dynamics confirms center-of-mass and stance-timing deviation as the primary consequence, with regime-dependent friction effects as a tertiary observable. A second threshold alpha_infeas &lt; alpha_crit establishes a floor below which restricting the admissible stiffness range cannot repair realizability, closing the conservative-tuning objection on structural grounds. Augmenting the prediction state with stiffness closes the mismatch by construction.</p>
+      <p class="abs-zh">将关节​​刚度视为瞬时决策变量的可变阻抗模型预测控制 (MPC) 公式在严格大于一阶执行器动力学下的物理可实现集的可行集上运行。我们将其识别为公式错误而不是建模近似，形式化基于参数的可行集 Fparam 和可实现集 Freal 之间的区别，并通过无量纲参数 alpha = omega_sT（执行器带宽乘以任务时间尺度）来表征失配状态。对于一维跳跃单足，我们证明低于从任务物理学以封闭形式导出的分析阈值 alpha_crit，没有可接受的刚度命令实现基于参数的预测。一维数值验证显示，随着 alpha 减小，偏差单调增长，预测的缩放比例在 10 个参数组合中保持不变 (log-log R2 = 0.99)。机制转移到平面弹簧加载倒立摆动力学证实了质心和姿态正时偏差是主要结果，而依赖于状态的摩擦效应是第三个可观察的结果。第二个阈值 alpha_infeas &lt; alpha_crit 建立了一个下限，低于该下限限制允许的刚度范围无法修复可实现性，从而消除了结构上的保守调整反对意见。通过刚度增强预测状态可以通过构造消除不匹配。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22238v1" target="_blank">CodeGraphVLP: Code-as-Planner Meets Semantic-Graph State for Non-Markovian Vision-Language-Action Models</a></h3>
+  <p  class="title-zh">CodeGraphVLP：代码即规划器满足非马尔可夫视觉语言动作模型的语义图状态</p>
+  <p  class="authors">Khoa Vo、Sieu Tran、Taisei Hanyu、Yuki Ikebe、Duy Nguyen 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22238v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22238v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Vision-Language-Action (VLA) models promise generalist robot manipulation, but are typically trained and deployed as short-horizon policies that assume the latest observation is sufficient for action reasoning. This assumption breaks in non-Markovian long-horizon tasks, where task-relevant evidence can be occluded or appear only earlier in the trajectory, and where clutter and distractors make fine-grained visual grounding brittle. We present CodeGraphVLP, a hierarchical framework that enables reliable long-horizon manipulation by combining a persistent semantic-graph state with an executable code-based planner and progress-guided visual-language prompting. The semantic-graph maintains task-relevant entities and relations under partial observability. The synthesized planner executes over this semantic-graph to perform efficient progress checks and outputs a subtask instruction together with subtask-relevant objects. We use these outputs to construct clutter-suppressed observations that focus the VLA executor on critical evidence. On real-world non-Markovian tasks, CodeGraphVLP improves task completion over strong VLA baselines and history-enabled variants while substantially lowering planning latency compared to VLM-in-the-loop planning. We also conduct extensive ablation studies to confirm the contributions of each component.</p>
+      <p class="abs-zh">视觉-语言-动作（VLA）模型有望实现通用的机器人操作，但通常作为短期策略进行训练和部署，假设最新的观察结果足以进行动作推理。这种假设在非马尔可夫长视野任务中被打破，其中与任务相关的证据可能被遮挡或仅出现在轨迹的较早位置，并且杂乱和干扰因素使细粒度的视觉基础变得脆弱。我们提出了 CodeGraphVLP，这是一个分层框架，通过将持久语义图状态与基于可执行代码的规划器和进度引导的视觉语言提示相结合，实现可靠的长范围操作。语义图在部分可观察性下维护与任务相关的实体和关系。综合规划器在此语义图上执行以执行有效的进度检查并输出子任务指令以及子任务相关对象。我们使用这些输出来构建杂乱抑制的观察结果，使 VLA 执行器专注于关键证据。在现实世界的非马尔可夫任务中，CodeGraphVLP 比强大的 VLA 基线和支持历史的变体提高了任务完成率，同时与 VLM 循环规划相比，显着降低了规划延迟。我们还进行了广泛的消融研究，以确认每个组件的贡献。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22363v1" target="_blank">LeHome: A Simulation Environment for Deformable Object Manipulation in Household Scenarios</a></h3>
+  <p  class="title-zh">LeHome：家庭场景中变形物体操控的仿真环境</p>
+  <p  class="authors">Zeyi Li、Yushi Yang、Shawn Xie、Kyle Xu、Tianxing Chen 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22363v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22363v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Household environments present one of the most common, impactful yet challenging application domains for robotics. Within household scenarios, manipulating deformable objects is particularly difficult, both in simulation and real-world execution, due to varied categories and shapes, complex dynamics, and diverse material properties, as well as the lack of reliable deformable-object support in existing simulations. We introduce LeHome, a comprehensive simulation environment designed for deformable object manipulation in household scenarios. LeHome covers a wide spectrum of deformable objects, such as garments and food items, offering high-fidelity dynamics and realistic interactions that existing simulators struggle to simulate accurately. Moreover, LeHome supports multiple robotic embodiments and emphasizes low-cost robots as a core focus, enabling end-to-end evaluation of household tasks on resource-constrained hardware. By bridging the gap between realistic deformable object simulation and practical robotic platforms, LeHome provides a scalable testbed for advancing household robotics. Webpage: https://lehome-web.github.io/ .</p>
+      <p class="abs-zh">家庭环境是机器人技术最常见、最有影响力但最具挑战性的应用领域之一。在家庭场景中，由于可变形物体的类别和形状多样、动力学复杂、材料属性多样，以及现有模拟中缺乏可靠的可变形物体支持，因此在模拟和现实世界执行中操纵可变形物体都特别困难。我们推出LeHome，一个专为家庭场景中的变形物体操作而设计的综合模拟环境。 LeHome 涵盖了广泛的可变形物体，例如服装和食品，提供了现有模拟器难以准确模拟的高保真动态和真实交互。此外，乐家支持多种机器人实施方式，并强调以低成本机器人为核心焦点，从而能够在资源有限的硬件上对家务任务进行端到端评估。通过弥合现实可变形物体模拟和实用机器人平台之间的差距，LeHome 为先进的家用机器人技术提供了一个可扩展的测试平台。网页：https://lehome-web.github.io/。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22014v1" target="_blank">DM$^3$-Nav: Decentralized Multi-Agent Multimodal Multi-Object Semantic Navigation</a></h3>
+  <p  class="title-zh">DM$^3$-Nav：去中心化多智能体多模态多对象语义导航</p>
+  <p  class="authors">Amin Kashiri、Atharva Jamsandekar、Yasin Yazıcıoğlu</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22014v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22014v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">We present DM$^3$-Nav, a fully decentralized multi-agent semantic navigation system supporting multimodal open-vocabulary goal specification and multi-object missions. In our setting, decentralization implies operation without a central coordinator, global map aggregation, or shared global state at runtime. Robots operate autonomously and coordinate through ad-hoc pairwise communication, exchanging local maps, goal status, and navigation intent without synchronization. An implicit task allocation mechanism combining intent broadcasting and distance-weighted frontier selection reduces redundant exploration while preserving decentralized operation. Evaluations on HM3DSem scenes using the HM3Dv0.2 and GOAT-Bench datasets demonstrate that DM$^3$-Nav matches or exceeds centralized and shared-map baselines while eliminating single points of failure inherent in centralized architectures. Finally, we validate our approach in a real-world office environment using two mobile robots, demonstrating successful deployment relying entirely on onboard sensing and computation. A video of our real-world experiments is available online: https://drive.google.com/file/d/1QiUSCn5rIvtuTUqtuXLPgmt6S8x9-MCZ/view?usp=drive_link</p>
+      <p class="abs-zh">我们提出了 DM$^3$-Nav，一个完全去中心化的多智能体语义导航系统，支持多模式开放词汇目标规范和多目标任务。在我们的设置中，去中心化意味着在运行时没有中央协调器、全局地图聚合或共享全局状态的操作。机器人自主操作，通过临时配对通信进行协调，交换本地地图、目标状态和导航意图，无需同步。结合意图广播和距离加权边界选择的隐式任务分配机制减少了冗余探索，同时保留了去中心化操作。使用 HM3Dv0.2 和 GOAT-Bench 数据集对 HM3DSem 场景进行的评估表明，DM$^3$-Nav 匹配或超过集中式和共享地图基线，同时消除了集中式架构中固有的单点故障。最后，我们使用两个移动机器人在现实办公环境中验证了我们的方法，展示了完全依赖于机载传感和计算的成功部署。我们的真实实验视频可在线观看：https://drive.google.com/file/d/1QiUSCn5rIvtuTUqtuXLPgmt6S8x9-MCZ/view?usp=drive_link</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉|医学图像" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span><span class="tag" style="background:#e91e63">医学图像</span></div>
+    <span class="pub-date">2026-03-31</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.21936v1" target="_blank">An Artifact-based Agent Framework for Adaptive and Reproducible Medical Image Processing</a></h3>
+  <p  class="title-zh">用于自适应和可再现医学图像处理的基于工件的代理框架</p>
+  <p  class="authors">Lianrui Zuo、Yihao Liu、Gaurav Rudravaram、Karthik Ramadass、Aravind R. Krishnan 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.21936v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.21936v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Medical imaging research is increasingly shifting from controlled benchmark evaluation toward real-world clinical deployment. In such settings, applying analytical methods extends beyond model design to require dataset-aware workflow configuration and provenance tracking. Two requirements therefore become central: \textbf{adaptability}, the ability to configure workflows according to dataset-specific conditions and evolving analytical goals; and \textbf{reproducibility}, the guarantee that all transformations and decisions are explicitly recorded and re-executable. Here, we present an artifact-based agent framework that introduces a semantic layer to augment medical image processing. The framework formalizes intermediate and final outputs through an artifact contract, enabling structured interrogation of workflow state and goal-conditioned assembly of configurations from a modular rule library. Execution is delegated to a workflow executor to preserve deterministic computational graph construction and provenance tracking, while the agent operates locally to comply with most privacy constraints. We evaluate the framework on real-world clinical CT and MRI cohorts, demonstrating adaptive configuration synthesis, deterministic reproducibility across repeated executions, and artifact-grounded semantic querying. These results show that adaptive workflow configuration can be achieved without compromising reproducibility in heterogeneous clinical environments.</p>
+      <p class="abs-zh">医学影像研究正日益从受控基准评估转向现实世界的临床部署。在这种情况下，应用分析方法不仅限于模型设计，还需要数据集感知的工作流配置和来源跟踪。因此，有两个要求成为核心：\textbf{适应性}，根据数据集特定条件和不断发展的分析目标配置工作流程的能力； \textbf{再现性}，保证所有转换和决策都被明确记录并可重新执行。在这里，我们提出了一个基于工件的代理框架，它引入了语义层来增强医学图像处理。该框架通过工件契约将中间和最终输出形式化，从而能够对工作流状态进行结构化询问，并从模块化规则库中以目标条件组装配置。执行被委托给工作流执行器，以保留确定性的计算图构造和来源跟踪，而代理在本地运行以遵守大多数隐私约束。我们评估了现实世界临床 CT 和 MRI 队列的框架，展示了自适应配置合成、重复执行的确定性再现性以及基于工件的语义查询。这些结果表明，可以在不影响异构临床环境中的可重复性的情况下实现自适应工作流程配置。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22715v1" target="_blank">ATRS: Adaptive Trajectory Re-splitting via a Shared Neural Policy for Parallel Optimization</a></h3>
+  <p  class="title-zh">ATRS：通过共享神经策略进行自适应轨迹重新分割以实现并行优化</p>
+  <p  class="authors">Jiajun Yu、Guodong Liu、Li Wang、Pengxiang Zhou、Wentao Liu 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22715v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22715v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Parallel trajectory optimization via the Alternating Direction Method of Multipliers (ADMM) has emerged as a scalable approach to long-horizon motion planning. However, existing frameworks typically decompose the problem into parallel subproblems based on a predefined fixed structure. Such structural rigidity often causes optimization stagnation in highly constrained regions, where a few lagging subproblems delay global convergence. A natural remedy is to adaptively re-split these stagnating segments online. Yet, deciding when, where, and how to split exceeds the capability of rule-based heuristics. To this end, we propose ATRS, a novel framework that embeds a shared Deep Reinforcement Learning policy into the parallel ADMM loop. We formulate this adaptive adjustment as a Multi-Agent Shared-Policy Markov Decision Process, where all trajectory segments act as homogeneous agents and share a unified neural policy network. This parameter-sharing architecture endows the system with size invariance, enabling it to handle dynamically changing segment counts during re-splitting and generalize to arbitrary trajectory lengths. Furthermore, our formulation inherently supports zero-shot generalization to unseen environments, as our network relies solely on the internal states of the numerical solver rather than on the geometric features of the environment. To ensure solver stability, a Confidence-Based Election mechanism selects only the most stagnating segment for re-splitting at each step. Extensive simulations demonstrate that ATRS accelerates convergence, reducing the number of iterations by up to 26.0% and the computation time by up to 19.1%. Real-world experiments further confirm its applicability to both large-scale offline global planning and real-time onboard replanning within 35 ms per cycle, with no sim-to-real degradation.</p>
+      <p class="abs-zh">通过乘子交替方向法 (ADMM) 进行的并行轨迹优化已成为一种可扩展的长视野运动规划方法。然而，现有框架通常根据预定义的固定结构将问题分解为并行子问题。这种结构刚性通常会导致高度受限区域的优化停滞，其中一些滞后子问题延迟了全局收敛。一种自然的补救措施是在线自适应地重新分割这些停滞的细分市场。然而，决定何时、何地以及如何分割超出了基于规则的启发式方法的能力。为此，我们提出了 ATRS，这是一种新颖的框架，它将共享的深度强化学习策略嵌入到并行 ADMM 循环中。我们将这种自适应调整制定为多代理共享策略马尔可夫决策过程，其中所有轨迹段都充当同构代理并共享统一的神经策略网络。这种参数共享架构赋予系统尺寸不变性，使其能够在重新分割期间处理动态变化的段计数，并泛化到任意轨迹长度。此外，我们的公式本质上支持对未见环境的零样本泛化，因为我们的网络仅依赖于数值求解器的内部状态，而不是环境的几何特征。为了确保求解器的稳定性，基于置信度的选择机制仅选择最停滞的段在每一步进行重新分割。大量的仿真表明，ATRS 可以加速收敛，将迭代次数减少高达 26.0%，计算时间减少高达 19.1%。现实世界的实验进一步证实了其适用于大规模离线全局规划和每个周期 35 毫秒内的实时机载重新规划，并且没有模拟到真实的退化。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22591v1" target="_blank">RedVLA: Physical Red Teaming for Vision-Language-Action Models</a></h3>
+  <p  class="title-zh">RedVLA：视觉-语言-动作模型的物理红队</p>
+  <p  class="authors">Yuhao Zhang、Borong Zhang、Jiaming Fan、Jiachen Shen、Yishuai Cai 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22591v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22591v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">The real-world deployment of Vision-Language-Action (VLA) models remains limited by the risk of unpredictable and irreversible physical harm. However, we currently lack effective mechanisms to proactively detect these physical safety risks before deployment. To address this gap, we propose \textbf{RedVLA}, the first red teaming framework for physical safety in VLA models. We systematically uncover unsafe behaviors through a two-stage process: (I) \textbf{Risk Scenario Synthesis} constructs a valid and task-feasible initial risk scene. Specifically, it identifies critical interaction regions from benign trajectories and positions the risk factor within these regions, aiming to entangle it with the VLA's execution flow and elicit a target unsafe behavior. (II) \textbf{Risk Amplification} ensures stable elicitation across heterogeneous models. It iteratively refines the risk factor state through gradient-free optimization guided by trajectory features. Experiments on six representative VLA models show that RedVLA uncovers diverse unsafe behaviors and achieves the ASR up to 95.5\% within 10 optimization iterations. To mitigate these risks, we further propose SimpleVLA-Guard, a lightweight safety guard built from RedVLA-generated data. Our data, assets, and code are available \href{https://redvla.github.io}{here}.</p>
+      <p class="abs-zh">视觉-语言-动作（VLA）模型在现实世界中的部署仍然受到不可预测和不可逆转的身体伤害风险的限制。然而，我们目前缺乏有效的机制来在部署之前主动检测这些物理安全风险。为了解决这一差距，我们提出了 \textbf{RedVLA}，这是 VLA 模型中第一个用于物理安全的红队框架。我们通过两个阶段的过程系统地发现不安全行为：（I）\textbf{风险场景综合}构建一个有效且任务可行的初始风险场景。具体来说，它从良性轨迹中识别关键交互区域，并将风险因素定位在这些区域内，旨在将其与 VLA 的执行流程纠缠在一起，并引发目标不安全行为。 (II) \textbf{风险放大}确保跨异构模型的稳定启发。它通过轨迹特征引导的无梯度优化迭代地细化风险因素状态。对六个代表性 VLA 模型的实验表明，RedVLA 发现了多种不安全行为，并在 10 次优化迭代内实现了高达 95.5% 的 ASR。为了减轻这些风险，我们进一步提出了 SimpleVLA-Guard，这是一种根据 RedVLA 生成的数据构建的轻量级安全防护装置。我们的数据、资产和代码可在 \href{https://redvla.github.io}{here} 获取。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22287v1" target="_blank">Closed Form Relations and Higher-Order Approximations of First and Second Derivatives of the Tangent Operator on SE(3)</a></h3>
+  <p  class="title-zh">SE(3)上切线算子的一阶导数和二阶导数的闭式关系和高阶近似</p>
+  <p  class="authors">Andreas Mueller</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22287v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22287v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">The Lie group SE(3) of isometric orientation preserving transformation is used for modeling multibody systems, robots, and Cosserat continua. The use of these models in numerical simulation and optimization schemes necessitates the exponential map, its right-trivialized differential (often referred to as tangent operator), as well as higher derivatives in closed form. The $6\times 6$ matrix representation of the differential, $\mathbf{dexp}_{\mathbf{X}}:se\left( 3\right) \rightarrow se\left( 3\right) $ , and its first derivative were reported using a $3\times 3$ block partitioning. In this paper, the differential, its first and second derivative, as well as the Jacobian and Hessian of the evaluation maps, $\mathbf{dexp}_{\mathbf{X}}\mathbf{Z}$ and $\mathbf{dexp}_{\mathbf{X}}^{T}% \mathbf{Z}$, are reported avoiding the block partitioning. For all of them, higher-order approximations are derived. Besides the compactness, the advantage of the presented closed form relations is their numerical robustness when combined with the local approximation. The formulations are demonstrated for computation of the deformation field and the strain rates of an elastic Cosserat-Simo-Reissner rod.</p>
+      <p class="abs-zh">等距方向保持变换的李群 SE(3) 用于建模多体系统、机器人和 Cosserat 连续体。在数值模拟和优化方案中使用这些模型需要指数映射、其右平凡微分（通常称为正切算子）以及封闭形式的高阶导数。微分的 $6\times 6$ 矩阵表示 $\mathbf{dexp}_{\mathbf{X}}:se\left( 3\right) \rightarrow se\left( 3\right) $ 及其一阶导数是使用 $3\times 3$ 块分区报告的。在本文中，报告了微分、其一阶和二阶导数以及评估图 $\mathbf{dexp}_{\mathbf{X}}\mathbf{Z}$ 和 $\mathbf{dexp}_{\mathbf{X}}^{T}% \mathbf{Z}$ 的雅可比和海森矩阵，以避免块划分。对于所有这些，都推导出高阶近似值。除了紧凑性之外，所提出的封闭形式关系的优点是与局部近似相结合时的数值鲁棒性。该公式被证明可用于计算弹性 Cosserat-Simo-Reissner 杆的变形场和应变率。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|3D视觉|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#1abc9c">3D视觉</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22283v1" target="_blank">A Kinematic Analysis of Palm Degrees of Freedom for Enhancing Thumb Opposability in Robotic Hands</a></h3>
+  <p  class="title-zh">增强机器人手拇指对抗性的手掌自由度的运动学分析</p>
+  <p  class="authors">HyoJae Kang、Yeong Jae Park、Hyunmok Jung、Joonho Lee、Dong Il Park 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22283v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22283v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">This study investigates the kinematic role of palm degrees of freedom (DoF) in enhancing thumb opposability in a five-finger robotic hand. A hand model consisting of a five DoF thumb and four fingers with three to four DoF is analyzed, where palm motion is introduced between adjacent fingers. To quantitatively evaluate thumb-finger interaction, the overlap workspace volume is defined based on voxelized fingertip reachable regions. Seven cases are considered, including configurations with increased total DoF and configurations in which the total DoF is maintained by redistributing DoF from the fingers to the palm. The results show that palm DoF significantly improves opposability, particularly for the ring and little fingers, by repositioning their base locations rather than simply extending their reachable range. However, when the total DoF is constrained, redistributing DoF to the palm leads to trade-offs between overlap workspace expansion and kinematic redundancy. These findings indicate that palm DoF and finger DoF play distinct roles in hand kinematics and should be considered jointly in design. This study provides a quantitative framework for evaluating palm-induced opposability without relying on object or contact models and offers practical design guidelines for incorporating palm motion in robotic hands.</p>
+      <p class="abs-zh">本研究调查了手掌自由度 (DoF) 在增强五指机器人手拇指相对性方面的运动学作用。分析了由五个自由度拇指和四个具有三到四个自由度的手指组成的手模型，其中在相邻手指之间引入手掌运动。为了定量评估拇指与手指的交互，重叠工作空间体积是基于体素化的指尖可到达区域来定义的。考虑了七种情况，包括总自由度增加的配置和通过将自由度从手指重新分配到手掌来维持总自由度的配置。结果表明，手掌自由度通过重新定位其基本位置而不是简单地扩展其可触及范围，显着提高了可对抗性，特别是无名指和小指。然而，当总自由度受到限制时，将自由度重新分配到手掌会导致重叠工作空间扩展和运动冗余之间的权衡。这些发现表明，手掌自由度和手指自由度在手部运动学中发挥着不同的作用，应在设计中共同考虑。这项研究提供了一个定量框架，用于评估手掌引起的可对抗性，而不依赖于物体或接触模型，并为将手掌运动纳入机器人手提供了实用的设计指南。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22235v1" target="_blank">Learning-augmented robotic automation for real-world manufacturing</a></h3>
+  <p  class="title-zh">用于现实制造的学习增强型机器人自动化</p>
+  <p  class="authors">Yunho Kim、Quan Nguyen、Taewhan Kim、Youngjin Heo、Joonho Lee 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22235v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22235v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Industrial robots are widely used in manufacturing, yet most manipulation still depends on fixed waypoint scripts that are brittle to environmental changes. Learning-based control offers a more adaptive alternative, but it remains unclear whether such methods, still mostly confined to laboratory demonstrations, can sustain hours of reliable operation, deliver consistent quality, and behave safely around people on a live production line. Here we present Learning-Augmented Robotic Automation, a hybrid system that integrates learned task controllers and a neural 3D safety monitor into conventional industrial workflows. We deployed the system on an electric-motor production line to automate deformable cable insertion and soldering under real manufacturing constraints, a step previously performed manually by human workers. With less than 20 min of real-world data per task, the system operated continuously for 5 h 10 min, producing 108 motors without physical fencing and achieving a 99.4% pass rate on product-level quality-control tests. It maintained near-human takt time while reducing variability in solder-joint quality and cycle time. These results establish a practical pathway for extending industrial automation with learning-based methods.</p>
+      <p class="abs-zh">工业机器人广泛应用于制造业，但大多数操作仍然依赖于固定的路径点脚本，这些脚本对环境变化很脆弱。基于学习的控制提供了一种更具适应性的替代方案，但目前尚不清楚这些方法（仍然主要局限于实验室演示）是否可以维持数小时的可靠运行，提供一致的质量，并在现场生产线上的人员周围安全地运行。在这里，我们展示了学习增强机器人自动化，这是一种混合系统，它将学习任务控制器和神经 3D 安全监视器集成到传统的工业工作流程中。我们将该系统部署在电动机生产线上，以在实际制造限制下自动插入和焊接可变形电缆，而这一步骤以前由工人手动执行。每个任务的实际数据不到20分钟，系统连续运行5小时10分钟，在没有物理围栏的情况下生产了108台电机，产品级质量控制测试的通过率达到99.4%。它保持了接近人类的节拍时间，同时减少了焊点质量和周期时间的变化。这些结果为通过基于学习的方法扩展工业自动化建立了一条实用途径。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|生成模型/扩散|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#9b59b6">生成模型/扩散</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22199v1" target="_blank">An LLM-Driven Closed-Loop Autonomous Learning Framework for Robots Facing Uncovered Tasks in Open Environments</a></h3>
+  <p  class="title-zh">法学硕士驱动的闭环自主学习框架，适用于在开放环境中面临未发现任务的机器人</p>
+  <p  class="authors">Hong Su</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22199v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22199v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Autonomous robots operating in open environments need the ability to continuously handle tasks that are not covered by predefined local methods. However, existing approaches often rely on repeated large-language-model (LLM) interaction for uncovered tasks, and even successful executions or observed successful external behaviors are not always autonomously transformed into reusable local knowledge. In this paper, we propose an LLM-driven closed-loop autonomous learning framework for robots facing uncovered tasks in open environments. The proposed framework first retrieves the local method library to determine whether a reusable solution already exists for the current task or observed event. If no suitable method is found, it triggers an autonomous learning process in which the LLM serves as a high-level reasoning component for task analysis, candidate model selection, data collection planning, and execution or observation strategy organization. The robot then learns from both self-execution and active observation, performs quasi-real-time training and adjustment, and consolidates the validated result into the local method library for future reuse. Through this recurring closed-loop process, the robot gradually converts both execution-derived and observation-derived experience into reusable local capability while reducing future dependence on repeated external LLM interaction. Results show that the proposed framework reduces execution time and LLM dependence in both repeated-task self-execution and observation-driven settings, for example reducing the average total execution time from 7.7772s to 6.7779s and the average number of LLM calls per task from 1.0 to 0.2 in the repeated-task self-execution experiments.</p>
+      <p class="abs-zh">在开放环境中运行的自主机器人需要能够连续处理预定义的本地方法未涵盖的任务。然而，现有的方法通常依赖于重复的大语言模型（LLM）交互来完成未覆盖的任务，甚至成功的执行或观察到的成功的外部行为并不总是自动转化为可重用的本地知识。在本文中，我们提出了一种由法学硕士驱动的闭环自主学习框架，用于在开放环境中面临未覆盖任务的机器人。所提出的框架首先检索本地方法库，以确定当前任务或观察到的事件是否已经存在可重用的解决方案。如果没有找到合适的方法，就会触发一个自主学习过程，其中法学硕士作为任务分析、候选模型选择、数据收集规划以及执行或观察策略组织的高级推理组件。然后机器人从自我执行和主动观察中学习，进行准实时训练和调整，并将验证结果整合到本地方法库中以供将来重用。通过这种重复的闭环过程，机器人逐渐将执行衍生和观察衍生的经验转化为可重用的本地能力，同时减少未来对重复的外部LLM交互的依赖。结果表明，所提出的框架减少了重复任务自执行和观察驱动设置中的执行时间和 LLM 依赖性，例如，在重复任务自执行实验中，将平均总执行时间从 7.7772 秒减少到 6.7779 秒，每个任务的平均 LLM 调用次数从 1.0 减少到 0.2。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|生成模型/扩散|视频理解|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#9b59b6">生成模型/扩散</span><span class="tag" style="background:#e67e22">视频理解</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22152v1" target="_blank">dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model</a></h3>
+  <p  class="title-zh">dWorldEval：通过离散扩散世界模型进行可扩展的机器人政策评估</p>
+  <p  class="authors">Yaxuan Li、Zhongyi Zhou、Yefei Chen、Yaokai Xue、Yichen Zhu 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22152v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22152v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Evaluating robotics policies across thousands of environments and thousands of tasks is infeasible with existing approaches. This motivates the need for a new methodology for scalable robotics policy evaluation. In this paper, we propose dWorldEval, which uses a discrete diffusion world model as a scalable evaluation proxy for robotics policies. Specifically, dWorldEval maps all modalities - including vision, language, and robotic actions - into a unified token space, modeling them via a single transformer-based denoising network. In this paper, we propose dWorldEval, using a discrete diffusion world model as a scalable evaluation proxy for robotics policy. Specifically, it maps all modalities, including vision, language, and robotics action into a unified token space, then denoises them with a single transformer network. Building on this architecture, we employ a sparse keyframe memory to maintain spatiotemporal consistency. We also introduce a progress token that indicates the degree of task completion. At inference, the model jointly predicts future observations and progress token, allowing automatically determine success when the progress reaches 1. Extensive experiments demonstrate that dWorldEval significantly outperforms previous approaches, i.e., WorldEval, Ctrl-World, and WorldGym, on LIBERO, RoboTwin, and multiple real-robot tasks. It paves the way for a new architectural paradigm in building world simulators for robotics evaluation at scale.</p>
+      <p class="abs-zh">使用现有方法评估数千个环境和数千个任务的机器人策略是不可行的。这激发了对可扩展机器人政策评估的新方法的需求。在本文中，我们提出了 dWorldEval，它使用离散扩散世界模型作为机器人策略的可扩展评估代理。具体来说，dWorldEval 将所有模态（包括视觉、语言和机器人动作）映射到统一的标记空间中，并通过基于变压器的去噪网络对它们进行建模。在本文中，我们提出 dWorldEval，使用离散扩散世界模型作为机器人政策的可扩展评估代理。具体来说，它将所有模式（包括视觉、语言和机器人动作）映射到统一的标记空间中，然后使用单个变压器网络对它们进行去噪。在此架构的基础上，我们采用稀疏关键帧内存来保持时空一致性。我们还引入了一个进度标记来指示任务完成的程度。在推理时，该模型联合预测未来的观察结果和进度标记，允许在进度达到 1 时自动确定成功。大量实验表明，dWorldEval 在 LIBERO、RoboTwin 和多个真实机器人任务上显着优于以前的方法，即 WorldEval、Ctrl-World 和 WorldGym。它为构建用于大规模机器人评估的世界模拟器的新架构范例铺平了道路。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22121v1" target="_blank">Characterizing pitch and roll torque coupling in insect-sized flapping-wing robots using a microfabricated gimbal</a></h3>
+  <p  class="title-zh">使用微制造的万向节表征昆虫大小的扑翼机器人的俯仰和横滚扭矩耦合</p>
+  <p  class="authors">Aaron Weber、Daksh Dhingra、Sawyer B. Fuller</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22121v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22121v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Sub-gram flapping-wing flying insect robots (FIRs) are challenging to model because of mechanical complexity in their wings, unsteady aerodynamic flow, and the difficulty of making precise measurements at a small scale. Coupling effects between roll and pitch torque actuation have not previously been measured because a two-axis sensor that is sensitive enough has not been realized. To address this shortcoming, we introduce a microfabricated gimbal design capable of precisely and simultaneously measuring roll and pitch torques as well as thrust. We then used it to measure the extent to which a pitch torque command affects roll torque and vice versa on a 180 mg piezo-actuated flapping-wing flying platform. Our results show a high coefficient of determination in the linear regression for both pitch (0.95) and roll (0.98) and low cross-correlation coefficients (-0.001 and -0.085, respectively) across the full range of simultaneous torque commands, indicating negligible cross-axis coupling. Similarly, thrust force deviates by a maximum of only 5.8% from the mean thrust value. These results validate the assumption that pitch and toll can be considered independently in control and will inform future models of how inputs affect the aerodynamics of resonant flapping-wing systems.</p>
+      <p class="abs-zh">亚克级扑翼飞行昆虫机器人 (FIR) 的建模具有挑战性，因为其翅膀的机械复杂性、不稳定的空气动力学流动以及在小规模下进行精确测量的难度。由于尚未实现足够灵敏的两轴传感器，因此之前尚未测量滚动和俯仰扭矩驱动之间的耦合效应。为了解决这个缺点，我们引入了一种微制造的万向节设计，能够精确地同时测量滚动和俯仰扭矩以及推力。然后，我们用它来测量在 180 mg 压电驱动扑翼飞行平台上俯仰扭矩命令对横滚扭矩的影响程度，反之亦然。我们的结果显示，在整个同步扭矩命令范围内，俯仰 (0.95) 和滚转 (0.98) 的线性回归的决定系数较高，互相关系数较低（分别为 -0.001 和 -0.085），表明跨轴耦合可以忽略不计。同样，推力与平均推力值的最大偏差仅为 5.8%。这些结果验证了在控制中可以独立考虑俯仰和费用的假设，并将为未来的模型提供输入如何影响共振扑翼系统空气动力学的信息。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.21984v2" target="_blank">Soft Anisotropic Diagrams for Differentiable Image Representation</a></h3>
+  <p  class="title-zh">用于可微分图像表示的软各向异性图</p>
+  <p  class="authors">Laki Iinbor、Zhiyang Dou、Wojciech Matusik</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.21984v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.21984v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">We introduce Soft Anisotropic Diagrams (SAD), an explicit and differentiable image representation parameterized by a set of adaptive sites in the image plane. In SAD, each site specifies an anisotropic metric and an additively weighted distance score, and we compute pixel colors as a softmax blend over a small per-pixel top-K subset of sites. We induce a soft anisotropic additively weighted Voronoi partition (i.e., an Apollonius diagram) with learnable per-site temperatures, preserving informative gradients while allowing clear, content-aligned boundaries and explicit ownership. Such a formulation enables efficient rendering by maintaining a per-query top-K map that approximates nearest neighbors under the same shading score, allowing GPU-friendly, fixed-size local computation. We update this list using our top-K propagation scheme inspired by jump flooding, augmented with stochastic injection to provide probabilistic global coverage. Training follows a GPU-first pipeline with gradient-weighted initialization, Adam optimization, and adaptive budget control through densification and pruning. Across standard benchmarks, SAD consistently outperforms Image-GS and Instant-NGP at matched bitrate. On Kodak, SAD reaches 46.0 dB PSNR with 2.2 s encoding time (vs. 28 s for Image-GS), and delivers 4-19 times end-to-end training speedups over state-of-the-art baselines. We demonstrate the effectiveness of SAD by showcasing the seamless integration with differentiable pipelines for forward and inverse problems, efficiency of fast random access, and compact storage.</p>
+      <p class="abs-zh">我们引入了软各向异性图（SAD），这是一种显式且可微分的图像表示，由图像平面中的一组自适应位点参数化。在 SAD 中，每个站点指定一个各向异性度量和一个附加加权距离分数，并且我们将像素颜色计算为每个像素前 K 个站点子集上的 softmax 混合。我们引入了具有可学习的每个站点温度的软各向异性附加加权沃罗诺伊分区（即阿波罗图），保留信息梯度，同时允许清晰的、内容对齐的边界和明确的所有权。这样的公式通过维护每个查询的前 K 个映射来实现高效渲染，该映射在相同着色分数下近似最近邻，从而允许 GPU 友好、固定大小的本地计算。我们使用受跳跃洪泛启发的 top-K 传播方案更新此列表，并通过随机注入增强以提供概率全局覆盖。训练遵循 GPU 优先的管道，具有梯度加权初始化、Adam 优化以及通过致密化和修剪进行的自适应预算控制。在标准基准测试中，SAD 在匹配的比特率下始终优于 Image-GS 和 Instant-NGP。在 Kodak 上，SAD 在编码时间为 2.2 秒（Image-GS 为 28 秒）的情况下达到 46.0 dB PSNR，并且与最先进的基线相比，端到端训练速度提高了 4-19 倍。我们通过展示与正向和逆向问题的可微管道的无缝集成、快速随机访问的效率以及紧凑存储来证明 SAD 的有效性。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22551v1" target="_blank">QDTraj: Exploration of Diverse Trajectory Primitives for Articulated Objects Robotic Manipulation</a></h3>
+  <p  class="title-zh">QDTraj：铰接物体机器人操作的多种轨迹基元的探索</p>
+  <p  class="authors">Mathilde Kappel、Mahdi Khoramshahi、Louis Annabi、Faiz Ben Amar、Stéphane Doncieux 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22551v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22551v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Thanks to the latest advances in learning and robotics, domestic robots are beginning to enter homes, aiming to execute household chores autonomously. However, robots still struggle to perform autonomous manipulation tasks in open-ended environments. In this context, this paper presents a method that enables a robot to manipulate a wide spectrum of articulated objects.   In this paper, we automatically generate different robot low-level trajectory primitives to manipulate given object articulations. A very important point when it comes to generating expert trajectories is to consider the diversity of solutions to achieve the same goal. Indeed, knowing diverse low-level primitives to accomplish the same task enables the robot to choose the optimal solution in its real-world environment, with live constraints and unexpected changes. To do so, we propose a method based on Quality-Diversity algorithms that leverages sparse reward exploration in order to generate a set of diverse and high-performing trajectory primitives for a given manipulation task.   We validated our method, QDTraj, by generating diverse trajectories in simulation and deploying them in the real world. QDTraj generates at least 5 times more diverse trajectories for both hinge and slider activation tasks, outperforming the other methods we compared against. We assessed the generalization of our method over 30 articulations of the PartNetMobility articulated object dataset, with an average of 704 different trajectories by task. Code is publicly available at: https://kappel.web.isir.upmc.fr/trajectory_primitive_website</p>
+      <p class="abs-zh">由于学习和机器人技术的最新进展，家用机器人开始进入家庭，旨在自主执行家务。然而，机器人仍然难以在开放环境中执行自主操作任务。在这种背景下，本文提出了一种使机器人能够操纵各种铰接物体的方法。   在本文中，我们自动生成不同的机器人低级轨迹基元来操纵给定的对象关节。在生成专家轨迹时，非常重要的一点是考虑实现同一目标的解决方案的多样性。事实上，了解完成相同任务的不同低级原语使机器人能够在现实环境中选择最佳解决方案，并具有实时约束和意外变化。为此，我们提出了一种基于质量多样性算法的方法，该方法利用稀疏奖励探索来为给定的操作任务生成一组多样化且高性能的轨迹基元。   我们通过在模拟中生成不同的轨迹并将其部署到现实世界中来验证我们的方法 QDTraj。 QDTraj 为铰链和滑块激活任务生成至少 5 倍多样化的轨迹，优于我们比较的其他方法。我们评估了我们的方法的泛化能力，超过了 PartNetMobility 关节对象数据集的 30 个关节，按任务平均有 704 个不同的轨迹。代码可公开获取：https://kappel.web.isir.upmc.fr/trajectory_primitive_website</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22526v1" target="_blank">Information-Theoretic Geometry Optimization and Physics-Aware Learning for Calibration-Free Magnetic Localization</a></h3>
+  <p  class="title-zh">用于免校准磁定位的信息论几何优化和物理感知学习</p>
+  <p  class="authors">Wenxuan Xie、Yuelin Zhang、Qingpeng Ding、Jianghua Chen、Jiewen Tan 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22526v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22526v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Wireless localization of permanent magnets enables occlusion-free guidance for medical interventions, yet its practical accuracy is fundamentally limited by two coupled challenges: the poor observability of conventional planar sensor arrays and the simulation-to-reality (Sim-to-Real) gap of learning-based estimators. To address these issues, this article presents a unified framework that combines information-theoretic sensor geometry optimization with physics-aware deep learning. First, a rigorous Fisher Information Matrix (FIM)-based evaluation framework is established to quantify geometry-induced observability limitations. The results show that a staggered split-array topology provides a substantially stronger observability foundation for localization while remaining compatible with practical external deployment. Second, building on this optimized sensing configuration, we propose Phy-GAANet, a calibration-free estimator trained entirely on hardware-aware synthetic data. By incorporating Physics-Informed Features (PIF) for saturation modeling and Geometry-Aware Attention (GAA) for preserving cross-layer vector structure, the network effectively bridges the Sim-to-Real gap. Extensive real-world experiments demonstrate state-of-the-art performance, achieving a position error of 1.84 mm and an orientation error of 3.18 degrees at a refresh rate exceeding 270 Hz. The proposed method consistently outperforms classical Levenberg--Marquardt solvers and generic convolutional baselines, particularly in suppressing catastrophic outliers and maintaining robustness in challenging near-field boundary regions. Beyond the proposed network, the FIM-guided analysis also provides a framework for sensor geometry design in magnetic localization systems under practical deployment constraints.</p>
+      <p class="abs-zh">永磁体的无线定位可以实现医疗干预的无遮挡引导，但其实际准确性从根本上受到两个相互关联的挑战的限制：传统平面传感器阵列的可观测性差以及基于学习的估计器的模拟与现实（Sim-to-Real）差距。为了解决这些问题，本文提出了一个统一的框架，将信息论传感器几何优化与物理感知深度学习相结合。首先，建立严格的基于费希尔信息矩阵（FIM）的评估框架来量化几何引起的可观测性限制。结果表明，交错分离阵列拓扑为定位提供了更强的可观察性基础，同时保持与实际外部部署的兼容性。其次，基于这种优化的传感配置，我们提出了 Phy-GAANet，这是一种完全基于硬件感知合成数据训练的免校准估计器。通过结合用于饱和建模的物理信息特征（PIF）和用于保留跨层向量结构的几何感知注意力（GAA），该网络有效地弥合了模拟到真实的差距。大量的实际实验证明了最先进的性能，在超过 270 Hz 的刷新率下实现了 1.84 毫米的位置误差和 3.18 度的方向误差。所提出的方法始终优于经典的 Levenberg-Marquardt 求解器和通用卷积基线，特别是在抑制灾难性异常值和在具有挑战性的近场边界区域中保持鲁棒性方面。除了所提出的网络之外，FIM 引导分析还为实际部署约束下磁定位系统中的传感器几何设计提供了框架。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22499v1" target="_blank">Decoding High-Dimensional Finger Motion from EMG Using Riemannian Features and RNNs</a></h3>
+  <p  class="title-zh">使用黎曼特征和 RNN 从 EMG 解码高维手指运动</p>
+  <p  class="authors">Martin Colot、Cédric Simar、Guy Cheron、Ana Maria Cebolla Alvarez、Gianluca Bontempi 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22499v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22499v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Continuous estimation of high-dimensional finger kinematics from forearm surface electromyography (EMG) could enable natural control for hand prostheses, AR/XR interfaces, and teleoperation. However, the complexity of human hand gestures and the entanglement of forearm muscles make accurate recognition intrinsically challenging. Existing approaches typically reduce task complexity by relying on classification-based machine learning, limiting the controllable degrees of freedom and compromising on natural interaction. We present an end-to-end framework for continuous EMG-to-kinematics regression using only consumer-grade hardware. The framework combines an 8-channel EMG armband, a single webcam, and an automatic synchronization procedure, enabling the collection of the EMG Finger-Kinematics dataset (EMG-FK), a 10-h dataset of synchronized EMG and 15 finger joint angles from 20 participants performing rich, unconstrained right-hand motions. We also introduce the Temporal Riemannian Regressor (TRR), a lightweight GRU-based model that uses sequences of multi-band Riemannian covariance features to decode finger motion. Across EMG-FK and the public emg2pose benchmark, TRR outperforms state-of-the-art methods in both intra- and cross-subject evaluation. On EMG-FK, it reaches an average absolute error of $9.79 °\pm 1.48$ in intra-subject and $16.71 °\pm 3.97$ in cross-subject. Finally, we demonstrate real-time deployment on a Raspberry Pi 5 and intuitive control of a robotic hand; TRR runs at nearly 10 predictions/s and is roughly an order of magnitude faster than state-of-the-art approaches. Together, these contributions lower the barrier to reproducible, real-time EMG-based decoding of high-dimensional finger motion, and pave the way toward more natural and intuitive control of embedded EMG-based systems.</p>
+      <p class="abs-zh">通过前臂表面肌电图 (EMG) 连续估计高维手指运动学可以实现对手假肢、AR/XR 接口和远程操作的自然控制。然而，人类手势的复杂性和前臂肌肉的纠缠使得准确识别本身具有挑战性。现有方法通常通过依赖基于分类的机器学习来降低任务复杂性，限制可控自由度并损害自然交互。我们提出了一个仅使用消费级硬件进行连续肌电图到运动学回归的端到端框架。该框架结合了 8 通道 EMG 臂带、单个网络摄像头和自动同步程序，能够收集 EMG 手指运动学数据集 (EMG-FK)、同步 EMG 的 10 小时数据集和来自 20 名执行丰富、无约束右手运动的参与者的 15 个手指关节角度。我们还介绍了时间黎曼回归器 (TRR)，这是一种基于 GRU 的轻量级模型，它使用多频带黎曼协方差特征序列来解码手指运动。在 EMG-FK 和公共 emg2pose 基准中，TRR 在受试者内和跨受试者评估方面均优于最先进的方法。在 EMG-FK 上，受试者内平均绝对误差为 $9.79 °\pm 1.48$，跨受试​​者平均绝对误差为 $16.71 °\pm 3.97$。最后，我们演示了在 Raspberry Pi 5 上的实时部署以及对机械手的直观控制； TRR 的运行速度接近 10 次预测/秒，比最先进的方法大约快一个数量级。总之，这些贡献降低了对高维手指运动进行可重复、基于肌电图的实时解码的障碍，并为更加自然和直观地控制基于肌电图的嵌入式系统铺平了道路。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="其他" style="border-left:4px solid #95a5a6">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#95a5a6">其他</span></div>
+    <span class="pub-date">2026-04-24</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22244v1" target="_blank">Learning Control Policies to Provably Satisfy Hard Affine Constraints for Black-Box Hybrid Dynamical Systems</a></h3>
+  <p  class="title-zh">学习控制策略可证明满足黑盒混合动力系统的硬仿射约束</p>
+  <p  class="authors">Aayushi Shrivastava、Kartik Nagpal、Sairam Jinkala、Jean-Baptiste Bouvier、Negar Mehr 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22244v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22244v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Ensuring safety for black-box hybrid dynamical systems presents significant challenges due to their instantaneous state jumps and unknown explicit nonlinear dynamics. Existing solutions for strict safety constraint satisfaction, like control barrier functions (CBFs) and reachability analysis, rely on direct knowledge of the dynamics. Similarly, safe reinforcement learning (RL) approaches often rely on known system dynamics or merely discourage safety violations through reward shaping. In this work, we want to learn RL policies which provably satisfy affine state constraints in closed loop for black-box hybrid dynamical systems with affine reset maps. Our key insight is forcing the RL policy to be affine and repulsive near the constraint boundaries for the unknown nonlinear dynamics of the system, providing guarantees that the trajectories will not violate the constraint. We further account for constraint violation due to instantaneous state jumps that occur due to impacts or reset maps in the hybrid system by introducing a second repulsive affine region before the reset that prevents post-reset states from violating the constraint. We derive sufficient conditions under which these policies satisfy safety constraints in closed loop. We also compare our approach with state-of-the-art reward shaping and learned-CBF methods on hybrid dynamical systems like the constrained pendulum and paddle juggler environments. In both scenarios, we show that our methodology learns higher quality policies while always satisfying the safety constraints.</p>
+      <p class="abs-zh">由于黑盒混合动力系统的瞬时状态跳跃和未知的显式非线性动力学，确保其安全性提出了重大挑战。满足严格安全约束的现有解决方案，例如控制屏障函数 (CBF) 和可达性分析，依赖于对动态的直接了解。同样，安全强化学习（RL）方法通常依赖于已知的系统动力学，或者仅仅通过奖励塑造来阻止安全违规。在这项工作中，我们希望学习可证明满足具有仿射重置图的黑盒混合动力系统闭环中仿射状态约束的强化学习策略。我们的主要见解是，对于系统的未知非线性动力学，迫使强化学习策略在约束边界附近具有仿射和排斥性，从而保证轨迹不会违反约束。我们通过在重置之前引入第二个排斥仿射区域来进一步解释由于混合系统中的影响或重置映射而发生的瞬时状态跳跃而导致的约束违反，以防止重置后状态违反约束。我们得出了这些策略满足闭环安全约束的充分条件。我们还将我们的方法与混合动力系统（如约束摆和桨杂耍环境）上最先进的奖励塑造和学习 CBF 方法进行了比较。在这两种情况下，我们都表明我们的方法可以学习更高质量的策略，同时始终满足安全约束。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22104v1" target="_blank">Dynamic Coupling and Indirect Control of Jointed Robots Rolling Atop A Moving Platform</a></h3>
+  <p  class="title-zh">移动平台上滚动的关节机器人的动态耦合和间接控制</p>
+  <p  class="authors">Hamidreza Moradi、Scott David Kelly</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22104v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22104v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">An asymmetric two-link robot supported atop a flat platform by wheels that roll and pivot freely, but do not slip laterally, will develop forward momentum if the joint between the links is actuated internally. In particular, oscillations in the joint angle will generate undulatory locomotion suggesting fishlike swimming. If two such robots surmount a common platform that's free to translate with its own inertial dynamics, then the individual robots' dynamics will be coupled so that the locomotion of either robot is affected by that of the other. We develop a mathematical model for this system and present simulations demonstrating its behavior. We then consider a single robot with an unactuated joint rolling atop a platform that moves under control, and show that actuation of the platform is sufficient to dictate the robot's behavior. In particular, with the acceleration of the platform as an input, the robot's heading can be made to track a chosen function of time. This is sufficient to guarantee that the robot can be induced to orbit a fixed point on the platform or to locomote persistently in a desired direction.</p>
+      <p class="abs-zh">一个不对称的双连杆机器人由轮子支撑在平坦的平台上，这些轮子可以自由滚动和枢转，但不会横向滑动，如果连杆之间的关节在内部被驱动，它将产生向前的动量。特别是，关节角度的振荡会产生波动性运动，暗示鱼状游动。如果两个这样的机器人跨越一个可以以其自身惯性动力学自由平移的公共平台，那么各个机器人的动力学将耦合，使得任一机器人的运动受到另一个机器人的运动的影响。我们为该系统开发了一个数学模型，并通过模拟演示了其行为。然后，我们考虑一个具有未驱动关节的机器人，该机器人在受控移动的平台上滚动，并表明平台的驱动足以决定机器人的行为。特别是，以平台的加速度作为输入，可以使机器人的航向跟踪选定的时间函数。这足以保证机器人可以被诱导绕平台上的固定点运行或沿所需方向持续移动。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|机器人视觉" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22102v1" target="_blank">Wiggle and Go! System Identification for Zero-Shot Dynamic Rope Manipulation</a></h3>
+  <p  class="title-zh">摇摆起来！零次动态绳索操纵的系统辨识</p>
+  <p  class="authors">Arthur Jakobsson、Abhinav Mahajan、Karthik Pullalarevu、Krishna Suresh、Yunchao Yao 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22102v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22102v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Many robotic tasks are unforgiving; a single mistake in a dynamic throw can lead to unacceptable delays or unrecoverable failure. To mitigate this, we present a novel approach that leverages learned simulation priors to inform goal-conditioned dynamic manipulation of ropes for efficient and accurate task execution. Related methods for dynamic rope manipulation either require large real-world datasets to estimate rope behavior or the use of iterative improvements on attempts at the task for goal completion. We introduce Wiggle and Go!, a system-identification, two-stage framework that enables zero-shot task rope manipulation. The framework consists of a system identification module that observes rope movement to predict descriptive physical parameters, which then informs an optimization method for goal-conditioned action prediction for the robot to execute zero-shot in the real. Our method achieves strong performance across multiple dynamic manipulation tasks enabled by the same task-agnostic system identification module which offers seamless switching between different manipulation tasks, allowing a single model to support a diverse array of manipulation policies. We achieve a 3.55 cm average accuracy on 3D target striking in real using rope system parameters in comparison to 15.34 cm accuracy when our task model is not system-parameter-informed. We achieve a Pearson correlation coefficient of 0.95 between Fourier frequencies of the predicted and real ropes on an unseen trajectory. Project website please see https://wiggleandgo.github.io/</p>
+      <p class="abs-zh">许多机器人任务都是无情的。动态投掷中的单个错误可能会导致不可接受的延迟或无法恢复的故障。为了缓解这一问题，我们提出了一种新颖的方法，该方法利用学习的模拟先验来通知绳索的目标条件动态操作，以实现高效、准确的任务执行。动态绳索操纵的相关方法要么需要大量的现实世界数据集来估计绳索行为，要么在尝试完成目标任务时使用迭代改进。我们推出了 Wiggle 和 Go!，这是一种系统识别、两阶段框架，可实现零样本任务绳操纵。该框架由一个系统识别模块组成，该模块观察绳索运动以预测描述性物理参数，然后为机器人提供目标条件动作预测的优化方法，以在现实中执行零射击。我们的方法通过相同的任务无关系统识别模块实现了跨多个动态操作任务的强大性能，该模块提供了不同操作任务之间的无缝切换，允许单个模型支持多种操作策略。使用绳索系统参数，我们在实际 3D 目标打击中实现了 3.55 厘米的平均准确度，而当我们的任务模型未了解系统参数时，准确度为 15.34 厘米。我们在未见轨迹上预测绳索和真实绳索的傅立叶频率之间实现了 0.95 的皮尔逊相关系数。项目网站请参见https://wiggleandgo.github.io/</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-04-23</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2604.22068v1" target="_blank">TRACE: Topology-aware Reconstruction of Accidents in CARLA for AV Evaluation</a></h3>
+  <p  class="title-zh">TRACE：CARLA 中事故的拓扑感知重建用于 AV 评估</p>
+  <p  class="authors">Nahian Salsabil、Sebastian Elbaum</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2604.22068v1" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2604.22068v1"   target="_blank" class="btn btn-pdf">PDF</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Validating Autonomous Vehicles (AVs) requires exposure to rare, safety-critical scenarios, infrequent in routine driving data. Existing benchmarks address this by generating synthetic conflicts or mapping accident descriptions to abstract road geometries, failing to capture the topological complexity of real-world crashes. We introduce TRACE , a pipeline that automates the reconstruction of NHTSA crash reports into high-fidelity CARLA simulations by (1) retrieving site-specific OpenStreetMap data to preserve exact road topology, (2) leveraging Large Language Models to infer vehicles' initial state from road geometry and pre-crash maneuvers, and (3) generating simulation trajectories from semi-structured report data. Using this pipeline, we curated a benchmark of 52 diverse accident scenarios covering varied collision types, road topologies, and pre-crash maneuvers, providing a challenging open source resource for testing AV systems against real-world failures.</p>
+      <p class="abs-zh">验证自动驾驶汽车 (AV) 需要接触罕见的、安全关键的场景，这些场景在日常驾驶数据中并不常见。现有的基准通过生成综合冲突或将事故描述映射到抽象的道路几何形状来解决这个问题，无法捕捉现实世界碰撞的拓扑复杂性。我们引入了 TRACE，这是一个管道，可通过以下方式自动将 NHTSA 碰撞报告重建为高保真 CARLA 模拟：(1) 检索特定地点的 OpenStreetMap 数据以保留准确的道路拓扑结构，(2) 利用大型语言模型从道路几何形状和碰撞前操作推断车辆的初始状态，以及 (3) 从半结构化报告数据生成模拟轨迹。使用该管道，我们策划了 52 个不同事故场景的基准，涵盖不同的碰撞类型、道路拓扑和预碰撞操作，为测试 AV 系统针对现实世界故障提供了具有挑战性的开源资源。</p>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="no-result" id="empty" style="display:none">没有找到匹配的论文 🤔</div>
+</div>
+
+<script>
+var curFilter='all', curSearch='';
+
+function filterBy(cat, btn){
+  curFilter=cat;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  apply();
+}
+
+function onSearch(q){
+  curSearch=q.trim().toLowerCase();
+  apply();
+}
+
+function apply(){
+  var cards=document.querySelectorAll('.card');
+  var shown=0;
+  cards.forEach(function(c){
+    var cats=c.dataset.cats;
+    var titleEn=c.querySelector('.title-en').textContent.toLowerCase();
+    var titleZh=c.querySelector('.title-zh').textContent.toLowerCase();
+    var matchCat=(curFilter==='all'||cats.split('|').indexOf(curFilter)>=0);
+    var matchQ=!curSearch||(titleEn.indexOf(curSearch)>=0||titleZh.indexOf(curSearch)>=0);
+    var show=matchCat&&matchQ;
+    c.style.display=show?'':'none';
+    if(show) shown++;
+  });
+  document.getElementById('cnt').textContent='显示 '+shown+' 篇论文';
+  document.getElementById('empty').style.display=shown?'none':'block';
+}
+
+function toggle(btn){
+  var body=btn.nextElementSibling;
+  var open=!body.hidden;
+  body.hidden=open;
+  btn.textContent=open?'展开摘要 ▾':'收起摘要 ▴';
+}
+</script>
+</body>
+</html>
