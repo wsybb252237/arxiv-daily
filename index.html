@@ -20,13 +20,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 
 .content{max-width:720px;margin:0 auto;padding:24px 16px}
 
-.month-section{margin-bottom:28px}
-.month-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;padding:0 4px}
-.month-title{font-size:16px;font-weight:700;color:#7dd8ff;letter-spacing:1px;text-shadow:0 0 12px rgba(56,182,255,.35)}
-.month-count{font-size:12px;color:rgba(255,255,255,.55)}
-.month-cards{background:rgba(255,255,255,.10);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.20);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.12)}
+.year-block{margin-bottom:20px}
+.year-header{display:flex;align-items:center;gap:10px;padding:12px 16px;background:rgba(0,20,60,.45);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);border-radius:12px;cursor:pointer;transition:background .18s;user-select:none}
+.year-header:hover{background:rgba(0,30,80,.55)}
+.year-label{font-size:18px;font-weight:800;color:#7dd8ff;letter-spacing:2px;text-shadow:0 0 14px rgba(56,182,255,.45)}
+.year-meta{font-size:12px;color:rgba(255,255,255,.60);flex:1}
+.year-arrow{color:rgba(255,255,255,.55);font-size:16px;transition:transform .2s}
+.year-block.collapsed .year-header{border-radius:12px}
+.year-body{padding-top:10px}
 
-.day-card{display:flex;align-items:center;padding:15px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(255,255,255,.10);transition:background .15s;touch-action:manipulation}
+.month-section{margin-bottom:16px}
+.month-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;padding:0 4px}
+.month-title{font-size:14px;font-weight:700;color:#a8d8f0;letter-spacing:1px}
+.month-count{font-size:12px;color:rgba(255,255,255,.50)}
+.month-cards{background:rgba(255,255,255,.10);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.20);border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.12)}
+
+.day-card{display:flex;align-items:center;padding:14px 18px;text-decoration:none;color:inherit;border-bottom:1px solid rgba(255,255,255,.10);transition:background .15s;touch-action:manipulation}
 .day-card:last-child{border-bottom:none}
 .day-card:hover{background:rgba(255,255,255,.08)}
 
@@ -37,7 +46,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .day-card-body{flex:1;padding:0 14px}
 .day-total{font-size:13px;font-weight:600;color:rgba(255,255,255,.80);margin-bottom:7px}
 .day-cats{display:flex;flex-wrap:wrap;gap:5px}
-.cat-tag{padding:2px 9px;border-radius:8px;font-size:11px;font-weight:700;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.45);box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.cat-tag{padding:2px 9px;border-radius:8px;font-size:11px;font-weight:700;white-space:nowrap;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.50);box-shadow:0 2px 8px rgba(0,0,0,.35)}
 
 .day-arrow{color:rgba(255,255,255,.40);font-size:22px;flex-shrink:0}
 
@@ -47,6 +56,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   .hd-title{font-size:22px;letter-spacing:3px}
   .day-card-left{width:46px}
   .day-date{font-size:14px}
+  .year-label{font-size:16px}
 }
 </style>
 </head>
@@ -56,15 +66,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <div class="hd">
   <div class="hd-title">◈ ARXIV · REMOTE SENSING ◈</div>
   <div class="tagline">SATELLITE · EARTH OBSERVATION · DAILY PAPERS</div>
-  <div class="updated">最后更新：2026年04月28日 12:37</div>
+  <div class="updated">最后更新：2026年04月28日 12:41</div>
 </div>
 <div class="summary">共收录 <span>5</span> 天 · <span>857</span> 篇论文</div>
 <div class="content">
   
+<div class="year-block">
+  <div class="year-header" onclick="toggleYear(this)">
+    <span class="year-label">2026 年</span>
+    <span class="year-meta">5 天 · 857 篇</span>
+    <span class="year-arrow">▾</span>
+  </div>
+  <div class="year-body">
 <div class="month-section">
   <div class="month-header">
-    <span class="month-title">2026年04月</span>
-    <span class="month-count">5 天 · 共 857 篇</span>
+    <span class="month-title">04月</span>
+    <span class="month-count">5 天 · 857 篇</span>
   </div>
   <div class="month-cards">
 <a href="2026-04/daily_papers_20260428.html" class="day-card">
@@ -74,7 +91,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   </div>
   <div class="day-card-body">
     <div class="day-total">33 篇论文</div>
-    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c20;color:#e74c3c;border:1px solid #e74c3c40">目标检测/分割 15</span><span class="cat-tag" style="background:#3498db20;color:#3498db;border:1px solid #3498db40">多模态/VLM 12</span><span class="cat-tag" style="background:#9b59b620;color:#9b59b6;border:1px solid #9b59b640">生成模型/扩散 2</span><span class="cat-tag" style="background:#1abc9c20;color:#1abc9c;border:1px solid #1abc9c40">3D视觉 4</span><span class="cat-tag" style="background:#e67e2220;color:#e67e22;border:1px solid #e67e2240">视频理解 1</span><span class="cat-tag" style="background:#27ae6020;color:#27ae60;border:1px solid #27ae6040">机器人视觉 24</span><span class="cat-tag" style="background:#e91e6320;color:#e91e63;border:1px solid #e91e6340">医学图像 1</span><span class="cat-tag" style="background:#f39c1220;color:#f39c12;border:1px solid #f39c1240">遥感 3</span><span class="cat-tag" style="background:#95a5a620;color:#95a5a6;border:1px solid #95a5a640">其他 2</span></div>
+    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c;color:#fff;opacity:0.92">目标检测/分割 15</span><span class="cat-tag" style="background:#3498db;color:#fff;opacity:0.92">多模态/VLM 12</span><span class="cat-tag" style="background:#9b59b6;color:#fff;opacity:0.92">生成模型/扩散 2</span><span class="cat-tag" style="background:#1abc9c;color:#fff;opacity:0.92">3D视觉 4</span><span class="cat-tag" style="background:#e67e22;color:#fff;opacity:0.92">视频理解 1</span><span class="cat-tag" style="background:#27ae60;color:#fff;opacity:0.92">机器人视觉 24</span><span class="cat-tag" style="background:#e91e63;color:#fff;opacity:0.92">医学图像 1</span><span class="cat-tag" style="background:#f39c12;color:#fff;opacity:0.92">遥感 3</span><span class="cat-tag" style="background:#95a5a6;color:#fff;opacity:0.92">其他 2</span></div>
   </div>
   <div class="day-arrow">›</div>
 </a>
@@ -85,7 +102,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   </div>
   <div class="day-card-body">
     <div class="day-total">113 篇论文</div>
-    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c20;color:#e74c3c;border:1px solid #e74c3c40">目标检测/分割 62</span><span class="cat-tag" style="background:#3498db20;color:#3498db;border:1px solid #3498db40">多模态/VLM 57</span><span class="cat-tag" style="background:#9b59b620;color:#9b59b6;border:1px solid #9b59b640">生成模型/扩散 23</span><span class="cat-tag" style="background:#1abc9c20;color:#1abc9c;border:1px solid #1abc9c40">3D视觉 26</span><span class="cat-tag" style="background:#e67e2220;color:#e67e22;border:1px solid #e67e2240">视频理解 11</span><span class="cat-tag" style="background:#27ae6020;color:#27ae60;border:1px solid #27ae6040">机器人视觉 45</span><span class="cat-tag" style="background:#e91e6320;color:#e91e63;border:1px solid #e91e6340">医学图像 12</span><span class="cat-tag" style="background:#f39c1220;color:#f39c12;border:1px solid #f39c1240">遥感 17</span><span class="cat-tag" style="background:#95a5a620;color:#95a5a6;border:1px solid #95a5a640">其他 7</span></div>
+    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c;color:#fff;opacity:0.92">目标检测/分割 62</span><span class="cat-tag" style="background:#3498db;color:#fff;opacity:0.92">多模态/VLM 57</span><span class="cat-tag" style="background:#9b59b6;color:#fff;opacity:0.92">生成模型/扩散 23</span><span class="cat-tag" style="background:#1abc9c;color:#fff;opacity:0.92">3D视觉 26</span><span class="cat-tag" style="background:#e67e22;color:#fff;opacity:0.92">视频理解 11</span><span class="cat-tag" style="background:#27ae60;color:#fff;opacity:0.92">机器人视觉 45</span><span class="cat-tag" style="background:#e91e63;color:#fff;opacity:0.92">医学图像 12</span><span class="cat-tag" style="background:#f39c12;color:#fff;opacity:0.92">遥感 17</span><span class="cat-tag" style="background:#95a5a6;color:#fff;opacity:0.92">其他 7</span></div>
   </div>
   <div class="day-arrow">›</div>
 </a>
@@ -96,7 +113,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   </div>
   <div class="day-card-body">
     <div class="day-total">111 篇论文</div>
-    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c20;color:#e74c3c;border:1px solid #e74c3c40">目标检测/分割 56</span><span class="cat-tag" style="background:#3498db20;color:#3498db;border:1px solid #3498db40">多模态/VLM 40</span><span class="cat-tag" style="background:#9b59b620;color:#9b59b6;border:1px solid #9b59b640">生成模型/扩散 30</span><span class="cat-tag" style="background:#27ae6020;color:#27ae60;border:1px solid #27ae6040">机器人视觉 13</span><span class="cat-tag" style="background:#f39c1220;color:#f39c12;border:1px solid #f39c1240">遥感 16</span><span class="cat-tag" style="background:#95a5a620;color:#95a5a6;border:1px solid #95a5a640">其他 15</span></div>
+    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c;color:#fff;opacity:0.92">目标检测/分割 56</span><span class="cat-tag" style="background:#3498db;color:#fff;opacity:0.92">多模态/VLM 40</span><span class="cat-tag" style="background:#9b59b6;color:#fff;opacity:0.92">生成模型/扩散 30</span><span class="cat-tag" style="background:#27ae60;color:#fff;opacity:0.92">机器人视觉 13</span><span class="cat-tag" style="background:#f39c12;color:#fff;opacity:0.92">遥感 16</span><span class="cat-tag" style="background:#95a5a6;color:#fff;opacity:0.92">其他 15</span></div>
   </div>
   <div class="day-arrow">›</div>
 </a>
@@ -107,7 +124,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   </div>
   <div class="day-card-body">
     <div class="day-total">300 篇论文</div>
-    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c20;color:#e74c3c;border:1px solid #e74c3c40">目标检测/分割 123</span><span class="cat-tag" style="background:#3498db20;color:#3498db;border:1px solid #3498db40">多模态/VLM 101</span><span class="cat-tag" style="background:#9b59b620;color:#9b59b6;border:1px solid #9b59b640">生成模型/扩散 74</span><span class="cat-tag" style="background:#27ae6020;color:#27ae60;border:1px solid #27ae6040">机器人视觉 34</span><span class="cat-tag" style="background:#f39c1220;color:#f39c12;border:1px solid #f39c1240">遥感 42</span><span class="cat-tag" style="background:#95a5a620;color:#95a5a6;border:1px solid #95a5a640">其他 61</span></div>
+    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c;color:#fff;opacity:0.92">目标检测/分割 123</span><span class="cat-tag" style="background:#3498db;color:#fff;opacity:0.92">多模态/VLM 101</span><span class="cat-tag" style="background:#9b59b6;color:#fff;opacity:0.92">生成模型/扩散 74</span><span class="cat-tag" style="background:#27ae60;color:#fff;opacity:0.92">机器人视觉 34</span><span class="cat-tag" style="background:#f39c12;color:#fff;opacity:0.92">遥感 42</span><span class="cat-tag" style="background:#95a5a6;color:#fff;opacity:0.92">其他 61</span></div>
   </div>
   <div class="day-arrow">›</div>
 </a>
@@ -118,10 +135,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   </div>
   <div class="day-card-body">
     <div class="day-total">300 篇论文</div>
-    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c20;color:#e74c3c;border:1px solid #e74c3c40">目标检测/分割 132</span><span class="cat-tag" style="background:#3498db20;color:#3498db;border:1px solid #3498db40">多模态/VLM 97</span><span class="cat-tag" style="background:#9b59b620;color:#9b59b6;border:1px solid #9b59b640">生成模型/扩散 77</span><span class="cat-tag" style="background:#27ae6020;color:#27ae60;border:1px solid #27ae6040">机器人视觉 37</span><span class="cat-tag" style="background:#f39c1220;color:#f39c12;border:1px solid #f39c1240">遥感 42</span><span class="cat-tag" style="background:#95a5a620;color:#95a5a6;border:1px solid #95a5a640">其他 63</span></div>
+    <div class="day-cats"><span class="cat-tag" style="background:#e74c3c;color:#fff;opacity:0.92">目标检测/分割 132</span><span class="cat-tag" style="background:#3498db;color:#fff;opacity:0.92">多模态/VLM 97</span><span class="cat-tag" style="background:#9b59b6;color:#fff;opacity:0.92">生成模型/扩散 77</span><span class="cat-tag" style="background:#27ae60;color:#fff;opacity:0.92">机器人视觉 37</span><span class="cat-tag" style="background:#f39c12;color:#fff;opacity:0.92">遥感 42</span><span class="cat-tag" style="background:#95a5a6;color:#fff;opacity:0.92">其他 63</span></div>
   </div>
   <div class="day-arrow">›</div>
 </a></div>
+</div></div>
 </div>
 </div>
 
@@ -280,6 +298,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   }
   frame();
 })();
+
+function toggleYear(hdr){
+  var block=hdr.parentElement;
+  var body=block.querySelector('.year-body');
+  var arrow=hdr.querySelector('.year-arrow');
+  var open=body.style.display!=='none';
+  body.style.display=open?'none':'';
+  arrow.textContent=open?'▸':'▾';
+  block.classList.toggle('collapsed',open);
+}
 </script>
 </body>
 </html>
