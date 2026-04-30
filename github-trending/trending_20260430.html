@@ -114,17 +114,26 @@ body{
 /* 操作行 */
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;}
 .btn{
-  padding:5px 14px;border-radius:6px;font-size:12px;font-weight:500;
-  text-decoration:none;border:1px solid;transition:all .15s;
-  white-space:nowrap;
+  padding:4px 12px;border-radius:6px;font-size:12px;font-weight:500;
+  text-decoration:none;border:1px solid;transition:all .15s;white-space:nowrap;
 }
-.btn-gh{
-  background:#fff;color:#0969da;border-color:#0969da;
-}
+.btn-gh{background:#fff;color:#0969da;border-color:#0969da;}
 .btn-gh:hover{background:#0969da;color:#fff;}
+.btn-readme{background:#fff;color:#1a7f37;border-color:#1a7f37;}
+.btn-readme:hover{background:#1a7f37;color:#fff;}
+.btn-issues{background:#fff;color:#9a6700;border-color:#bf8700;}
+.btn-issues:hover{background:#9a6700;color:#fff;}
+.stat-sep{flex:1;}
 .stat-item{font-size:12px;color:#656d76;}
 .lang-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#656d76;}
 .lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;}
+.topics{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
+.topic-tag{
+  font-size:11px;padding:2px 9px;border-radius:12px;
+  background:#ddf4ff;color:#0969da;text-decoration:none;
+  border:1px solid #54aeff4d;transition:background .15s;
+}
+.topic-tag:hover{background:#b6e3ff;}
 
 .no-result{text-align:center;padding:60px 20px;color:#9ba1aa;font-size:14px;display:none;}
 
@@ -141,7 +150,7 @@ body{
 <body>
 
 <div class="nav">
-  <a href="../github_trending.html" class="nav-home">← 返回归档</a>
+  <a href="../trending/" class="nav-home">← 返回归档</a>
   <span class="nav-date">2026年04月30日 · 周四</span>
 </div>
 
@@ -173,9 +182,13 @@ body{
       <span class="badge-today">▲ 8.3k stars today</span>
     </div>
     <p class="desc-en">Warp is an agentic development environment, born out of the terminal.</p><p class="desc-zh">Warp 是一个代理开发环境，脱胎于终端。</p>
+    
     <div class="actions">
-      <a href="https://github.com/warpdotdev/warp" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
-      <span class="stat-item">★ 47.4k</span>
+      <a href="https://github.com/warpdotdev/warp" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/warpdotdev/warp/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/warpdotdev/warp/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 47.5k</span>
       <span class="stat-item">⑂ 3.0k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
     </div>
@@ -193,9 +206,13 @@ body{
       <span class="badge-today">▲ 386 stars today</span>
     </div>
     <p class="desc-en">TradingAgents: Multi-Agents LLM Financial Trading Framework</p><p class="desc-zh">TradingAgents：多代理LLM金融交易框架</p>
+    
     <div class="actions">
-      <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
-      <span class="stat-item">★ 56.6k</span>
+      <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 56.7k</span>
       <span class="stat-item">⑂ 10.6k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
     </div>
@@ -213,9 +230,13 @@ body{
       <span class="badge-today">▲ 6.2k stars today</span>
     </div>
     <p class="desc-en">Skills for Real Engineers. Straight from my .claude directory.</p><p class="desc-zh">真正工程师的技能。直接来自我的 .claude 目录。</p>
+    
     <div class="actions">
-      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
-      <span class="stat-item">★ 47.6k</span>
+      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mattpocock/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mattpocock/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 47.7k</span>
       <span class="stat-item">⑂ 3.9k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
     </div>
@@ -233,8 +254,12 @@ body{
       <span class="badge-today">▲ 1.6k stars today</span>
     </div>
     <p class="desc-en">An agentic skills framework &amp;amp; software development methodology that works.</p><p class="desc-zh">代理技能框架和有效的软件开发方法。</p>
+    
     <div class="actions">
-      <a href="https://github.com/obra/superpowers" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/obra/superpowers" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/obra/superpowers/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/obra/superpowers/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 174.1k</span>
       <span class="stat-item">⑂ 15.4k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
@@ -253,8 +278,12 @@ body{
       <span class="badge-today">▲ 314 stars today</span>
     </div>
     <p class="desc-en"><span class="no-desc">暂无描述</span></p>
+    
     <div class="actions">
-      <a href="https://github.com/lukilabs/craft-agents-oss" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/lukilabs/craft-agents-oss" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/lukilabs/craft-agents-oss/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/lukilabs/craft-agents-oss/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 5.5k</span>
       <span class="stat-item">⑂ 732</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
@@ -273,8 +302,12 @@ body{
       <span class="badge-today">▲ 307 stars today</span>
     </div>
     <p class="desc-en">A collective list of free APIs</p><p class="desc-zh">免费 API 集合列表</p>
+    
     <div class="actions">
-      <a href="https://github.com/public-apis/public-apis" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/public-apis/public-apis" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/public-apis/public-apis/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/public-apis/public-apis/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 429.1k</span>
       <span class="stat-item">⑂ 46.8k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
@@ -293,10 +326,14 @@ body{
       <span class="badge-today">▲ 670 stars today</span>
     </div>
     <p class="desc-en">Coding Agent Harness</p><p class="desc-zh">编码剂线束</p>
+    
     <div class="actions">
-      <a href="https://github.com/1jehuang/jcode" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/1jehuang/jcode" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/1jehuang/jcode/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/1jehuang/jcode/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 1.7k</span>
-      <span class="stat-item">⑂ 152</span>
+      <span class="stat-item">⑂ 153</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
     </div>
   </div>
@@ -313,8 +350,12 @@ body{
       <span class="badge-today">▲ 723 stars today</span>
     </div>
     <p class="desc-en">🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites</p><p class="desc-zh">🕵️‍♂️ 从 3000 多个网站按用户名收集某人的档案</p>
+    
     <div class="actions">
-      <a href="https://github.com/soxoj/maigret" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/soxoj/maigret" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/soxoj/maigret/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/soxoj/maigret/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 20.6k</span>
       <span class="stat-item">⑂ 1.4k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
@@ -333,9 +374,13 @@ body{
       <span class="badge-today">▲ 830 stars today</span>
     </div>
     <p class="desc-en">Useful tool to track location or mobile number</p><p class="desc-zh">跟踪位置或手机号码的有用工具</p>
+    
     <div class="actions">
-      <a href="https://github.com/HunxByts/GhostTrack" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
-      <span class="stat-item">★ 11.9k</span>
+      <a href="https://github.com/HunxByts/GhostTrack" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/HunxByts/GhostTrack/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/HunxByts/GhostTrack/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 12.0k</span>
       <span class="stat-item">⑂ 1.6k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
     </div>
@@ -353,8 +398,12 @@ body{
       <span class="badge-today">▲ 799 stars today</span>
     </div>
     <p class="desc-en">🪐 Markdown with superpowers: from ideas to papers, presentations, websites, books, and knowledge bases.</p><p class="desc-zh">🪐 具有超能力的 Markdown：从想法到论文、演示文稿、网站、书籍和知识库。</p>
+    
     <div class="actions">
-      <a href="https://github.com/iamgio/quarkdown" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/iamgio/quarkdown" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/iamgio/quarkdown/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/iamgio/quarkdown/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 12.7k</span>
       <span class="stat-item">⑂ 343</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#A97BFF"></span><span class="lang-name">Kotlin</span></span>
@@ -372,9 +421,13 @@ body{
       </a>
       <span class="badge-today">▲ 411 stars today</span>
     </div>
-    <p class="desc-en">👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.</p><p class="desc-zh">👻 Ghostty 是一款快速、功能丰富的跨平台终端模拟器，使用平台本机 UI 和 GPU 加速。</p>
+    <p class="desc-en">👻 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.</p><p class="desc-zh">👻 Ghostty 是一款快速、功能丰富的跨平台终端模拟器，它使用平台本机 UI 和 GPU 加速。</p>
+    
     <div class="actions">
-      <a href="https://github.com/ghostty-org/ghostty" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/ghostty-org/ghostty" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ghostty-org/ghostty/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ghostty-org/ghostty/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 52.5k</span>
       <span class="stat-item">⑂ 2.5k</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#ec915c"></span><span class="lang-name">Zig</span></span>
@@ -393,8 +446,12 @@ body{
       <span class="badge-today">▲ 133 stars today</span>
     </div>
     <p class="desc-en">Video discussing this curriculum:</p><p class="desc-zh">讨论该课程的视频：</p>
+    
     <div class="actions">
-      <a href="https://github.com/ForrestKnight/open-source-cs" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
+      <a href="https://github.com/ForrestKnight/open-source-cs" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ForrestKnight/open-source-cs/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ForrestKnight/open-source-cs/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
       <span class="stat-item">★ 22.2k</span>
       <span class="stat-item">⑂ 3.2k</span>
       
@@ -413,9 +470,13 @@ body{
       <span class="badge-today">▲ 54 stars today</span>
     </div>
     <p class="desc-en">Claude Agent SDK with a web browsing tool</p><p class="desc-zh">Claude Agent SDK 带有网页浏览工具</p>
+    
     <div class="actions">
-      <a href="https://github.com/browserbase/skills" target="_blank" class="btn btn-gh">GitHub 仓库 →</a>
-      <span class="stat-item">★ 673</span>
+      <a href="https://github.com/browserbase/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/browserbase/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/browserbase/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 679</span>
       <span class="stat-item">⑂ 54</span>
       <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
     </div>

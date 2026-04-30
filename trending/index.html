@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Trending · 归档</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:#f6f8fa;color:#1f2328;font-size:15px;min-height:100vh;
+}
+
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;background:#fff;border-bottom:1px solid #d0d7de;
+  position:sticky;top:0;z-index:99;
+}
+.nav-arxiv{
+  color:#0969da;font-size:13px;text-decoration:none;font-weight:500;
+  padding:5px 12px;border-radius:6px;border:1px solid #d0d7de;
+  background:#fff;transition:background .15s,border-color .15s;
+}
+.nav-arxiv:hover{background:#f3f4f6;border-color:#0969da;}
+.nav-upd{font-size:12px;color:#9ba1aa;}
+
+.hd{
+  background:#fff;border-bottom:1px solid #d0d7de;
+  padding:36px 24px 28px;text-align:center;
+}
+.hd-title{font-size:26px;font-weight:700;color:#1f2328;}
+.hd-title em{font-style:normal;color:#0969da;}
+.hd-sub{margin-top:6px;font-size:12px;color:#9ba1aa;letter-spacing:1.5px;}
+.hd-chip{
+  display:inline-block;margin-top:12px;
+  padding:4px 16px;border-radius:20px;
+  background:#ddf4ff;border:1px solid #54aeff;
+  color:#0969da;font-size:12px;font-weight:500;
+}
+.author{margin-top:9px;font-size:11px;color:#c6c6c6;letter-spacing:1px;}
+
+.content{max-width:640px;margin:20px auto 0;padding:0 20px 60px;}
+
+.yr-block{margin-bottom:12px;}
+.yr-hd{
+  display:flex;align-items:center;gap:10px;
+  padding:11px 15px;background:#fff;
+  border:1px solid #d0d7de;border-radius:8px;
+  cursor:pointer;user-select:none;transition:border-color .15s,background .15s;
+}
+.yr-hd:hover{background:#f3f4f6;border-color:#0969da;}
+.yr-label{font-size:15px;font-weight:700;color:#0969da;}
+.yr-meta{flex:1;font-size:12px;color:#9ba1aa;}
+.yr-arr{color:#9ba1aa;font-size:13px;}
+.yr-body{padding-top:6px;}
+
+.mo-sec{margin-bottom:10px;}
+.mo-hd{display:flex;justify-content:space-between;padding:0 4px 5px;}
+.mo-title{font-size:12px;font-weight:600;color:#9ba1aa;}
+.mo-cnt{font-size:12px;color:#c6c6c6;}
+.mo-cards{background:#fff;border:1px solid #d0d7de;border-radius:8px;overflow:hidden;}
+
+.day-row{
+  display:flex;align-items:center;padding:12px 15px;
+  text-decoration:none;color:inherit;
+  border-bottom:1px solid #f0f1f3;transition:background .15s;
+}
+.day-row:last-child{border-bottom:none;}
+.day-row:hover{background:#f6f8fa;}
+.day-left{width:54px;flex-shrink:0;}
+.day-date{font-size:14px;font-weight:600;color:#1f2328;}
+.day-wd{font-size:11px;color:#9ba1aa;margin-top:2px;}
+.day-mid{flex:1;padding:0 12px;font-size:13px;color:#656d76;}
+.day-arr{color:#c6c6c6;font-size:20px;}
+
+.empty{text-align:center;padding:60px 20px;color:#9ba1aa;font-size:14px;}
+
+@media(max-width:500px){
+  .hd-title{font-size:21px;}
+  .nav{padding:10px 14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="../index.html" class="nav-arxiv">← arXiv CV 日报</a>
+  <span class="nav-upd">更新于 2026年04月30日 13:11</span>
+</div>
+
+<div class="hd">
+  <div class="hd-title">GitHub <em>Trending</em></div>
+  <div class="hd-sub">OPEN SOURCE PROJECTS ARCHIVE</div>
+  <div class="hd-chip">共收录 1 天</div>
+  <div class="author">curated by binbinyang</div>
+</div>
+
+<div class="content">
+  <div class="yr-block">
+  <div class="yr-hd" onclick="toggleYr(this)">
+    <span class="yr-label">2026 年</span>
+    <span class="yr-meta">1 天</span>
+    <span class="yr-arr">▾</span>
+  </div>
+  <div class="yr-body"><div class="mo-sec">
+  <div class="mo-hd">
+    <span class="mo-title">04月</span>
+    <span class="mo-cnt">1 天</span>
+  </div>
+  <div class="mo-cards"><a href="../github-trending/trending_20260430.html" class="day-row">
+  <div class="day-left">
+    <div class="day-date">04月30日</div>
+    <div class="day-wd">周四</div>
+  </div>
+  <div class="day-mid">Top 13 · 今日热榜</div>
+  <div class="day-arr">›</div>
+</a></div>
+</div></div>
+</div>
+</div>
+
+<script>
+function toggleYr(hd){
+  var block=hd.parentElement;
+  var body=block.querySelector('.yr-body');
+  var arr=hd.querySelector('.yr-arr');
+  var open=body.style.display!=='none';
+  body.style.display=open?'none':'';
+  arr.textContent=open?'▸':'▾';
+}
+</script>
+</body>
+</html>
