@@ -67,7 +67,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 <div class="hd">
   <div class="hd-title">◈ ARXIV · CV DAILY ◈</div>
   <div class="tagline">COMPUTER VISION AND PATTERN RECOGNITION · DAILY PAPERS</div>
-  <div class="updated">最后更新：2026年04月29日 12:00</div>
+  <div class="updated">最后更新：2026年04月30日 13:05</div>
   <div class="author">curated by binbinyang</div>
 </div>
 <div class="summary">共收录 <span>7</span> 天 · <span>1087</span> 篇论文</div>
@@ -195,11 +195,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
   function drawEarth(){
     eRot+=0.0008;
     var r=ER,cx=ECX,cy=ECY,toR=Math.PI/180;
-    var atm=ctx.createRadialGradient(cx,cy,r*0.80,cx,cy,r*1.55);
-    atm.addColorStop(0,'rgba(72,168,255,0.32)');
-    atm.addColorStop(0.4,'rgba(40,128,230,0.16)');
+    var atm=ctx.createRadialGradient(cx,cy,r*0.85,cx,cy,r*1.28);
+    atm.addColorStop(0,'rgba(72,168,255,0.16)');
+    atm.addColorStop(0.5,'rgba(40,128,230,0.07)');
     atm.addColorStop(1,'rgba(0,0,0,0)');
-    ctx.beginPath();ctx.arc(cx,cy,r*1.55,0,Math.PI*2);ctx.fillStyle=atm;ctx.fill();
+    ctx.beginPath();ctx.arc(cx,cy,r*1.28,0,Math.PI*2);ctx.fillStyle=atm;ctx.fill();
     var ocean=ctx.createRadialGradient(cx-r*0.22,cy-r*0.18,0,cx,cy,r);
     ocean.addColorStop(0,'#1e90e0');ocean.addColorStop(0.45,'#1460b5');
     ocean.addColorStop(0.80,'#0c3d88');ocean.addColorStop(1,'#081f50');
@@ -257,7 +257,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
     var shd=ctx.createLinearGradient(cx+r*0.06,cy,cx+r*0.88,cy);
     shd.addColorStop(0,'rgba(0,0,0,0)');shd.addColorStop(0.58,'rgba(0,5,22,0.52)');shd.addColorStop(1,'rgba(0,2,14,0.76)');
     ctx.fillStyle=shd;ctx.fillRect(cx-r,cy-r,r*2,r*2);ctx.restore();
-    var rim=ctx.createRadialGradient(cx,cy,r*0.79,cx,cy,r*1.10);
+    var rim=ctx.createRadialGradient(cx,cy,r*0.84,cx,cy,r*1.06);
     rim.addColorStop(0,'rgba(60,150,255,0)');rim.addColorStop(0.48,'rgba(75,172,255,0.30)');
     rim.addColorStop(0.76,'rgba(118,200,255,0.54)');rim.addColorStop(1,'rgba(165,222,255,0.10)');
     ctx.beginPath();ctx.arc(cx,cy,r*1.10,0,Math.PI*2);ctx.fillStyle=rim;ctx.fill();
