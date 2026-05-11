@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Trending · 2026年05月11日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  background:#f6f8fa;color:#1f2328;font-size:15px;min-height:100vh;
+}
+
+/* ── 顶栏 ── */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;background:#fff;
+  border-bottom:1px solid #d0d7de;
+  position:sticky;top:0;z-index:99;
+}
+.nav-home{
+  color:#0969da;font-size:13px;text-decoration:none;font-weight:500;
+  padding:5px 12px;border-radius:6px;border:1px solid #d0d7de;
+  background:#fff;transition:background .15s,border-color .15s;
+}
+.nav-home:hover{background:#f3f4f6;border-color:#0969da;}
+.nav-date{font-size:12px;color:#656d76;}
+
+/* ── 页头 ── */
+.hd{
+  background:#fff;border-bottom:1px solid #d0d7de;
+  padding:40px 24px 30px;text-align:center;
+}
+.hd-title{
+  font-size:28px;font-weight:700;color:#1f2328;letter-spacing:.5px;
+}
+.hd-title em{font-style:normal;color:#0969da;}
+.hd-sub{margin-top:6px;font-size:12px;color:#656d76;letter-spacing:1.5px;}
+.hd-chip{
+  display:inline-block;margin-top:14px;
+  padding:4px 16px;border-radius:20px;
+  background:#ddf4ff;border:1px solid #54aeff;
+  color:#0969da;font-size:12px;font-weight:500;
+}
+.author{margin-top:10px;font-size:11px;color:#c6c6c6;letter-spacing:1px;}
+
+/* ── 搜索 ── */
+.search-wrap{max-width:760px;margin:20px auto 0;padding:0 20px;}
+.search{
+  width:100%;padding:9px 16px;
+  background:#fff;border:1px solid #d0d7de;border-radius:6px;
+  color:#1f2328;font-size:14px;outline:none;
+  transition:border-color .2s,box-shadow .2s;
+}
+.search::placeholder{color:#9ba1aa;}
+.search:focus{border-color:#0969da;box-shadow:0 0 0 3px rgba(9,105,218,0.08);}
+
+/* ── 标签页 ── */
+.tabs-wrap{max-width:760px;margin:16px auto 0;padding:0 20px;}
+.tabs{
+  display:flex;gap:0;
+  border-bottom:2px solid #d0d7de;
+}
+.tab-btn{
+  padding:9px 24px;font-size:14px;font-weight:500;
+  background:transparent;border:none;cursor:pointer;
+  color:#656d76;border-bottom:2px solid transparent;margin-bottom:-2px;
+  transition:color .15s,border-color .15s;white-space:nowrap;
+}
+.tab-btn.active{color:#1f2328;border-bottom-color:#0969da;}
+.tab-btn:hover:not(.active){color:#1f2328;}
+
+/* ── 列表区 ── */
+.main{max-width:760px;margin:12px auto 0;padding:0 20px 60px;}
+.list-meta{
+  font-size:12px;color:#9ba1aa;margin-bottom:10px;
+  display:flex;justify-content:space-between;
+}
+
+/* ── 卡片 ── */
+.card{
+  display:flex;align-items:stretch;gap:0;
+  background:#fff;border:1px solid #d0d7de;border-radius:8px;
+  margin-bottom:8px;overflow:hidden;
+  transition:box-shadow .15s,border-color .15s;
+}
+.card:hover{
+  border-color:#0969da;
+  box-shadow:0 1px 6px rgba(9,105,218,0.12);
+}
+.card.hidden{display:none;}
+
+/* 序号竖条 */
+.rank-col{
+  flex-shrink:0;width:48px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f6f8fa;border-right:1px solid #d0d7de;
+}
+.rank-num{
+  font-size:16px;font-weight:700;color:#b0b8c2;
+  font-variant-numeric:tabular-nums;
+}
+
+/* 内容区 */
+.card-body{flex:1;min-width:0;padding:15px 18px;}
+
+.repo-line{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;}
+.repo-name{
+  font-size:15px;font-weight:600;text-decoration:none;color:#1f2328;
+  transition:color .15s;
+}
+.repo-name:hover{color:#0969da;}
+.repo-author{color:#656d76;font-weight:400;}
+.repo-sep{color:#c6c6c6;}
+.repo-title{color:#0969da;}
+
+.badge-today{
+  font-size:11px;font-weight:600;white-space:nowrap;
+  padding:2px 8px;border-radius:12px;
+  background:#fff8c5;border:1px solid #d4a72c;color:#9a6700;
+}
+
+.desc-en{font-size:13px;color:#656d76;line-height:1.65;margin-bottom:3px;}
+.desc-zh{font-size:13px;color:#1f2328;line-height:1.65;margin-bottom:10px;}
+.no-desc{color:#c6c6c6;font-style:italic;}
+
+/* 操作行 */
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px;}
+.btn{
+  padding:4px 12px;border-radius:6px;font-size:12px;font-weight:500;
+  text-decoration:none;border:1px solid;transition:all .15s;white-space:nowrap;
+}
+.btn-gh{background:#fff;color:#0969da;border-color:#0969da;}
+.btn-gh:hover{background:#0969da;color:#fff;}
+.btn-readme{background:#fff;color:#1a7f37;border-color:#1a7f37;}
+.btn-readme:hover{background:#1a7f37;color:#fff;}
+.btn-issues{background:#fff;color:#9a6700;border-color:#bf8700;}
+.btn-issues:hover{background:#9a6700;color:#fff;}
+.stat-sep{flex:1;}
+.stat-item{font-size:12px;color:#656d76;}
+.lang-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#656d76;}
+.lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;}
+.readme-preview{
+  margin:10px 0 6px;padding:10px 14px;
+  background:#f6f8fa;border:1px solid #d0d7de;border-radius:6px;
+}
+.readme-label{
+  display:inline-block;font-size:10px;font-weight:600;letter-spacing:.5px;
+  color:#9ba1aa;text-transform:uppercase;margin-bottom:5px;
+}
+.readme-text{font-size:13px;color:#1f2328;line-height:1.7;}
+.topics{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
+.topic-tag{
+  font-size:11px;padding:2px 9px;border-radius:12px;
+  background:#ddf4ff;color:#0969da;text-decoration:none;
+  border:1px solid #54aeff4d;transition:background .15s;
+}
+.topic-tag:hover{background:#b6e3ff;}
+
+.no-result{text-align:center;padding:60px 20px;color:#9ba1aa;font-size:14px;display:none;}
+
+@media(max-width:600px){
+  .hd-title{font-size:22px;}
+  .nav{padding:10px 14px;}
+  .tab-btn{padding:8px 16px;font-size:13px;}
+  .rank-col{width:36px;}
+  .rank-num{font-size:13px;}
+  .card-body{padding:12px 13px;}
+  .repo-name{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="../trending/" class="nav-home">← 返回归档</a>
+  <span class="nav-date">2026年05月11日 · 周一</span>
+</div>
+
+<div class="hd">
+  <div class="hd-title">GitHub <em>Trending</em></div>
+  <div class="hd-sub">MOST POPULAR OPEN SOURCE PROJECTS</div>
+  <div class="hd-chip">Top 20 · 2026年05月11日</div>
+  <div class="author">curated by binbinyang</div>
+</div>
+
+<div class="search-wrap">
+  <input class="search" type="text" placeholder="⌕  搜索项目名称或描述…" oninput="onSearch(this.value)">
+</div>
+
+<div class="tabs-wrap">
+  <div class="tabs">
+    <button class="tab-btn active" data-period="daily"   onclick="switchTab('daily')">日榜</button>
+    <button class="tab-btn"        data-period="weekly"  onclick="switchTab('weekly')">周榜</button>
+    <button class="tab-btn"        data-period="monthly" onclick="switchTab('monthly')">月榜</button>
+  </div>
+</div>
+
+<div class="main">
+  <div class="list-meta">
+    <span id="cnt">共 13 个项目</span>
+    <span id="period-label">今日热榜</span>
+  </div>
+
+  <div id="panel-daily"   class="panel"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/bytedance/UI-TARS-desktop" target="_blank">
+        <span class="repo-author">bytedance</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">UI-TARS-desktop</span>
+      </a>
+      <span class="badge-today">▲ 956 stars today</span>
+    </div>
+    <p class="desc-en">The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra</p><p class="desc-zh">开源多模式 AI 代理堆栈：连接尖端 AI 模型和代理基础设施</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">TARS \* 是一个多模态 AI Agent 堆栈，目前推出两个项目：Agent TARS 和 UI-TARS-desktop：Agent TARS 是一个通用的多模态 AI Agent 堆栈，它将 GUI Agent 和 Vision 的强大功能带入您的终端、计算机、浏览器和产品中。它主要附带 CLI 和 Web UI 供使用。它旨在通过尖端的多模式 LLM 以及与各种现实世界 MCP 工具的无缝集成，提供更接近于类人任务完成的工作流程。 UI-TARS Desktop是一个桌面应用程序，提供基于UI-TARS模型的本机GUI Agent。远程计算机以及浏览器操作员。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/bytedance/UI-TARS-desktop/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/bytedance/UI-TARS-desktop/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 32.8k</span>
+      <span class="stat-item">⑂ 3.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/CloakHQ/CloakBrowser" target="_blank">
+        <span class="repo-author">CloakHQ</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">CloakBrowser</span>
+      </a>
+      <span class="badge-today">▲ 1.3k stars today</span>
+    </div>
+    <p class="desc-en">Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.</p><p class="desc-zh">Stealth Chromium 通过了所有机器人检测测试。使用源级指纹补丁替换 Playwright。 30/30 测试通过。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Stealth Chromium 通过了所有机器人检测测试。不是修补过的配置。不是JS注入。真正的 Chromium 二进制文件，其指纹在 C++ 源代码级别进行了修改。反机器人系统将其评分为普通浏览器——因为它是普通浏览器。 Cloudflare Turnstile — 通过 3 项实时测试（headed 模式，macOS）Python 和 JavaScript 的即用型 Playwright/Puppeteer 替代品。相同的 API，相同的代码 — 只需交换导入即可。 3行代码，30秒解锁。 - **49 个源代码级 C++ 补丁** - 画布、WebGL、音频、字体、GPU、屏幕、WebRTC、网络计时、自动化信号、CDP 输入行为 - **** - 类人鼠标曲线、键盘计时和滚动模式。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/CloakHQ/CloakBrowser" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/CloakHQ/CloakBrowser/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/CloakHQ/CloakBrowser/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 5.8k</span>
+      <span class="stat-item">⑂ 436</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/yikart/AiToEarn" target="_blank">
+        <span class="repo-author">yikart</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AiToEarn</span>
+      </a>
+      <span class="badge-today">▲ 595 stars today</span>
+    </div>
+    <p class="desc-en">Let's use AI to Earn!</p><p class="desc-zh">让我们用AI来赚钱吧！</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**货币化·发布·参与·创造——一站式平台。**AiToEarn通过**AI自动化**，帮助OPC（一人公司）、创作者、品牌与企业在全球主流平台上、分发并变现。 ② 在龙虾 OpenClaw 中用 | 龙虾用户 | ❌ 不需要 | | ③ 在 Claude / Cursor 等 AI 助手中用 |人工智能工具用户| ❌ 不需要 | | ④ Docker 一键部署 | 想要进行团队化部署| ✅ 需要服务器 | &gt; 💡 **方式②③④都需要先获取API Key**，请先看如何获取API Key。 - **2026-04-20**: OpenClaw（龙虾）新增AiToEarn赚钱支持，可在龙虾中直接接收并执行内容变现任务。 - **2026-03-26**: 2.1版本—内容交易市场上线；新增OpenClaw（龙虾）支持，可在龙虾中直接使用AiToEarn；新增MCP协议支持，可在Claude、Cursor等任何支持MCP的Agent或大模型中使用AiToEarn。 - **2026-02-07**: 1.8.0版本中，新增线下商户推广解决方案，支持餐厅、零售店、民宿、美容美发、健身房等多种线下业态，将线下推广活动转化为线上传播任务，通过内容发布和用户参与机制，帮助门店获取更多线上曝光和到店流量。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/yikart/AiToEarn" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/yikart/AiToEarn/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/yikart/AiToEarn/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.5k</span>
+      <span class="stat-item">⑂ 2.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/playcanvas/supersplat" target="_blank">
+        <span class="repo-author">playcanvas</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">supersplat</span>
+      </a>
+      <span class="badge-today">▲ 533 stars today</span>
+    </div>
+    <p class="desc-en">3D Gaussian Splat Editor</p><p class="desc-zh">3D 高斯 Splat 编辑器</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">| SuperSplat 编辑器 |用户指南 |博客 |论坛 | SuperSplat Editor 是一款免费开源工具，用于检查、编辑、优化和发布 3D Gaussian Splats。它基于网络技术构建并在浏览器中运行，因此无需下载或安装任何内容。该工具的实时版本可从以下网址获取：https://superspl.at/editor 要了解有关使用 SuperSplat 的更多信息，请参阅用户指南。要初始化 SuperSplat 的本地开发环境，请确保安装了 Node.js 18 或更高版本。请按照以下步骤操作： 3. 构建 SuperSplat 并启动本地 Web 服务器： 4. 打开 Web 浏览器选项卡并确保网络选项卡上的网络缓存已禁用，并且其他应用程序缓存已清除： - 在 Safari 上，您可以使用“开发”-&gt;“清空缓存”。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/playcanvas/supersplat" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/playcanvas/supersplat/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/playcanvas/supersplat/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 7.2k</span>
+      <span class="stat-item">⑂ 788</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/datawhalechina/easy-vibe" target="_blank">
+        <span class="repo-author">datawhalechina</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">easy-vibe</span>
+      </a>
+      <span class="badge-today">▲ 808 stars today</span>
+    </div>
+    <p class="desc-en">💻 vibe coding 2026 | Your first modern Coding course for beginners to master step by step.</p><p class="desc-zh">💻 氛围编码 2026 |您的第一门现代编码课程，供初学者逐步掌握。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">立即加入并一起氛围 - 如果您会说话，您就可以构建应用程序。 🚀 开始探索 · ✨ 互动教程 · 🦞 学习 OpenClaw · 📖 目录 🚀 开始体验 · ✨ 交互式教程 · 🦞 学习 OpenClaw · 📖 查看目录 适合初学者的学习地图 从零开始的清晰指导，让你不再“学而忘” 详细的演练，感觉像跟着私人导师学习 虚拟鼠标引导，帮助你快速学习 IDE 核心工作流程 动画讲解轻松查看 AI 如何生成图像 交互式组件让您可以点击完整的 RAG 数据流 当底层逻辑可视化时，命令行行为变得直观 ⭐ 在此处为存储库加注星标以帮助加速更新 ❤️ 📝 有您自己的氛围编码故事吗？在这里提交并激励其他人！ - 二.</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/datawhalechina/easy-vibe" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/datawhalechina/easy-vibe/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/datawhalechina/easy-vibe/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 9.7k</span>
+      <span class="stat-item">⑂ 930</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/decolua/9router" target="_blank">
+        <span class="repo-author">decolua</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">9router</span>
+      </a>
+      <span class="badge-today">▲ 942 stars today</span>
+    </div>
+    <p class="desc-en">Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.</p><p class="desc-zh">无限免费人工智能编码。通过 40 多个提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK -40% 代币，永远不会达到极限。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text"># 9Router - 免费 AI 路由器和令牌保护程序 **永远不要停止编码。通过 RTK + 自动回退到免费和廉价的 AI 模型，节省 20-40% 的代币。** **将所有 AI 代码工具（Claude Code、Cursor、Antigravity、Copilot、Codex、Gemini、OpenCode、Cline、OpenClaw...）连接到 40 多个 AI 提供商和 100 多个模型。** [](https://www.npmjs.com/package/9router) [](https://www.npmjs.com/package/9router) [](https://github.com/decolua/9router/blob/main/LICENSE) 🚀 快速入门 • 💡 功能 • 📖 设置 • 🌐 网站 **停止浪费金钱、代币和达到限制：** - ❌ 订阅配额每月都会过期，未使用 - ❌ 速率限制会阻止您进行中期编码 - ❌ 工具输出（git diff、grep、ls...）快速燃烧代币 - ❌ 昂贵的 API（每个提供商 20-50 美元/月） - ❌ 提供商之间手动切换 - ✅ **RTK Token Saver** - 自动压缩</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/decolua/9router" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/decolua/9router/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/decolua/9router/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.1k</span>
+      <span class="stat-item">⑂ 1.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/tinyhumansai/openhuman" target="_blank">
+        <span class="repo-author">tinyhumansai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">openhuman</span>
+      </a>
+      <span class="badge-today">▲ 501 stars today</span>
+    </div>
+    <p class="desc-en">Your Personal AI super intelligence. Private, Simple and extremely powerful.</p><p class="desc-zh">您的个人人工智能超级智能。私密、简单且极其强大。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">OpenHuman 是您的个人 AI 超级智能。私密、简单且极其强大。 &gt; **早期测试版**：正在积极开发中。预计会有粗糙的边缘。要安装或开始，请从tiny humans.ai/open human 网站下载或运行 OpenHuman 是一个开源代理助手，旨在与您的日常生活融为一体。每个项目符号都链接到文档中更深入的文章。 - **简单、UI 优先且人性化** 干净的桌面体验和简短的入门路径让您只需单击几下即可从安装到工作代理 — 无需配置优先设置，无需终端。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/tinyhumansai/openhuman" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/tinyhumansai/openhuman/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/tinyhumansai/openhuman/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 1.2k</span>
+      <span class="stat-item">⑂ 157</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/millionco/react-doctor" target="_blank">
+        <span class="repo-author">millionco</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">react-doctor</span>
+      </a>
+      <span class="badge-today">▲ 340 stars today</span>
+    </div>
+    <p class="desc-en">Your agent writes bad React. This catches it</p><p class="desc-zh">你的代理写了糟糕的 React。这抓住了它</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">包/react-doctor/README.md</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/millionco/react-doctor" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/millionco/react-doctor/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/millionco/react-doctor/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 7.8k</span>
+      <span class="stat-item">⑂ 247</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Lordog/dive-into-llms" target="_blank">
+        <span class="repo-author">Lordog</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">dive-into-llms</span>
+      </a>
+      <span class="badge-today">▲ 373 stars today</span>
+    </div>
+    <p class="desc-en">《动手学大模型Dive into LLMs》系列编程实践教程</p><p class="desc-zh">《动手学大模型深入LLM》系列编程实践教程</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">2025/06/06感谢各位网友的关注和积极反馈！我们从以下两个方面对本教程进行了更新： - [x]上线国产化《大模型开发全流程》公益教程（含PPT、实验手册和视频），这里特别感谢华为升腾社区的支持！ - [x]在原系列编程实践教程的基础上进行了内容更新，并增加了新的主题（数学推理、GUI Agent、大模型初始化、隐写术等）！ 《参与学大模型》系列编程实践教程，由上海交通大学《自然语言处理前沿技术》（NIS8021）、《人工智能安全技术》课程（NIS3353）讲义拓展而来（教师：张倬胜），旨在提供大模型的相关入门参考。本教程属于公益性质、完全。通过简单实践，帮助同学们免费入门大模型，实地开展快速课程设计或学术研究。 ---------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | | 负荷与部署 | 预训练模型配置与配置指南：想提升预训练模型在指定任务上的性能？让我们选择合适的预训练模型，在特定任务上进行配置，调整配置后的模型配置成方便使用的演示！ [课件] [教程] [脚本] | | 提示学习与思维链| 大模型的 API 调用与推理指南：“AI 在线寻求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一个“鼓励””| [课件] [教程] [脚本] | | 知识编辑 | 语言模型的编辑方法和工具：想操纵语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定的知识进行编辑，然后对编辑后的模型进行验证！ [课件] [教程] [脚本] | | 数学推理 | 如何让大模型学会数学推理？让我们快速添置一个迷你R1！ | [课件]</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Lordog/dive-into-llms" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Lordog/dive-into-llms/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Lordog/dive-into-llms/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 37.2k</span>
+      <span class="stat-item">⑂ 4.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#DA5B0B"></span><span class="lang-name">Jupyter Notebook</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank">
+        <span class="repo-author">AUTOMATIC1111</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">stable-diffusion-webui</span>
+      </a>
+      <span class="badge-today">▲ 29 stars today</span>
+    </div>
+    <p class="desc-en">Stable Diffusion web UI</p><p class="desc-zh">稳定的扩散网页用户界面</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">稳定扩散的 Web 界面，使用 Gradio 库实现。带图像的详细功能展示： - 原始 txt2img 和 img2img 模式 - 一键安装并运行脚本（但您仍然必须安装 python 和 git） - 注意，指定模型应该更多关注的文本部分 - 穿着 a 的男人 - 将更多地关注燕尾服 - 穿着 a 的男人 - 替代语法 - 选择文本并按 或 （或或，如果您使用的是 MacOS）自动调整对所选文本的关注（由匿名用户贡献的代码） - 环回，运行img2img 多次处理 - X/Y/Z 图，一种绘制具有不同参数的 3 维图像图的方法 - 拥有任意数量的嵌入，并为它们使用任何你喜欢的名称 - 使用具有不同数量向量的多个嵌入</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 162.9k</span>
+      <span class="stat-item">⑂ 30.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/rasbt/LLMs-from-scratch" target="_blank">
+        <span class="repo-author">rasbt</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">LLMs-from-scratch</span>
+      </a>
+      <span class="badge-today">▲ 141 stars today</span>
+    </div>
+    <p class="desc-en">Implement a ChatGPT-like LLM in PyTorch from scratch, step by step</p><p class="desc-zh">在 PyTorch 中从头开始一步步实现类似 ChatGPT 的 LLM</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">构建大型语言模型（从头开始） 该存储库包含用于开发、预训练和微调类似 GPT 的 LLM 的代码，并且是《构建大型语言模型（从头开始）》一书的官方代码存储库。在*构建大型语言模型（从头开始）*中，您将通过从头开始逐步编码来学习和理解大型语言模型 (LLM) 如何从内到外工作。在本书中，我将指导您创建自己的法学硕士，并用清晰的文本、图表和示例解释每个阶段。本书中描述的用于出于教育目的训练和开发您自己的小型但实用的模型的方法反映了创建大型基础模型（例如 ChatGPT 背后的模型）所使用的方法。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/rasbt/LLMs-from-scratch/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/rasbt/LLMs-from-scratch/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 92.8k</span>
+      <span class="stat-item">⑂ 14.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#DA5B0B"></span><span class="lang-name">Jupyter Notebook</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/NousResearch/hermes-agent" target="_blank">
+        <span class="repo-author">NousResearch</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hermes-agent</span>
+      </a>
+      <span class="badge-today">▲ 2.2k stars today</span>
+    </div>
+    <p class="desc-en">The agent that grows with you</p><p class="desc-zh">与您共同成长的代理商</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**由 Nous Research 构建的自我改进的人工智能代理。**它是唯一具有内置学习循环的代理 - 它从经验中创造技能，在使用过程中改进它们，推动自己坚持知识，搜索自己过去的对话，并在各个会话中构建一个关于你是谁的深化模型。在 5 美元的 VPS、GPU 集群或无服务器基础设施上运行它，闲置时几乎不需要任何成本。它与您的笔记本电脑无关——当它在云虚拟机上工作时，可以通过 Telegram 与它交谈。使用您想要的任何模型 - Nous Portal、OpenRouter（200 多种型号）、NVIDIA NIM (Nemotron)、Xiaomi MiMo、z.ai/GLM、Kimi/Moonshot、MiniMax、Hugging Face、OpenAI 或您自己的端点。切换 — 无需更改代码，无需锁定。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/NousResearch/hermes-agent/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/NousResearch/hermes-agent/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 144.2k</span>
+      <span class="stat-item">⑂ 22.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/rohitg00/agentmemory" target="_blank">
+        <span class="repo-author">rohitg00</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agentmemory</span>
+      </a>
+      <span class="badge-today">▲ 604 stars today</span>
+    </div>
+    <p class="desc-en">#1 Persistent memory for AI coding agents based on real-world benchmarks</p><p class="desc-zh">#1 基于真实世界基准的人工智能编码代理的持久内存</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">您的编码代理会记住一切。不再重新解释。适用于 Claude Code、Cursor、Gemini CLI、Codex CLI、pi、OpenCode 和任何 MCP 客户端的持久内存。该要点通过置信度评分、生命周期、知识图和混合搜索扩展了 Karpathy 的 LLM Wiki 模式。代理内存是实现。 agentmemory 可与任何支持钩子、MCP 或 REST API 的代理配合使用。所有代理共享同一内存服务器。可与任何使用 MCP 或 HTTP 的代理配合使用。一台服务器，所有服务器共享记忆。您每次会议都会解释相同的架构。您重新发现相同的错误。您重新教授相同的偏好。内置内存（CLAUDE.md、.cursorrules）上限为 200 行，然后就会过时。代理内存修复了这个问题。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/rohitg00/agentmemory" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/rohitg00/agentmemory/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/rohitg00/agentmemory/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 4.5k</span>
+      <span class="stat-item">⑂ 420</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-weekly"  class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Hmbown/DeepSeek-TUI" target="_blank">
+        <span class="repo-author">Hmbown</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">DeepSeek-TUI</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Coding agent for DeepSeek models that runs in your terminal</p><p class="desc-zh">在终端中运行的 DeepSeek 模型的编码代理</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; DeepSeek V4 的终端编码代理。它从命令运行，流式传输推理块，使用批准门编辑本地工作区，并包括每回合选择模型和思维级别的自动模式。作为 Rust 二进制文件分发：调度程序命令 () 和配套的 TUI 运行时 ()。选择您已使用的安装路径；他们都在你的 . npm 包是发布二进制文件的安装程序/包装程序，而不是 &gt; 在中国大陆，使用 DeepSeek 加速 npm 路径 TUI 是在终端中运行的编码代理。它可以读取和编辑文件、运行 shell 命令、搜索网络、管理 git 以及通过键盘驱动的 TUI 协调子代理。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Hmbown/DeepSeek-TUI" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Hmbown/DeepSeek-TUI/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Hmbown/DeepSeek-TUI/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 25.0k</span>
+      <span class="stat-item">⑂ 2.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/anthropics/financial-services" target="_blank">
+        <span class="repo-author">anthropics</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">financial-services</span>
+      </a>
+      
+    </div>
+    <p class="desc-en"><span class="no-desc">暂无描述</span></p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">我们最常见的金融服务工作流程的参考代理、技能和数据连接器——投资银行、股权研究、私募股权和财富管理。这里的所有内容都可用**一源二用**：将其安装为 Claude Cowork 插件，或通过您自己的工作流引擎后面的 Claude Managed Agents API 进行部署。相同的系统提示，相同的技能——您可以选择它的运行位置。 &gt; 此存储库中的任何内容均不构成投资、法律、税务或会计建议。这些代理起草分析师的工作产品——模型、备忘录、研究笔记、对账——供合格的专业人士审查。他们不提出投资建议、执行交易、约束风险、发布到分类账或批准入职；每个输出都经过人工签核。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/anthropics/financial-services" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/anthropics/financial-services/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/anthropics/financial-services/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 20.0k</span>
+      <span class="stat-item">⑂ 2.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/ruvnet/ruflo" target="_blank">
+        <span class="repo-author">ruvnet</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ruflo</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, self-learning swarm intelligence, RAG integration, and native Claude Code / Codex Integration</p><p class="desc-zh">🌊 Claude 领先的代理编排平台。部署智能多代理群、协调自主工作流程并构建对话式 AI 系统。具有企业级架构、自学习群体智能、RAG 集成和原生 Claude Code/Codex 集成</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**Claude Code 的多代理 AI 编排** 跨机器、团队和信任边界编排 100 多个专业 AI 代理。 Ruflo 在 Claude Code 中添加了协调群、自学习记忆、联合通信和企业安全性，因此代理不仅仅是运行，而是协作。 &gt; Claude Flow 现在更名为 Ruflo — 由 命名，他热爱 Rust、流程状态以及构建感觉不可避免的事物。 “Ru”是rUv。 “flo”一直工作到凌晨 3 点。在底层，由代理架构提供支持，运行基于 Rust 的人工智能引擎、嵌入、内存和插件系统。其中一个为 Claude Code 提供了一个神经系统：智能体自我组织成群，从每项任务中学习，跨会话进行记忆，并且通过联合安全地与其他机器上的智能体进行对话，而不会泄露数据。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/ruvnet/ruflo" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ruvnet/ruflo/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ruvnet/ruflo/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 48.9k</span>
+      <span class="stat-item">⑂ 5.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/bytedance/UI-TARS-desktop" target="_blank">
+        <span class="repo-author">bytedance</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">UI-TARS-desktop</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra</p><p class="desc-zh">开源多模式 AI 代理堆栈：连接尖端 AI 模型和代理基础设施</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">TARS \* 是一个多模态 AI Agent 堆栈，目前推出两个项目：Agent TARS 和 UI-TARS-desktop：Agent TARS 是一个通用的多模态 AI Agent 堆栈，它将 GUI Agent 和 Vision 的强大功能带入您的终端、计算机、浏览器和产品中。它主要附带 CLI 和 Web UI 供使用。它旨在通过尖端的多模式 LLM 以及与各种现实世界 MCP 工具的无缝集成，提供更接近于类人任务完成的工作流程。 UI-TARS Desktop是一个桌面应用程序，提供基于UI-TARS模型的本机GUI Agent。远程计算机以及浏览器操作员。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/bytedance/UI-TARS-desktop/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/bytedance/UI-TARS-desktop/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 32.8k</span>
+      <span class="stat-item">⑂ 3.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/LearningCircuit/local-deep-research" target="_blank">
+        <span class="repo-author">LearningCircuit</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">local-deep-research</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local &amp;amp; Encrypted.</p><p class="desc-zh">SimpleQA 上约为 95%（例如 3090 上的 Qwen3.6-27B）。支持所有本地和云 LLM（llama.cpp、Ollama、Google...）。 10 多个搜索引擎 - arXiv、PubMed、您的私人文档。一切都是当地的已加密。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**人工智能驱动的研究助理，用于深入、代理研究** *使用多个法学硕士和搜索引擎进行深入、代理研究并适当引用* 🧪 **第一个开源项目 — 在单个 RTX 3090 (Qwen3.6-27B) 上完全本地化 — 在本地硬件上报告 ~95% SimpleQA (n=500) 和 77% xbench-DeepSearch (n=100)。** 请参阅r/LocalLLaMA 公告和基准数据集。 ▶️ 观看终端艺术的评论 由你掌控的人工智能研究助手。为了隐私而在本地运行，使用任何法学硕士并构建您自己的可搜索知识库。您拥有自己的数据并确切了解其工作原理。 **选项 1：Docker Run (Linux)** &gt; **Mac / Windows / WSL2 用户：** 仅适用于本机 Linux。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/LearningCircuit/local-deep-research" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/LearningCircuit/local-deep-research/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/LearningCircuit/local-deep-research/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 7.2k</span>
+      <span class="stat-item">⑂ 634</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/docusealco/docuseal" target="_blank">
+        <span class="repo-author">docusealco</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">docuseal</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Open source DocuSign alternative. Create, fill, and sign digital documents ✍️</p><p class="desc-zh">开源 DocuSign 替代方案。创建、填写和签署数字文档 ✍️</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">开源文档填写和签名 DocuSeal 是一个开源平台，可提供安全高效的数字文档签名和处理。创建 PDF 表单，使用易于使用、针对移动设备优化的网络工具在任何设备上在线填写和签名。 - PDF 表单字段生成器 (WYSIWYG) - 12 种可用字段类型（签名、日期、文件、复选框等） - 每个文档有多个提交者 - 文件存储在磁盘或 AWS S3、Google 存储、Azure 云上 - 7 种 UI 语言，可提供 14 种语言的签名 - 用于集成的 API 和 Webhooks - 通过短信进行邀请和身份验证 - 条件字段和公式 - 通过 CSV、XLSX 电子表格导入批量发送 - 使用 HTML API 创建模板（指南） -使用 PDF 或 DOCX 和字段标签 API 创建模板（指南）- Emb</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/docusealco/docuseal" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/docusealco/docuseal/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/docusealco/docuseal/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 16.3k</span>
+      <span class="stat-item">⑂ 1.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#701516"></span><span class="lang-name">Ruby</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/decolua/9router" target="_blank">
+        <span class="repo-author">decolua</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">9router</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Unlimited FREE AI coding. Connect Claude Code, Codex, Cursor, Cline, Copilot, Antigravity to FREE Claude/GPT/Gemini via 40+ providers. Auto-fallback, RTK -40% tokens, never hit limits.</p><p class="desc-zh">无限免费人工智能编码。通过 40 多个提供商将 Claude Code、Codex、Cursor、Cline、Copilot、Antigravity 连接到免费的 Claude/GPT/Gemini。自动回退，RTK -40% 代币，永远不会达到极限。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text"># 9Router - 免费 AI 路由器和令牌保护程序 **永远不要停止编码。通过 RTK + 自动回退到免费和廉价的 AI 模型，节省 20-40% 的代币。** **将所有 AI 代码工具（Claude Code、Cursor、Antigravity、Copilot、Codex、Gemini、OpenCode、Cline、OpenClaw...）连接到 40 多个 AI 提供商和 100 多个模型。** [](https://www.npmjs.com/package/9router) [](https://www.npmjs.com/package/9router) [](https://github.com/decolua/9router/blob/main/LICENSE) 🚀 快速入门 • 💡 功能 • 📖 设置 • 🌐 网站 **停止浪费金钱、代币和达到限制：** - ❌ 订阅配额每月都会过期，未使用 - ❌ 速率限制会阻止您进行中期编码 - ❌ 工具输出（git diff、grep、ls...）快速燃烧代币 - ❌ 昂贵的 API（每个提供商 20-50 美元/月） - ❌ 提供商之间手动切换 - ✅ **RTK Token Saver** - 自动压缩</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/decolua/9router" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/decolua/9router/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/decolua/9router/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.1k</span>
+      <span class="stat-item">⑂ 1.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/TauricResearch/TradingAgents" target="_blank">
+        <span class="repo-author">TauricResearch</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">TradingAgents</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">TradingAgents: Multi-Agents LLM Financial Trading Framework</p><p class="desc-zh">TradingAgents：多代理LLM金融交易框架</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">TradingAgents：多代理 LLM 金融交易框架 - [2026-05] **TradingAgents v0.2.5** 发布，包含接地情绪分析师、GPT-5.5 等模型覆盖、Qwen/GLM/MiniMax 双区域支持、具有 API 密钥自动检测的 env-var 可配置性、远程 Ollama 支持、非美国 alpha 基准测试和股票路径遍历强化。完整列表请参见 CHANGELOG.md。 - [2026-04] **TradingAgents v0.2.4** 发布，包含结构化输出代理（研究管理器、交易者、投资组合管理器）、LangGraph 检查点恢复、持久决策日志、DeepSeek/Qwen/GLM/Azure 提供商支持、Docker 和 Windows UTF-8 编码修复。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 73.7k</span>
+      <span class="stat-item">⑂ 14.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/bwya77/vscode-dark-islands" target="_blank">
+        <span class="repo-author">bwya77</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">vscode-dark-islands</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">VSCode theme based off the easemate IDE and Jetbrains islands theme</p><p class="desc-zh">VSCode 主题基于 easemate IDE 和 Jetbrains 群岛主题</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Visual Studio Code 的深色主题，灵感来自 easemate IDE。具有浮动玻璃面板、圆角、流畅的动画和深度精致的用户界面。 - 带有浮动面板的深色画布 () - 具有方向光模拟的玻璃效果边框（顶部/左侧更亮，底部/右侧更微妙） - 所有面板、通知、命令面板和侧边栏上的圆角 - 带有玻璃选择指示器的药丸形活动栏 - 面包屑导航栏和状态栏在未悬停时变暗 - 悬停时淡入的选项卡关闭按钮 - 侧边栏选择、滚动条和状态栏上的平滑过渡 - 颜色匹配的图标发光效果（与Seti 文件夹图标主题）- 温暖的语法突出显示和全面的语言支持（JS/TS、Python、Go、Rust、HTML/CSS、JSON、YA</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/bwya77/vscode-dark-islands" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/bwya77/vscode-dark-islands/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/bwya77/vscode-dark-islands/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.4k</span>
+      <span class="stat-item">⑂ 263</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#012456"></span><span class="lang-name">PowerShell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/virattt/dexter" target="_blank">
+        <span class="repo-author">virattt</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">dexter</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">An autonomous agent for deep financial research</p><p class="desc-zh">深度金融研究的自主代理</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Dexter 是一个自主的金融研究代理，可以在工作中思考、计划和学习。它使用任务规划、自我反思和实时市场数据进行分析。想想 Claude Code，但它是专门为金融研究而构建的。该项目仅用于**教育、娱乐和信息目的**。它不适用于真实交易或投资。 - 不是财务、投资、税务或法律建议 - 不保证任何目的的准确性、完整性或适用性 - 输出可能不正确、不完整或过时 - 创建者和贡献者对任何财务损失或损害不承担任何责任 - 在做出投资决定之前咨询有执照的财务顾问 - 过去的表现并不代表未来的结果 使用此软件，即表示您同意</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/virattt/dexter" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/virattt/dexter/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/virattt/dexter/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 25.3k</span>
+      <span class="stat-item">⑂ 3.1k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank">
+        <span class="repo-author">AIDC-AI</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">Pixelle-Video</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine</p><p class="desc-zh">🚀 AI 短视频引擎 | AI全自动短视频引擎</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">https://github.com/user-attachments/assets/a42e7457-fcc8-40da-83fc-784c45a8b95d须输入一个**主题**，Pixelle-Video可以自动完成： - ✅ **2026-01-26**: 新增「动作迁移」模块，上传参考视频和图片进行动作迁移 - ✅ **2026-01-14**:新增「数字人口播」和「图生视频」预设，新增多语言 TTS 音色支持 - ✅ **2026-01-06**：新增 RunningHub 48G 显存机器调用支持 - ✅ **2025-12-28**：支持 RunningHub 限制和可配置，优化 LLM 返回格式化数据的逻辑 - ✅ **2025-12-17**：支持 ComfyUI API 密钥配置，支持 Nano Banana模型调用，API接口支持模板自定义参数 - ✅ **2025-12-10**: 侧边栏内置FAQ，锁定edge-tts版本修复TTS服务不稳定问题 - ✅ **2025-12-08**: 支持固定脚本多种分割方式(段落/行/句子)，优化选择交互逻辑支持直接预览模板选择 - ✅ **2025-12-06**: 修复视频生成API返回URL路径处理，支持跨平台兼容 - ✅ **2025-12-05**: 新增 Windows 整合包下载，优化图片与视频反推工作流 - ✅ **2025-12-04**: 新增上传自定义素材功能，支持用户自己的照片和视频，AI 智能分析生成脚本 - ✅ **2025-11-18**: 优化 RunningHub 服务调用支持大部分处理，新增历史记录页面，支持批量创建视频任务 - ✅ **AI 智能文案** - 根据主题智能创作解说词，不用自己写剧本 - ✅ **AI 生成配图*</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/AIDC-AI/Pixelle-Video/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/AIDC-AI/Pixelle-Video/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 15.1k</span>
+      <span class="stat-item">⑂ 2.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/addyosmani/agent-skills" target="_blank">
+        <span class="repo-author">addyosmani</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agent-skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Production-grade engineering skills for AI coding agents.</p><p class="desc-zh">AI 编码代理的生产级工程技能。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**人工智能编码代理的生产级工程技能。** 技能对高级工程师在构建软件时使用的工作流程、质量关卡和最佳实践进行编码。这些内容经过打包，以便人工智能代理在开发的每个阶段都能一致地遵循它们。映射到开发生命周期的 7 个斜线命令。每一项都会自动激活正确的技能。 |你在做什么|命令|关键原理| |--------------------|---------|---------------| |定义要构建的内容 | |代码前的规格 | |计划如何构建它 | |小型原子任务 | |增量构建 | |一次一片 | |证明它有效 | |测试就是证明| |合并前审查 | |改善代码健康 | |简化代码 | |清晰胜过聪明 | |交付生产| |更快更安全 |斯克</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/addyosmani/agent-skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/addyosmani/agent-skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 39.3k</span>
+      <span class="stat-item">⑂ 4.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/cocoindex-io/cocoindex" target="_blank">
+        <span class="repo-author">cocoindex-io</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">cocoindex</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Incremental engine for long horizon agents 🌟 Star if you like it!</p><p class="desc-zh">适合长期代理的增量引擎🌟 如果喜欢就加星吧！</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">您的代理应该获得新的背景。给我们加星标❤️→ &amp;nbsp; &amp;nbsp;·&amp;nbsp; CocoIndex 将代码库、会议记录、收件箱、Slack、PDF 和视频转化为实时、持续新鲜的上下文，供您的 AI 代理和 LLM 应用程序进行有效推理 - 只需最少的增量处理。使用可靠、持续更新的数据，在 10 分钟内让您的生产 AI 代理做好准备 — 没有过时的批次，没有上下文间隙 增量 · 只有增量 · · &amp;nbsp;任意比例·默认平行 &amp;nbsp;·&amp;nbsp;声明式 · Python，5 分钟 查看全部 20 多个示例 · 每周更新 → 声明您的目标中应该包含 *什么* - CocoIndex 使其永远保持同步，仅重新计算 Δ。运行一次回填。随时重新运行 - 仅重新嵌入更改的文件。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/cocoindex-io/cocoindex" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/cocoindex-io/cocoindex/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/cocoindex-io/cocoindex/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 9.6k</span>
+      <span class="stat-item">⑂ 736</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">14</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/VectifyAI/PageIndex" target="_blank">
+        <span class="repo-author">VectifyAI</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">PageIndex</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG</p><p class="desc-zh">📑 PageIndex：无向量、基于推理的 RAG 的文档索引</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">PageIndex：无向量、基于推理的 RAG 基于推理的 RAG ◦ &amp;nbsp;无矢量数据库或分块&amp;nbsp; ◦ 上下文感知◦ &amp;nbsp;仿人检索 🖥️ 聊天平台 &amp;nbsp; • &amp;nbsp; - 🔥 **Agentic Vectorless RAG** — 一个简单的 *agentic、无矢量 RAG* 示例，具有自托管 PageIndex，使用 OpenAI Agents SDK。 - **将 PageIndex 扩展到数百万个文档** — *PageIndex 文件系统* 是一个文件级树层，可让 PageIndex 对整个语料库（而不仅仅是单个文档）进行推理，从而实现大规模文档搜索。 - PageIndex Chat — 用于专业长文档的类人文档分析代理平台。也可通过 MCP 或 API 获取。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/VectifyAI/PageIndex" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/VectifyAI/PageIndex/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/VectifyAI/PageIndex/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 30.6k</span>
+      <span class="stat-item">⑂ 2.6k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">15</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/InsForge/InsForge" target="_blank">
+        <span class="repo-author">InsForge</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">InsForge</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The all-in-one, open-source backend platform for agentic coding. InsForge gives your coding agent database, auth, storage, compute, hosting, and AI gateway to ship full-stack apps end-to-end.</p><p class="desc-zh">用于代理编码的一体化开源后端平台。 InsForge 为您的编码代理数据库、身份验证、存储、计算、托管和 AI 网关提供端到端的全栈应用程序。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">用于代理编码的一体化开源后端平台。 ⭐ 帮助我们接触更多开发者并发展 InsForge 社区。给这个仓库加注星标！用于代理编码的一体化开源后端平台。 InsForge 为您的编码代理数据库、身份验证、存储、计算、托管和 AI 网关提供端到端的全栈应用程序。 https://github.com/user-attachments/assets/345efbc6-ca63-4189-bde0-12ef3bda561b 编码代理通过两个接口之一与 InsForge 交互： - **MCP 服务器**（自托管和云）：将 InsForge 的操作公开为任何 MCP 兼容代理可以调用​​的工具。 - **CLI + Skills**（仅限云）：与代理直接从终端调用的技能配对的命令行界面。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/InsForge/InsForge" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/InsForge/InsForge/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/InsForge/InsForge/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 9.4k</span>
+      <span class="stat-item">⑂ 780</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">16</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/PriorLabs/TabPFN" target="_blank">
+        <span class="repo-author">PriorLabs</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">TabPFN</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">⚡ TabPFN: Foundation Model for Tabular Data ⚡</p><p class="desc-zh">⚡ TabPFN：表格数据的基础模型 ⚡</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">&gt; 直接使用我们的交互式 Colab 笔记本！这是亲身体验 TabPFN 的最佳方式，它会引导您完成安装、分类和回归示例。 &gt; [](https://colab.research.google.com/github/PriorLabs/TabPFN/blob/main/examples/notebooks/TabPFN_Demo_Local.ipynb) &gt; 为了获得最佳性能，请使用 GPU（甚至具有 ~8GB VRAM 的较旧 GPU 也能正常工作；某些大型数据集需要 16GB）。 &gt; 在CPU上，只有小数据集（≲1000个样本）是可行的。 &gt; 没有GPU？通过 TabPFN 客户端使用我们的免费托管推理。或者本地开发安装：首先安装 uv（推荐版本 0.10.0 或更高版本），我们用于开发，然后运行 ​​要使用我们默认的 TabPFN-2.6 模型，纯粹在合成数据上进行训练：要使用其他模型版本（例如</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/PriorLabs/TabPFN" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/PriorLabs/TabPFN/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/PriorLabs/TabPFN/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 6.9k</span>
+      <span class="stat-item">⑂ 684</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">17</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/1jehuang/jcode" target="_blank">
+        <span class="repo-author">1jehuang</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">jcode</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Coding Agent Harness</p><p class="desc-zh">编码剂线束</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">下一代编码代理可以提高技能上限。专为多会话工作流程、无限的可定制性和性能而构建。功能 · 安装 · 快速入门 · 进一步阅读 · 贡献 需要 Windows、Homebrew、源代码构建、提供程序设置，还是告诉您的代理为您设置？性能和资源效率 jcode 的构建目标是尽可能提高性能和资源效率。每个指标都针对骨骼进行了优化，这对于扩展多会话工作流程非常重要。在这里，我们采样了一些指标来显示差异：RAM 使用情况和启动情况。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/1jehuang/jcode" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/1jehuang/jcode/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/1jehuang/jcode/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 5.7k</span>
+      <span class="stat-item">⑂ 586</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#dea584"></span><span class="lang-name">Rust</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">18</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mattpocock/skills" target="_blank">
+        <span class="repo-author">mattpocock</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Skills for Real Engineers. Straight from my .claude directory.</p><p class="desc-zh">真正工程师的技能。直接来自我的 .claude 目录。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">我每天用我的代理技能来做真正的工程——而不是氛围编码。开发真正的应用程序很困难。 GSD、BMAD 和 Spec-Kit 等方法试图通过拥有流程来提供帮助。但这样做时，它们会夺走您的控制权，并使流程中的错误难以解决。这些技能被设计得很小、易于适应且可组合。它们适用于任何模型。它们基于数十年的工程经验。和他们一起玩。让它们成为你自己的。享受。如果您想跟上这些技能的变化以及我创建的任何新技能，您可以在我的时事通讯上加入约 60,000 名其他开发人员： 1. 运行 Skills.sh 安装程序： 2. 选择您想要的技能，以及您想要将其安装到的编码代理。 **确保您选择**。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mattpocock/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mattpocock/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 71.5k</span>
+      <span class="stat-item">⑂ 6.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">19</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/yikart/AiToEarn" target="_blank">
+        <span class="repo-author">yikart</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">AiToEarn</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Let's use AI to Earn!</p><p class="desc-zh">让我们用AI来赚钱吧！</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**货币化·发布·参与·创造——一站式平台。**AiToEarn通过**AI自动化**，帮助OPC（一人公司）、创作者、品牌与企业在全球主流平台上、分发并变现。 ② 在龙虾 OpenClaw 中用 | 龙虾用户 | ❌ 不需要 | | ③ 在 Claude / Cursor 等 AI 助手中用 |人工智能工具用户| ❌ 不需要 | | ④ Docker 一键部署 | 想要进行团队化部署| ✅ 需要服务器 | &gt; 💡 **方式②③④都需要先获取API Key**，请先看如何获取API Key。 - **2026-04-20**: OpenClaw（龙虾）新增AiToEarn赚钱支持，可在龙虾中直接接收并执行内容变现任务。 - **2026-03-26**: 2.1版本—内容交易市场上线；新增OpenClaw（龙虾）支持，可在龙虾中直接使用AiToEarn；新增MCP协议支持，可在Claude、Cursor等任何支持MCP的Agent或大模型中使用AiToEarn。 - **2026-02-07**: 1.8.0版本中，新增线下商户推广解决方案，支持餐厅、零售店、民宿、美容美发、健身房等多种线下业态，将线下推广活动转化为线上传播任务，通过内容发布和用户参与机制，帮助门店获取更多线上曝光和到店流量。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/yikart/AiToEarn" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/yikart/AiToEarn/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/yikart/AiToEarn/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.5k</span>
+      <span class="stat-item">⑂ 2.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div></div>
+  <div id="panel-monthly" class="panel" style="display:none"><div class="card">
+  <div class="rank-col"><span class="rank-num">01</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank">
+        <span class="repo-author">forrestchang</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">andrej-karpathy-skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.</p><p class="desc-zh">用于改进 Claude 代码行为的单个 CLAUDE.md 文件，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">受 Karpathy 启发的 Claude 代码指南 &gt; 查看我的新项目 Multica — 一个开源平台，用于运行和管理具有可重用技能的编码代理。 &gt; 在 X 上关注我：https://x.com/jiayuan_jy 一个用于改进 Claude 代码行为的单个文件，源自 Andrej Karpathy 对 LLM 编码陷阱的观察。 &gt; “模型会代表你做出错误的假设，并且不加检查就跟着它们运行。它们不会管理自己的混乱，不会寻求澄清，不会暴露不一致的地方，不会提出权衡，在应该的时候不会推迟。” &gt; “他们真的喜欢使代码和 API 过于复杂，使抽象变得臃肿，不清理死代码......</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/forrestchang/andrej-karpathy-skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/forrestchang/andrej-karpathy-skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/forrestchang/andrej-karpathy-skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 125.0k</span>
+      <span class="stat-item">⑂ 12.7k</span>
+      
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">02</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/mattpocock/skills" target="_blank">
+        <span class="repo-author">mattpocock</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Skills for Real Engineers. Straight from my .claude directory.</p><p class="desc-zh">真正工程师的技能。直接来自我的 .claude 目录。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">我每天用我的代理技能来做真正的工程——而不是氛围编码。开发真正的应用程序很困难。 GSD、BMAD 和 Spec-Kit 等方法试图通过拥有流程来提供帮助。但这样做时，它们会夺走您的控制权，并使流程中的错误难以解决。这些技能被设计得很小、易于适应且可组合。它们适用于任何模型。它们基于数十年的工程经验。和他们一起玩。让它们成为你自己的。享受。如果您想跟上这些技能的变化以及我创建的任何新技能，您可以在我的时事通讯上加入约 60,000 名其他开发人员： 1. 运行 Skills.sh 安装程序： 2. 选择您想要的技能，以及您想要将其安装到的编码代理。 **确保您选择**。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/mattpocock/skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/mattpocock/skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/mattpocock/skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 71.5k</span>
+      <span class="stat-item">⑂ 6.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">03</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Alishahryar1/free-claude-code" target="_blank">
+        <span class="repo-author">Alishahryar1</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">free-claude-code</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Use claude-code for free in the terminal, VSCode extension or discord like OpenClaw (voice supported)</p><p class="desc-zh">在终端、VSCode 扩展或像 OpenClaw 这样的 Discord 中免费使用 claude-code（支持语音）</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">通过您自己的 Anthropic 兼容代理使用 Claude Code CLI、VS Code、JetBrains ACP 或聊天机器人。免费 Claude Code 将 Anthropic Messages API 流量从 Claude Code 路由到 NVIDIA NIM、Kimi、Wafer、OpenRouter、DeepSeek、LM Studio、llama.cpp 或 Ollama。它使 Claude Code 的客户端协议保持稳定，同时让您选择免费、付费或本地模型。快速启动 · 提供者 · 客户端 · 配置 · 开发 - Claude Code 的 Anthropic API 调用的嵌入式代理。 - 八个提供商后端：NVIDIA NIM、Kimi、Wafer、OpenRouter、DeepSeek、LM Studio、llama.cpp 和 Ollama。 - 按模型路由：将 Opus、Sonnet、Haiku 和后备流量发送到不同的提供商。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Alishahryar1/free-claude-code" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Alishahryar1/free-claude-code/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Alishahryar1/free-claude-code/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 23.8k</span>
+      <span class="stat-item">⑂ 3.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">04</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/NousResearch/hermes-agent" target="_blank">
+        <span class="repo-author">NousResearch</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hermes-agent</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The agent that grows with you</p><p class="desc-zh">与您共同成长的代理商</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**由 Nous Research 构建的自我改进的人工智能代理。**它是唯一具有内置学习循环的代理 - 它从经验中创造技能，在使用过程中改进它们，推动自己坚持知识，搜索自己过去的对话，并在各个会话中构建一个关于你是谁的深化模型。在 5 美元的 VPS、GPU 集群或无服务器基础设施上运行它，闲置时几乎不需要任何成本。它与您的笔记本电脑无关——当它在云虚拟机上工作时，可以通过 Telegram 与它交谈。使用您想要的任何模型 - Nous Portal、OpenRouter（200 多种型号）、NVIDIA NIM (Nemotron)、Xiaomi MiMo、z.ai/GLM、Kimi/Moonshot、MiniMax、Hugging Face、OpenAI 或您自己的端点。切换 — 无需更改代码，无需锁定。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/NousResearch/hermes-agent/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/NousResearch/hermes-agent/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 144.2k</span>
+      <span class="stat-item">⑂ 22.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">05</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/lsdefine/GenericAgent" target="_blank">
+        <span class="repo-author">lsdefine</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">GenericAgent</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption</p><p class="desc-zh">自进化代理：从 3.3K 行种子中生长技能树，以减少 6 倍的代币消耗实现完整的系统控制</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">英语 | 中文 | 📄 技术报告：&amp;nbsp; &amp;nbsp; &amp;nbsp; | 📘 教程 | Sophub &gt; 📌 **官方渠道**：此 GitHub 存储库是 GenericAgent 的唯一官方来源。我们与任何使用 GenericAgent 名称的第三方网站没有任何隶属关系。 **GenericAgent** 是一个最小的、自我进化的自主代理框架。它的核心只有**~3K行代码**。通过 **9 个原子工具 + 约 100 行代理循环**，它授予任何 LLM 对本地计算机的系统级控制 - 涵盖浏览器、终端、文件系统、键盘/鼠标输入、屏幕视觉和移动设备 (ADB)。它的设计理念是：**不要预加载技能，而是进化它们。** 每次 GenericAgent 解决新任务时，它都会自动将执行路径具体化为技能，以便以后直接重用。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/lsdefine/GenericAgent" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/lsdefine/GenericAgent/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/lsdefine/GenericAgent/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 10.9k</span>
+      <span class="stat-item">⑂ 1.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">06</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank">
+        <span class="repo-author">AIDC-AI</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">Pixelle-Video</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine</p><p class="desc-zh">🚀 AI 短视频引擎 | AI全自动短视频引擎</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">https://github.com/user-attachments/assets/a42e7457-fcc8-40da-83fc-784c45a8b95d须输入一个**主题**，Pixelle-Video可以自动完成： - ✅ **2026-01-26**: 新增「动作迁移」模块，上传参考视频和图片进行动作迁移 - ✅ **2026-01-14**:新增「数字人口播」和「图生视频」预设，新增多语言 TTS 音色支持 - ✅ **2026-01-06**：新增 RunningHub 48G 显存机器调用支持 - ✅ **2025-12-28**：支持 RunningHub 限制和可配置，优化 LLM 返回格式化数据的逻辑 - ✅ **2025-12-17**：支持 ComfyUI API 密钥配置，支持 Nano Banana模型调用，API接口支持模板自定义参数 - ✅ **2025-12-10**: 侧边栏内置FAQ，锁定edge-tts版本修复TTS服务不稳定问题 - ✅ **2025-12-08**: 支持固定脚本多种分割方式(段落/行/句子)，优化选择交互逻辑支持直接预览模板选择 - ✅ **2025-12-06**: 修复视频生成API返回URL路径处理，支持跨平台兼容 - ✅ **2025-12-05**: 新增 Windows 整合包下载，优化图片与视频反推工作流 - ✅ **2025-12-04**: 新增上传自定义素材功能，支持用户自己的照片和视频，AI 智能分析生成脚本 - ✅ **2025-11-18**: 优化 RunningHub 服务调用支持大部分处理，新增历史记录页面，支持批量创建视频任务 - ✅ **AI 智能文案** - 根据主题智能创作解说词，不用自己写剧本 - ✅ **AI 生成配图*</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/AIDC-AI/Pixelle-Video/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/AIDC-AI/Pixelle-Video/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 15.1k</span>
+      <span class="stat-item">⑂ 2.2k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">07</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/addyosmani/agent-skills" target="_blank">
+        <span class="repo-author">addyosmani</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">agent-skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Production-grade engineering skills for AI coding agents.</p><p class="desc-zh">AI 编码代理的生产级工程技能。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**人工智能编码代理的生产级工程技能。** 技能对高级工程师在构建软件时使用的工作流程、质量关卡和最佳实践进行编码。这些内容经过打包，以便人工智能代理在开发的每个阶段都能一致地遵循它们。映射到开发生命周期的 7 个斜线命令。每一项都会自动激活正确的技能。 |你在做什么|命令|关键原理| |--------------------|---------|---------------| |定义要构建的内容 | |代码前的规格 | |计划如何构建它 | |小型原子任务 | |增量构建 | |一次一片 | |证明它有效 | |测试就是证明| |合并前审查 | |改善代码健康 | |简化代码 | |清晰胜过聪明 | |交付生产| |更快更安全 |斯克</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/addyosmani/agent-skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/addyosmani/agent-skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/addyosmani/agent-skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 39.3k</span>
+      <span class="stat-item">⑂ 4.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#89e051"></span><span class="lang-name">Shell</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">08</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/multica-ai/multica" target="_blank">
+        <span class="repo-author">multica-ai</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">multica</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.</p><p class="desc-zh">开源托管代理平台。将编码代理变成真正的队友 - 分配任务、跟踪进度、复合技能。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**您接下来的 10 名员工将不是人类。** 开源托管代理平台。将编码代理变成真正的队友 - 分配任务、跟踪进度、复合技能。网站·云·X·自托管·贡献 Multica 将编码代理变成真正的队友。将问题分配给代理，就像分配给同事一样 - 他们将自动接手工作、编写代码、报告阻止程序并更新状态。不再有复制粘贴提示。不再需要照顾孩子了。您的代理出现在董事会上，参与对话，并随着时间的推移复合可重用的技能。将其视为托管代理的开源基础设施——供应商中立、自托管、专为人类+人工智能团队设计。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/multica-ai/multica" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/multica-ai/multica/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/multica-ai/multica/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 27.2k</span>
+      <span class="stat-item">⑂ 3.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">09</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank">
+        <span class="repo-author">ComposioHQ</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">awesome-codex-skills</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">A curated list of practical Codex skills for automating workflows across the Codex CLI and API.</p><p class="desc-zh">用于跨 Codex CLI 和 API 实现工作流程自动化的实用 Codex 技能精选列表。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">用于跨 Codex CLI 和 API 实现工作流程自动化的实用 Codex 技能精选列表。 &gt; **想要的技能不仅仅是生成文本？** Codex 可以发送电子邮件、创建问题、发布到 Slack 以及在 1000 多个应用程序中执行操作。查看如何 → 快速入门：使用技能安装程序将技能添加到 Codex 安装（推荐） 安装程序获取技能并将其放入 .重新启动 Codex 以获取新技能。 1. 将所需的技能文件夹（例如 ）复制到（默认为 ）。 2. 重新启动 Codex，以便加载新的元数据。 3. 在下一次会议中，描述任务或提及技能名称； Codex 将根据其 frontmatter 触发匹配技能。 - Bernstein - 带有 Codex CLI 适配器的多代理协调器。在具有质量门控的隔离 git 工作树中运行并行 Codex 代理。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/ComposioHQ/awesome-codex-skills/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/ComposioHQ/awesome-codex-skills/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 8.4k</span>
+      <span class="stat-item">⑂ 584</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">10</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Z4nzu/hackingtool" target="_blank">
+        <span class="repo-author">Z4nzu</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">hackingtool</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">ALL IN ONE Hacking Tool For Hackers</p><p class="desc-zh">黑客的多合一黑客工具</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">面向安全研究人员和渗透测试人员的一体化黑客工具 | **🐍** | **Python 3.10+** |所有 Python 2 代码均已删除，现代语法贯穿始终 | | **🖥** | **操作系统感知菜单** |仅限 Linux 的工具在 macOS 上自动隐藏 | | **📦** | **185+ 工具** |跨 6 个类别添加 35 个新的现代工具 | | **🔍** | **搜索** |键入可按名称、描述或关键字搜索所有工具 | | **🏷** | **标签过滤器** |输入按 19 个标签进行过滤 — osint、web、c2、cloud、mobile... | | **💡** | **推荐** |输入 — “我想扫描网络”→ 显示相关工具 | | **✅** | **安装状态** | ✔/✘ 显示在每个工具旁边 — 了解已准备好哪些工具 | | **⚡** | **安装全部** |任何类别的选项 - 立即批量安装 | | **🔄** | **智能更新** |每个工具都有更新——自动检测 git pull / pip upg</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Z4nzu/hackingtool" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Z4nzu/hackingtool/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Z4nzu/hackingtool/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 73.6k</span>
+      <span class="stat-item">⑂ 8.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">11</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/soxoj/maigret" target="_blank">
+        <span class="repo-author">soxoj</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">maigret</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites</p><p class="desc-zh">🕵️‍♂️ 从 3000 多个网站按用户名收集某人的档案</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">**Maigret** 仅通过用户名**收集某人的档案，检查大量网站上的帐户并从网页收集所有可用信息。无需 API 密钥。确保您有 Python 3.10 或更高版本。没有安装？尝试使用 Telegram 机器人或 Cloud Shell。想要网络用户界面吗？查看如何启动它。 - 支持 3,000 多个站点（查看完整列表）。默认运行会检查流量排名最高的 500 个网站；通过扫描所有内容，或按类别/国家缩小范围。 - 可嵌入 Python 项目中 — 以编程方式导入和运行搜索（请参阅库的使用）。 - 从个人资料页面和站点 API 中提取有关帐户所有者的所有可用信息，包括指向其他​​帐户的链接。 - 使用发现的用户名和其他 ID 执行递归搜索。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/soxoj/maigret" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/soxoj/maigret/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/soxoj/maigret/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 27.8k</span>
+      <span class="stat-item">⑂ 2.0k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">12</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/TauricResearch/TradingAgents" target="_blank">
+        <span class="repo-author">TauricResearch</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">TradingAgents</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">TradingAgents: Multi-Agents LLM Financial Trading Framework</p><p class="desc-zh">TradingAgents：多代理LLM金融交易框架</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">TradingAgents：多代理 LLM 金融交易框架 - [2026-05] **TradingAgents v0.2.5** 发布，包含接地情绪分析师、GPT-5.5 等模型覆盖、Qwen/GLM/MiniMax 双区域支持、具有 API 密钥自动检测的 env-var 可配置性、远程 Ollama 支持、非美国 alpha 基准测试和股票路径遍历强化。完整列表请参见 CHANGELOG.md。 - [2026-04] **TradingAgents v0.2.4** 发布，包含结构化输出代理（研究管理器、交易者、投资组合管理器）、LangGraph 检查点恢复、持久决策日志、DeepSeek/Qwen/GLM/Azure 提供商支持、Docker 和 Windows UTF-8 编码修复。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/TauricResearch/TradingAgents/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 73.7k</span>
+      <span class="stat-item">⑂ 14.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">13</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/thedotmack/claude-mem" target="_blank">
+        <span class="repo-author">thedotmack</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">claude-mem</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More</p><p class="desc-zh">每个座席跨会话的持久上下文 – 捕获座席在会话期间所做的所有操作，使用 AI 对其进行压缩，并将相关上下文注入到未来的会话中。适用于 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">为 Claude Code 构建的持久内存压缩系统。 Claude-Mem 通过自动捕获工具使用观察、生成语义摘要并将其提供给未来的会话，无缝地保留跨会话的上下文。这使得克劳德即使在会话结束或重新连接后也能保持项目知识的连续性。或安装 Gemini CLI（自动检测）：或从 Claude Code 内的插件市场安装：重新启动 Claude Code 或 Gemini CLI。先前会话中的上下文将自动出现在新会话中。 &gt; **注意：** Claude-Mem 也在 npm 上发布，但仅安装 **SD​​K/库** - 它不注册插件挂钩或设置工作服务。始终通过 或 上面的命令安装。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/thedotmack/claude-mem" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/thedotmack/claude-mem/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/thedotmack/claude-mem/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 74.8k</span>
+      <span class="stat-item">⑂ 6.4k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3178c6"></span><span class="lang-name">TypeScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">14</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/Anil-matcha/Open-Generative-AI" target="_blank">
+        <span class="repo-author">Anil-matcha</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">Open-Generative-AI</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">Unrestricted, open-source alternative to AI video platforms — Free, unrestricted AI image &amp;amp; video generation studio with 200+ models (Flux, Midjourney, Kling, Sora, Veo). No content filters. Self-hosted, MIT licensed.</p><p class="desc-zh">AI 视频平台的无限制、开源替代方案 — 免费、无限制的 AI 图像和视频视频生成工作室，拥有 200 多个模型（Flux、Midjourney、Kling、Sora、Veo）。没有内容过滤器。自托管，麻省理工学院许可。</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">Open Generative AI — Unrestricted Open-Source Alternative to AI Video Platforms &gt; **The free, open-source, unrestricted alternative to AI Video Platforms.** Generate AI images and videos using 200+ state-of-the-art models — no content filters, no closed ecosystem, no subscription fees. **Community:** Join Reddit &amp; Discord for discussions and support &gt; 🤖 **Automate media generations with AI coding agents:** Generative-Media-Skills — a library of skills that let agents like **Claude Code**, **Codex**, and other coding assistants drive 200+ image/video models end-to-end (prompt → generate → edit → stitch) directly from your terminal.非常适合在不接触 UI 的情况下构建自动化媒体管道。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/Anil-matcha/Open-Generative-AI" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/Anil-matcha/Open-Generative-AI/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/Anil-matcha/Open-Generative-AI/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 12.8k</span>
+      <span class="stat-item">⑂ 2.3k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#f1e05a"></span><span class="lang-name">JavaScript</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">15</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/hugohe3/ppt-master" target="_blank">
+        <span class="repo-author">hugohe3</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">ppt-master</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">AI generates natively editable PPTX from any document — real PowerPoint shapes with native animations, not images · by Hugo He</p><p class="desc-zh">AI 从任何文档生成本机可编辑的 PPTX — 具有本机动画的真实 PowerPoint 形状，而不是图像 · Hugo He</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">PPT Master — AI 从任何文档生成本机可编辑的 PPTX 该项目在 PackyCode 和其他赞助商的支持下保持免费和开源。感谢 PackyCode 对本项目的赞助！ PackyCode 是一家可靠、高效的 API 中继服务提供商，为 Claude Code、Codex、Gemini 等提供中继服务。 PackyCode 为我们的项目用户提供特别折扣：使用此链接注册并在充值时输入促销代码 ppt-master 即可获得 10% 的折扣。 ^ 使用 Claude Opus 4.7 从单个微信文章 URL 端到端生成的 12 页本机可编辑甲板。无需手动设计。没有图像导出。每个形状、文本框和图表都可以在 PowerPoint 中单击和编辑。</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/hugohe3/ppt-master" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/hugohe3/ppt-master/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/hugohe3/ppt-master/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 14.7k</span>
+      <span class="stat-item">⑂ 1.5k</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="rank-col"><span class="rank-num">16</span></div>
+  <div class="card-body">
+    <div class="repo-line">
+      <a class="repo-name" href="https://github.com/z-lab/dflash" target="_blank">
+        <span class="repo-author">z-lab</span
+        ><span class="repo-sep"> / </span
+        ><span class="repo-title">dflash</span>
+      </a>
+      
+    </div>
+    <p class="desc-en">DFlash: Block Diffusion for Flash Speculative Decoding</p><p class="desc-zh">DFlash：用于闪存推测解码的块扩散</p><div class="readme-preview"><span class="readme-label">README 摘要</span><p class="readme-text">DFlash：用于闪存推测解码的块扩散 **论文** | **博客** | **模型** **DFlash** 是一种轻量级的 **块扩散** 模型，专为推测解码而设计。它可以实现高效、高质量的并行绘图。 https://github.com/user-attachments/assets/5b29cabb-eb95-44c9-8ffe-367​​c0758de8c |杰玛-4-31B-it | z-lab/gemma-4-31B-it-DFlash | | gemma-4-26B-A4B-it | 宝石-4-26B-A4B-it z-lab/gemma-4-26B-A4B-it-DFlash | | MiniMax-M2.7（预览版）| z-lab/MiniMax-M2.7-DFlash | | MiniMax-M2.5（预览版）| z-lab/MiniMax-M2.5-DFlash | | Kimi-K2.6（预览版）| z-lab/Kimi-K2.6-DFlash | |基米-K2.5 | z-lab/Kimi-K2.5-DFlash | | Qwen3.6-27B | z-lab/Qwen3.6-27B-DFlash | | Qwen3.6-35B-A3B | z-lab/Qwen3.6-35B-A3B-DFlash | | Qwen3.5-4B | z-lab/Qwen3.5-4B-DFlash | | Qwen3.5-9B | z-lab/Qwen3.5-9B-DFlash | |奎韦</p></div>
+    
+    <div class="actions">
+      <a href="https://github.com/z-lab/dflash" target="_blank" class="btn btn-gh">GitHub →</a>
+      <a href="https://github.com/z-lab/dflash/blob/HEAD/README.md" target="_blank" class="btn btn-readme">README</a>
+      <a href="https://github.com/z-lab/dflash/issues" target="_blank" class="btn btn-issues">Issues</a>
+      <span class="stat-sep"></span>
+      <span class="stat-item">★ 4.4k</span>
+      <span class="stat-item">⑂ 307</span>
+      <span class="lang-chip"><span class="lang-dot" style="background:#3572A5"></span><span class="lang-name">Python</span></span>
+    </div>
+  </div>
+</div></div>
+
+  <div class="no-result" id="empty">没有找到匹配的项目</div>
+</div>
+
+<script>
+var COUNTS={"daily":13,"weekly":19,"monthly":16};
+var LABELS={"daily":"今日热榜","weekly":"本周热榜","monthly":"本月热榜"};
+var currentPeriod="daily";
+
+function switchTab(period){
+  if(period===currentPeriod)return;
+  currentPeriod=period;
+  ["daily","weekly","monthly"].forEach(function(p){
+    document.getElementById("panel-"+p).style.display=p===period?"":"none";
+    document.querySelector("[data-period="+p+"]").classList.toggle("active",p===period);
+  });
+  var inp=document.querySelector(".search");
+  inp.value="";
+  document.getElementById("cnt").textContent="共 "+COUNTS[period]+" 个项目";
+  document.getElementById("period-label").textContent=LABELS[period];
+  document.getElementById("empty").style.display="none";
+  document.querySelectorAll("#panel-"+period+" .card").forEach(function(c){c.classList.remove("hidden");});
+}
+
+function onSearch(q){
+  q=q.trim().toLowerCase();
+  var cards=document.querySelectorAll("#panel-"+currentPeriod+" .card"),shown=0;
+  cards.forEach(function(c){
+    var show=!q||c.textContent.toLowerCase().indexOf(q)>=0;
+    c.classList.toggle("hidden",!show);
+    if(show)shown++;
+  });
+  document.getElementById("cnt").textContent="共 "+shown+" 个项目";
+  document.getElementById("empty").style.display=shown?"none":"block";
+}
+</script>
+</body>
+</html>
