@@ -696,17 +696,26 @@
     ]
   },
   "20260616": {
-    "total": 18,
+    "total": 13,
     "file": "github-trending/trending_20260616.html",
     "top_repos": [
       {
-        "full_name": "iptv-org/iptv",
-        "url": "https://github.com/iptv-org/iptv",
-        "description": "Collection of publicly available IPTV channels from all over the world",
-        "description_zh": "来自世界各地的公开 IPTV 频道集合",
+        "full_name": "freeCodeCamp/freeCodeCamp",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+        "description_zh": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。",
         "language": "TypeScript",
-        "stars_today": 2657,
-        "stars": 122911
+        "stars_today": 640,
+        "stars": 448434
+      },
+      {
+        "full_name": "swc-project/swc",
+        "url": "https://github.com/swc-project/swc",
+        "description": "Rust-based platform for the Web",
+        "description_zh": "基于 Rust 的 Web 平台",
+        "language": "Rust",
+        "stars_today": 21,
+        "stars": 33939
       },
       {
         "full_name": "teslamate-org/teslamate",
@@ -714,17 +723,26 @@
         "description": "A self-hosted data logger for your Tesla 🚘 [main maintainer=@JakobLichterfeld]",
         "description_zh": "特斯拉的自托管数据记录器 🚘 [主要维护者=@JakobLichterfeld]",
         "language": "Elixir",
-        "stars_today": 33,
-        "stars": 8238
+        "stars_today": 214,
+        "stars": 8377
       },
       {
-        "full_name": "Panniantong/Agent-Reach",
-        "url": "https://github.com/Panniantong/Agent-Reach",
-        "description": "Give your AI agent eyes to see the entire internet. Read &amp; search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-        "description_zh": "让您的人工智能代理有一双能够看到整个互联网的眼睛。阅读&amp;搜索 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书 — 一个 CLI，零 API 费用。",
-        "language": "Python",
-        "stars_today": 1100,
-        "stars": 30213
+        "full_name": "iptv-org/iptv",
+        "url": "https://github.com/iptv-org/iptv",
+        "description": "Collection of publicly available IPTV channels from all over the world",
+        "description_zh": "来自世界各地的公开 IPTV 频道集合",
+        "language": "TypeScript",
+        "stars_today": 1196,
+        "stars": 123870
+      },
+      {
+        "full_name": "puppeteer/puppeteer",
+        "url": "https://github.com/puppeteer/puppeteer",
+        "description": "JavaScript API for Chrome and Firefox",
+        "description_zh": "适用于 Chrome 和 Firefox 的 JavaScript API",
+        "language": "TypeScript",
+        "stars_today": 80,
+        "stars": 94840
       },
       {
         "full_name": "meshery/meshery",
@@ -732,62 +750,17 @@
         "description": "Meshery, the cloud native manager",
         "description_zh": "Meshery，云原生管理器",
         "language": "TypeScript",
-        "stars_today": 228,
-        "stars": 10632
+        "stars_today": 229,
+        "stars": 10799
       },
       {
-        "full_name": "chatwoot/chatwoot",
-        "url": "https://github.com/chatwoot/chatwoot",
-        "description": "Open-source live-chat, email support, omni-channel desk. An alternative to Intercom, Zendesk, Salesforce Service Cloud etc. 🔥💬",
-        "description_zh": "开源实时聊天、电子邮件支持、全渠道服务台。 Intercom、Zendesk、Salesforce Service Cloud 等的替代品。🔥💬",
-        "language": "Ruby",
-        "stars_today": 431,
-        "stars": 31701
-      },
-      {
-        "full_name": "krahets/hello-algo",
-        "url": "https://github.com/krahets/hello-algo",
-        "description": "《Hello 算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、English、日本語，提供 Python, Java, C++, C, C#, JS, Go, Swift, Rust, Ruby, Kotlin, TS, Dart 等代码实现",
-        "description_zh": "《Hello算法》：动画图解、一键运行的数据结构与算法教程。支持简中、繁中、英语、日本语，提供Python、Java、C++、C、C#、JS、Go、Swift、Rust、Ruby、Kotlin、TS、Dart等代码实现",
-        "language": "Java",
-        "stars_today": 71,
-        "stars": 126920
-      },
-      {
-        "full_name": "freeCodeCamp/freeCodeCamp",
-        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
-        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
-        "description_zh": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。",
+        "full_name": "cypress-io/cypress",
+        "url": "https://github.com/cypress-io/cypress",
+        "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+        "description_zh": "对浏览器中运行的任何内容进行快速、简单且可靠的测试。",
         "language": "TypeScript",
-        "stars_today": 736,
-        "stars": 447906
-      },
-      {
-        "full_name": "trycua/cua",
-        "url": "https://github.com/trycua/cua",
-        "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-        "description_zh": "计算机使用代理的开源基础设施。用于训练和评估可控制完整桌面（macOS、Linux、Windows）的 AI 代理的沙箱、SDK 和基准测试。",
-        "language": "HTML",
-        "stars_today": 70,
-        "stars": 18159
-      },
-      {
-        "full_name": "jwasham/coding-interview-university",
-        "url": "https://github.com/jwasham/coding-interview-university",
-        "description": "A complete computer science study plan to become a software engineer.",
-        "description_zh": "成为软件工程师的完整计算机科学研究计划。",
-        "language": "",
-        "stars_today": 364,
-        "stars": 352315
-      },
-      {
-        "full_name": "rohitg00/ai-engineering-from-scratch",
-        "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-        "description": "Learn it. Build it. Ship it for others.",
-        "description_zh": "学习它。建造它。寄给别人。",
-        "language": "Python",
-        "stars_today": 562,
-        "stars": 33095
+        "stars_today": 11,
+        "stars": 50148
       },
       {
         "full_name": "music-assistant/server",
@@ -795,71 +768,53 @@
         "description": "Music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistant and must run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike.",
         "description_zh": "音乐助手是一款免费的开源媒体库管理器，可连接到您的流媒体服务和各种连接的扬声器。服务器是跳动的心脏，是音乐助手的核心，必须在始终在线的设备上运行，例如 Raspberry Pi、NAS 或 Intel NUC 等。",
         "language": "Python",
-        "stars_today": 225,
-        "stars": 2387
+        "stars_today": 157,
+        "stars": 2519
       },
       {
-        "full_name": "Free-TV/IPTV",
-        "url": "https://github.com/Free-TV/IPTV",
-        "description": "M3U Playlist for free TV channels",
-        "description_zh": "免费电视频道的 M3U 播放列表",
+        "full_name": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+        "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+        "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
+        "description_zh": "使用 Rust 编写的跨平台 GUI，使用 ADB 来消除非 root 的 Android 设备。提高您的隐私、安全性和设备的电池寿命。",
+        "language": "Rust",
+        "stars_today": 146,
+        "stars": 7197
+      },
+      {
+        "full_name": "OpenBMB/VoxCPM",
+        "url": "https://github.com/OpenBMB/VoxCPM",
+        "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning",
+        "description_zh": "VoxCPM2：用于多语言语音生成、创意语音设计和逼真克隆的无分词器 TTS",
         "language": "Python",
-        "stars_today": 361,
-        "stars": 17288
+        "stars_today": 413,
+        "stars": 30064
       },
       {
-        "full_name": "Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
-        "url": "https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
-        "description": "Introduction to Autonomous Robots",
-        "description_zh": "自主机器人简介",
-        "language": "TeX",
-        "stars_today": 489,
-        "stars": 3071
-      },
-      {
-        "full_name": "Raphire/Win11Debloat",
-        "url": "https://github.com/Raphire/Win11Debloat",
-        "description": "A simple, lightweight PowerShell script that allows you to remove pre-installed apps, disable telemetry, as well as perform various other changes to declutter and customize your Windows experience. Win11Debloat works for both Windows 10 and Windows 11.",
-        "description_zh": "一个简单、轻量级的 PowerShell 脚本，允许您删除预安装的应用程序、禁用遥测以及执行各种其他更改以整理和自定义您的 Windows 体验。 Win11Debloat 适用于 Windows 10 和 Windows 11。",
-        "language": "PowerShell",
-        "stars_today": 112,
-        "stars": 48031
-      },
-      {
-        "full_name": "mikeroyal/Self-Hosting-Guide",
-        "url": "https://github.com/mikeroyal/Self-Hosting-Guide",
-        "description": "Self-Hosting Guide. Learn all about locally hosting (on premises &amp; private web servers) and managing software applications by yourself or your organization. Including Cloud, LLMs, WireGuard, Automation, Home Assistant, and Networking.",
-        "description_zh": "自托管指南。了解有关本地托管（本地和私有 Web 服务器）以及您自己或您的组织管理软件应用程序的所有信息。包括云、法学硕士、WireGuard、自动化、家庭助理和网络。",
-        "language": "Dockerfile",
+        "full_name": "alibaba/zvec",
+        "url": "https://github.com/alibaba/zvec",
+        "description": "A lightweight, lightning-fast, in-process vector database",
+        "description_zh": "轻量级、快如闪电的进程内矢量数据库",
+        "language": "C++",
         "stars_today": 188,
-        "stars": 21039
+        "stars": 10377
       },
       {
-        "full_name": "itsfatduck/optimizerDuck",
-        "url": "https://github.com/itsfatduck/optimizerDuck",
-        "description": "Free, open-source Windows optimization tool for performance, privacy, and simplicity.",
-        "description_zh": "免费、开源的 Windows 优化工具，可实现性能、隐私和简单性。",
-        "language": "C#",
-        "stars_today": 340,
-        "stars": 3694
+        "full_name": "rmyndharis/OpenWA",
+        "url": "https://github.com/rmyndharis/OpenWA",
+        "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
+        "description_zh": "免费、开源、自托管 WhatsApp API 网关",
+        "language": "TypeScript",
+        "stars_today": 185,
+        "stars": 8981
       },
       {
-        "full_name": "NVIDIA/SkillSpector",
-        "url": "https://github.com/NVIDIA/SkillSpector",
-        "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
-        "description_zh": "AI 代理技能的安全扫描器。检测漏洞、恶意模式和安全风险。",
-        "language": "Python",
-        "stars_today": 1079,
-        "stars": 6386
-      },
-      {
-        "full_name": "shiyu-coder/Kronos",
-        "url": "https://github.com/shiyu-coder/Kronos",
-        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-        "description_zh": "Kronos：金融市场语言的基础模型",
-        "language": "Python",
-        "stars_today": 396,
-        "stars": 30283
+        "full_name": "n0-computer/iroh",
+        "url": "https://github.com/n0-computer/iroh",
+        "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+        "description_zh": "IP 地址中断，请改为拨号键。 Rust 中的模块化网络堆栈。",
+        "language": "Rust",
+        "stars_today": 326,
+        "stars": 9193
       }
     ]
   }
