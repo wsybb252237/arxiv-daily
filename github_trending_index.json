@@ -1003,5 +1003,155 @@
         "stars": 51132
       }
     ]
+  },
+  "20260618": {
+    "total": 16,
+    "file": "github-trending/trending_20260618.html",
+    "top_repos": [
+      {
+        "full_name": "google-research/timesfm",
+        "url": "https://github.com/google-research/timesfm",
+        "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.",
+        "description_zh": "TimesFM（时间序列基础模型）是 Google Research 开发的用于时间序列预测的预训练时间序列基础模型。",
+        "language": "Python",
+        "stars_today": 858,
+        "stars": 22731
+      },
+      {
+        "full_name": "n0-computer/iroh",
+        "url": "https://github.com/n0-computer/iroh",
+        "description": "IP addresses break, dial keys instead. Modular networking stack in Rust.",
+        "description_zh": "IP 地址中断，请改为拨号键。 Rust 中的模块化网络堆栈。",
+        "language": "Rust",
+        "stars_today": 369,
+        "stars": 9921
+      },
+      {
+        "full_name": "freeCodeCamp/freeCodeCamp",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp",
+        "description": "freeCodeCamp.org's open-source codebase and curriculum. Learn math, programming, and computer science for free.",
+        "description_zh": "freeCodeCamp.org 的开源代码库和课程。免费学习数学、编程和计算机科学。",
+        "language": "TypeScript",
+        "stars_today": 417,
+        "stars": 449444
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 1435,
+        "stars": 232175
+      },
+      {
+        "full_name": "zai-org/GLM-5",
+        "url": "https://github.com/zai-org/GLM-5",
+        "description": "GLM-5: From Vibe Coding to Agentic Engineering",
+        "description_zh": "GLM-5：从 Vibe 编码到代理工程",
+        "language": "",
+        "stars_today": 286,
+        "stars": 3988
+      },
+      {
+        "full_name": "DeusData/codebase-memory-mcp",
+        "url": "https://github.com/DeusData/codebase-memory-mcp",
+        "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+        "description_zh": "高性能代码智能MCP服务器。将代码库索引到持久知识图谱中——以毫秒为单位的平均存储库。 158 种语言，亚毫秒级查询，标记减少 99%。单个静态二进制文件，零依赖性。",
+        "language": "C",
+        "stars_today": 2308,
+        "stars": 6747
+      },
+      {
+        "full_name": "alibaba/zvec",
+        "url": "https://github.com/alibaba/zvec",
+        "description": "A lightweight, lightning-fast, in-process vector database",
+        "description_zh": "轻量级、快如闪电的进程内矢量数据库",
+        "language": "C++",
+        "stars_today": 344,
+        "stars": 11135
+      },
+      {
+        "full_name": "withastro/flue",
+        "url": "https://github.com/withastro/flue",
+        "description": "The sandbox agent framework.",
+        "description_zh": "沙箱代理框架。",
+        "language": "TypeScript",
+        "stars_today": 164,
+        "stars": 5409
+      },
+      {
+        "full_name": "Kilo-Org/kilocode",
+        "url": "https://github.com/Kilo-Org/kilocode",
+        "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+        "description_zh": "Kilo 是一款一体化代理工程平台。使用最流行的开源编码代理更快地构建、发布和迭代。",
+        "language": "TypeScript",
+        "stars_today": 1339,
+        "stars": 21787
+      },
+      {
+        "full_name": "makeplane/plane",
+        "url": "https://github.com/makeplane/plane",
+        "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+        "description_zh": "🔥🔥🔥 开源 Jira、Linear、Monday 和 ClickUp 替代方案。 Plane 是一个现代项目管理平台，用于管理任务、冲刺、文档和分类。",
+        "language": "TypeScript",
+        "stars_today": 610,
+        "stars": 51698
+      },
+      {
+        "full_name": "Kong/insomnia",
+        "url": "https://github.com/Kong/insomnia",
+        "description": "The open-source, cross-platform API client for GraphQL, REST, WebSockets, SSE and gRPC. With Cloud, Local and Git storage.",
+        "description_zh": "适用于 GraphQL、REST、WebSockets、SSE 和 gRPC 的开源、跨平台 API 客户端。具有云、本地和 Git 存储。",
+        "language": "TypeScript",
+        "stars_today": 13,
+        "stars": 38589
+      },
+      {
+        "full_name": "Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+        "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation",
+        "description": "Cross-platform GUI written in Rust using ADB to debloat non-rooted Android devices. Improve your privacy, the security and battery life of your device.",
+        "description_zh": "使用 Rust 编写的跨平台 GUI，使用 ADB 来消除非 root 的 Android 设备。提高您的隐私、安全性和设备的电池寿命。",
+        "language": "Rust",
+        "stars_today": 247,
+        "stars": 7841
+      },
+      {
+        "full_name": "dotnet/aspnetcore",
+        "url": "https://github.com/dotnet/aspnetcore",
+        "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "description_zh": "ASP.NET Core 是一个跨平台 .NET 框架，用于在 Windows、Mac 或 Linux 上构建基于云的现代 Web 应用程序。",
+        "language": "C#",
+        "stars_today": 22,
+        "stars": 38079
+      },
+      {
+        "full_name": "owainlewis/awesome-artificial-intelligence",
+        "url": "https://github.com/owainlewis/awesome-artificial-intelligence",
+        "description": "A curated list of Artificial Intelligence (AI) courses, books, video lectures and papers.",
+        "description_zh": "人工智能 (AI) 课程、书籍、视频讲座和论文的精选列表。",
+        "language": "",
+        "stars_today": 33,
+        "stars": 14256
+      },
+      {
+        "full_name": "Lightricks/LTX-2",
+        "url": "https://github.com/Lightricks/LTX-2",
+        "description": "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+        "description_zh": "LTX-2 音视频生成模型的官方 Python 推理和 LoRA 训练包。",
+        "language": "Python",
+        "stars_today": 47,
+        "stars": 7434
+      },
+      {
+        "full_name": "LibreTranslate/LibreTranslate",
+        "url": "https://github.com/LibreTranslate/LibreTranslate",
+        "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+        "description_zh": "免费开源机器翻译 API。自托管、离线功能且易于设置。",
+        "language": "Python",
+        "stars_today": 83,
+        "stars": 14882
+      }
+    ]
   }
 }
