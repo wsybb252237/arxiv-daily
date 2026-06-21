@@ -1453,5 +1453,155 @@
         "stars": 7328
       }
     ]
+  },
+  "20260621": {
+    "total": 16,
+    "file": "github-trending/trending_20260621.html",
+    "top_repos": [
+      {
+        "full_name": "palmier-io/palmier-pro",
+        "url": "https://github.com/palmier-io/palmier-pro",
+        "description": "macOS video editor built for AI",
+        "description_zh": "专为 AI 打造的 macOS 视频编辑器",
+        "language": "Swift",
+        "stars_today": 1829,
+        "stars": 4494
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+        "description_zh": "世界上第一个开源的代理视频制作系统。 12条管道、52种工具、500+座席技能。将您的人工智能编码助手变成一个完整的视频制作工作室。",
+        "language": "Python",
+        "stars_today": 993,
+        "stars": 7980
+      },
+      {
+        "full_name": "chopratejas/headroom",
+        "url": "https://github.com/chopratejas/headroom",
+        "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+        "description_zh": "在工具输出、日志、文件和 RAG 块到达 LLM 之前对其进行压缩。减少 60-95% 的标记，答案相同。库、代理、MCP 服务器。",
+        "language": "Python",
+        "stars_today": 2617,
+        "stars": 43416
+      },
+      {
+        "full_name": "tursodatabase/turso",
+        "url": "https://github.com/tursodatabase/turso",
+        "description": "Turso is an in-process SQL database, compatible with SQLite.",
+        "description_zh": "Turso 是一个进程内 SQL 数据库，与 SQLite 兼容。",
+        "language": "Rust",
+        "stars_today": 543,
+        "stars": 20642
+      },
+      {
+        "full_name": "penpot/penpot",
+        "url": "https://github.com/penpot/penpot",
+        "description": "Penpot: The open-source design tool for design and code collaboration",
+        "description_zh": "Penpot：用于设计和代码协作的开源设计工具",
+        "language": "Clojure",
+        "stars_today": 1131,
+        "stars": 52017
+      },
+      {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "description_zh": "LLM驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动自主，支持零定时运行。LLM驱动的多市场股票智能分析系统，具有多源市场数据、实时新闻、决策仪表板、自动通知和免费计划运行。",
+        "language": "Python",
+        "stars_today": 519,
+        "stars": 44162
+      },
+      {
+        "full_name": "koala73/worldmonitor",
+        "url": "https://github.com/koala73/worldmonitor",
+        "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+        "description_zh": "实时全球情报仪表板。在统一的态势感知界面中进行人工智能驱动的新闻聚合、地缘政治监控和基础设施跟踪",
+        "language": "TypeScript",
+        "stars_today": 633,
+        "stars": 57850
+      },
+      {
+        "full_name": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+        "description_zh": "一个开源的长期 SuperAgent 工具，用于研究、编码和创建。借助沙箱、内存、工具、技能、子代理和消息网关，它可以处理可能需要几分钟到几小时的不同级别的任务。",
+        "language": "Python",
+        "stars_today": 415,
+        "stars": 72344
+      },
+      {
+        "full_name": "DeusData/codebase-memory-mcp",
+        "url": "https://github.com/DeusData/codebase-memory-mcp",
+        "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+        "description_zh": "高性能代码智能MCP服务器。将代码库索引到持久知识图谱中——以毫秒为单位的平均存储库。 158 种语言，亚毫秒级查询，标记减少 99%。单个静态二进制文件，零依赖性。",
+        "language": "C",
+        "stars_today": 1029,
+        "stars": 9968
+      },
+      {
+        "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+        "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+        "description": "754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND &amp; NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI &amp; 20+ platforms · 26 security domains · Apache 2.0",
+        "description_zh": "人工智能代理的 754 项结构化网络安全技能 · 映射到 5 个框架：MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND 和NIST AI RMF · Agentskills.io 标准 · 可与 Claude Code、GitHub Copilot、Codex CLI、Cursor、Gemini CLI 和 Claude Code 配合使用20+平台·26个安全域·Apache 2.0",
+        "language": "Python",
+        "stars_today": 445,
+        "stars": 17396
+      },
+      {
+        "full_name": "mikumifa/biliTickerBuy",
+        "url": "https://github.com/mikumifa/biliTickerBuy",
+        "description": "b站会员购购票辅助工具",
+        "description_zh": "b站会员购票辅助工具",
+        "language": "Python",
+        "stars_today": 56,
+        "stars": 3691
+      },
+      {
+        "full_name": "smicallef/spiderfoot",
+        "url": "https://github.com/smicallef/spiderfoot",
+        "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+        "description_zh": "SpiderFoot 自动化 OSINT 以获取威胁情报并绘制攻击面图。",
+        "language": "Python",
+        "stars_today": 288,
+        "stars": 18627
+      },
+      {
+        "full_name": "topoteretes/cognee",
+        "url": "https://github.com/topoteretes/cognee",
+        "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+        "description_zh": "Cognee 是面向代理的开源人工智能记忆平台。通过自托管知识图引擎，为您的人工智能代理提供跨会话的持久长期记忆。",
+        "language": "Python",
+        "stars_today": 361,
+        "stars": 18492
+      },
+      {
+        "full_name": "byoungd/English-level-up-tips",
+        "url": "https://github.com/byoungd/English-level-up-tips",
+        "description": "An advanced guide to learn English which might benefit you a lot 🎉 . 离谱的英语学习指南/英语学习教程/英语学习/学英语",
+        "description_zh": "学习英语的高级指南，可能会让您受益匪浅。 离谱的英语学习指南/英语学习教程/英语学习/学英语",
+        "language": "",
+        "stars_today": 121,
+        "stars": 53941
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+        "description_zh": "从 Anthropic 中提取的系统提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思维、GPT 5.5 即时、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。",
+        "language": "JavaScript",
+        "stars_today": 352,
+        "stars": 44153
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .claude directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .claude 目录。",
+        "language": "Shell",
+        "stars_today": 1441,
+        "stars": 139210
+      }
+    ]
   }
 }
