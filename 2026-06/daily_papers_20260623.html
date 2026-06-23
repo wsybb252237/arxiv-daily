@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>arxiv CV 日报 · 2026年06月23日</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1a3a6e;color:#eef6ff;font-size:15px;min-height:100vh}
+#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.back-bar,.hd,.stats,.ctrl,.main{position:relative;z-index:1}
+
+/* ── 顶栏 ── */
+.back-bar{background:rgba(255,255,255,.10);padding:10px 18px;border-bottom:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px)}
+.back-btn{display:inline-flex;align-items:center;gap:6px;color:#7dd8ff;font-size:14px;font-weight:600;text-decoration:none;padding:6px 14px;border-radius:8px;background:rgba(255,255,255,.10);border:1px solid rgba(120,200,255,.40);transition:all .2s}
+.back-btn:hover{background:rgba(255,255,255,.18);box-shadow:0 0 16px rgba(56,182,255,.35)}
+
+/* ── 页头 ── */
+.hd{background:rgba(255,255,255,.10);backdrop-filter:blur(24px);color:#fff;padding:30px 20px 22px;text-align:center;border-bottom:1px solid rgba(255,255,255,.18);box-shadow:0 4px 32px rgba(0,0,0,.20)}
+.hd-title{font-size:27px;font-weight:800;letter-spacing:4px;background:linear-gradient(90deg,#38b6ff 0%,#a78bfa 45%,#34d399 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 14px rgba(56,182,255,.5))}
+.hd .sub{margin-top:7px;color:rgba(255,255,255,.70);font-size:13px;letter-spacing:1.5px}
+.hd .tot{margin-top:9px;font-size:22px;font-weight:700;color:#7dd8ff;text-shadow:0 0 20px rgba(56,182,255,.5)}
+.author{margin-top:10px;font-size:12px;color:rgba(255,255,255,.45);letter-spacing:1.5px;font-style:italic}
+
+/* ── 统计栏 ── */
+.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:11px 16px;background:rgba(0,20,60,.35);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}
+.stat-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#cce8ff;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.stat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;box-shadow:0 0 6px currentColor}
+
+/* ── 搜索/筛选栏 ── */
+.ctrl{background:rgba(0,20,60,.40);backdrop-filter:blur(24px);padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.14);position:sticky;top:0;z-index:99;box-shadow:0 4px 24px rgba(0,0,0,.18)}
+.search{width:100%;padding:10px 20px;border:1px solid rgba(255,255,255,.30);border-radius:24px;font-size:15px;outline:none;background:rgba(255,255,255,.10);color:#eef6ff;transition:all .25s}
+.search::placeholder{color:rgba(255,255,255,.45)}
+.search:focus{border-color:rgba(120,210,255,.80);background:rgba(255,255,255,.16);box-shadow:0 0 20px rgba(56,182,255,.25)}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.filter-btn{padding:6px 14px;border:1px solid rgba(255,255,255,.30);border-radius:18px;background:rgba(0,20,55,.35);cursor:pointer;font-size:12px;color:#cce8ff;transition:all .2s;touch-action:manipulation;text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.filter-btn:hover{border-color:var(--cc,#38b6ff);color:#fff;background:rgba(0,30,80,.50)}
+.filter-btn.active{background:rgba(30,100,200,.55);border-color:#38b6ff;color:#fff;box-shadow:0 0 14px rgba(56,182,255,.30);font-weight:600}
+
+/* ── 卡片区 ── */
+.main{max-width:980px;margin:0 auto;padding:20px 16px}
+.count{color:rgba(255,255,255,.55);font-size:12px;margin-bottom:14px;text-align:right}
+
+.card{background:rgba(8,24,60,.78);backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.08);transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,.40),0 0 20px rgba(56,182,255,.18);border-color:rgba(120,210,255,.45)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{padding:3px 10px;border-radius:10px;color:#fff;font-size:11px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.45);text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.pub-date{color:rgba(255,255,255,.60);font-size:12px;white-space:nowrap;margin-left:8px}
+
+.title-en{font-size:15px;line-height:1.6;margin-bottom:5px}
+.title-en a{color:#eef6ff;text-decoration:none;transition:color .2s;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.title-en a:hover{color:#7dd8ff;text-shadow:0 0 12px rgba(56,182,255,.4)}
+.title-zh{color:#b8d8f0;font-size:14px;line-height:1.7;margin-bottom:8px;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.authors{color:rgba(255,255,255,.65);font-size:12px;margin-bottom:12px}
+
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px}
+.btn{padding:6px 16px;border-radius:8px;font-size:13px;text-decoration:none;font-weight:500;transition:all .2s;border:1px solid transparent;touch-action:manipulation}
+.btn-abs{background:rgba(56,182,255,.20);color:#7dd8ff;border-color:rgba(56,182,255,.45)}
+.btn-abs:hover{background:rgba(56,182,255,.35);box-shadow:0 0 14px rgba(56,182,255,.30)}
+.btn-pdf{background:rgba(255,100,80,.18);color:#ff9077;border-color:rgba(255,100,80,.40)}
+.btn-pdf:hover{background:rgba(255,100,80,.30);box-shadow:0 0 14px rgba(255,100,80,.25)}
+.btn-html{background:rgba(52,211,153,.18);color:#34d399;border-color:rgba(52,211,153,.40)}
+.btn-html:hover{background:rgba(52,211,153,.30);box-shadow:0 0 14px rgba(52,211,153,.25)}
+.github-link{color:#5ee8b0;font-size:13px;font-weight:600;text-decoration:none;text-shadow:0 0 8px rgba(52,211,153,.35)}
+.github-link:hover{text-shadow:0 0 16px rgba(52,211,153,.60)}
+.no-github{color:rgba(255,255,255,.38);font-size:12px}
+
+.toggle{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:8px;cursor:pointer;font-size:13px;color:rgba(255,255,255,.60);touch-action:manipulation;width:100%;transition:all .2s}
+.toggle:hover{background:rgba(56,182,255,.14);border-color:rgba(120,210,255,.45);color:#7dd8ff}
+.abs-body{margin-top:10px}
+.abs-en{color:#c8e0f4;font-size:13px;line-height:1.8;padding:12px 16px;background:rgba(4,14,40,.75);border:1px solid rgba(255,255,255,.12);border-radius:8px;margin-bottom:8px}
+.abs-zh{color:#d2eafc;font-size:13px;line-height:1.9;padding:12px 16px;background:rgba(8,28,65,.72);border:1px solid rgba(100,180,255,.22);border-radius:8px}
+
+.no-result{text-align:center;padding:60px;color:rgba(255,255,255,.40);font-size:15px}
+
+@media(max-width:600px){
+  .hd-title{font-size:20px;letter-spacing:2px}
+  .card{padding:14px}
+  .title-en{font-size:14px}
+}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+
+<div class="back-bar">
+  <a href="../index.html" class="back-btn">← 返回首页</a>
+</div>
+<div class="hd">
+  <div class="hd-title">◈ ARXIV · CV DAILY ◈</div>
+  <div class="sub">COMPUTER VISION AND PATTERN RECOGNITION · DAILY PAPERS</div>
+  <div class="tot">6 篇论文 &nbsp;·&nbsp; 2026年06月23日</div>
+  <div class="author">curated by binbinyang</div>
+</div>
+<div class="stats"><div class="stat-item"><span class="stat-dot" style="background:#e74c3c"></span>目标检测/分割: 4篇</div><div class="stat-item"><span class="stat-dot" style="background:#3498db"></span>多模态/VLM: 4篇</div><div class="stat-item"><span class="stat-dot" style="background:#9b59b6"></span>生成模型/扩散: 2篇</div><div class="stat-item"><span class="stat-dot" style="background:#1abc9c"></span>3D视觉: 1篇</div><div class="stat-item"><span class="stat-dot" style="background:#e67e22"></span>视频理解: 1篇</div><div class="stat-item"><span class="stat-dot" style="background:#27ae60"></span>机器人视觉: 2篇</div><div class="stat-item"><span class="stat-dot" style="background:#e91e63"></span>医学图像: 2篇</div></div>
+<div class="ctrl">
+  <input class="search" type="text" placeholder="⌕  搜索论文标题关键词…" oninput="onSearch(this.value)">
+  <div class="filters"><button class="filter-btn active" onclick="filterBy('all',this)">全部 (6)</button>
+<button class="filter-btn" onclick="filterBy('目标检测/分割',this)" style="--cc:#e74c3c">目标检测/分割 (4)</button>
+<button class="filter-btn" onclick="filterBy('多模态/VLM',this)" style="--cc:#3498db">多模态/VLM (4)</button>
+<button class="filter-btn" onclick="filterBy('生成模型/扩散',this)" style="--cc:#9b59b6">生成模型/扩散 (2)</button>
+<button class="filter-btn" onclick="filterBy('3D视觉',this)" style="--cc:#1abc9c">3D视觉 (1)</button>
+<button class="filter-btn" onclick="filterBy('视频理解',this)" style="--cc:#e67e22">视频理解 (1)</button>
+<button class="filter-btn" onclick="filterBy('机器人视觉',this)" style="--cc:#27ae60">机器人视觉 (2)</button>
+<button class="filter-btn" onclick="filterBy('医学图像',this)" style="--cc:#e91e63">医学图像 (2)</button>
+</div>
+</div>
+<div class="main">
+  <div class="count" id="cnt">显示 6 篇论文</div>
+  <div id="papers">
+<div class="card" data-cats="目标检测/分割|多模态/VLM|医学图像" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#e91e63">医学图像</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.20477v2" target="_blank">Scalable Training of Spatially Grounded 2D Vision-Language Models for Radiology</a></h3>
+  <p  class="title-zh">放射学空间接地 2D 视觉语言模型的可扩展训练</p>
+  <p  class="authors">Yusuf Salcan、Simon Ging、Robin Tibor Schirrmeister、Philipp Arnold、Elmar Kotter 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.20477v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.20477v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.20477v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">We study how to train visually grounded vision-language models (VLMs) for radiology without manual spatial annotations. We introduce RefRad2D, a large-scale bilingual (German/English) dataset of 1.2M CT and MR image-text pairs derived from clinical practice, with task-specific VQA and spatial grounding subsets generated automatically via LLM-based curation and automated segmentation. Trained on this data, our model RadGrounder jointly performs report generation, visual question answering, and spatial grounding via bounding-box detection or segmentation. On external VQA benchmarks (Slake, VQA-RAD), RadGrounder achieves competitive results with specialized medical VLMs. Adding our clinical data to the training mixture improves open-ended VQA over fine-tuning on the downstream datasets alone, showing the transferability of our dataset. Crucially, adding grounding supervision does not degrade language quality, enabling spatially verifiable outputs at no cost to VQA performance.</p>
+      <p class="abs-zh">我们研究如何训练放射学中基于视觉的视觉语言模型（VLM），而无需手动空间注释。我们引入了 RefRad2D，这是一个源自临床实践的 1.2M CT 和 MR 图像文本对的大型双语（德语/英语）数据集，具有通过基于 LLM 的管理和自动分割自动生成的特定任务 VQA 和空间基础子集。根据这些数据进行训练，我们的模型 RadGrounder 通过边界框检测或分割联合执行报告生成、视觉问答和空间接地。在外部 VQA 基准（Slake、VQA-RAD）上，RadGrounder 通过专业医疗 VLM 取得了具有竞争力的结果。将我们的临床数据添加到训练混合物中，比单独对下游数据集进行微调改进了开放式 VQA，显示了我们数据集的可转移性。至关重要的是，增加基础监督不会降低语言质量，从而在不影响 VQA 性能的情况下实现空间可验证的输出。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.20244v2" target="_blank">SPOT-E: Test-Time Entropy Shaping with Visual Spotlights for Frozen VLMs</a></h3>
+  <p  class="title-zh">SPOT-E：针对冻结 VLM 的视觉聚光灯测试时熵整形</p>
+  <p  class="authors">Bo Yin、Xiaobin Hu、Chengming Xu、Ruolin Shen、Mo Yang 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.20244v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.20244v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.20244v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <a href="https://github.com/YinBo0927/SPOT-E" target="_blank" class="github-link">⭐ GitHub 开源</a>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Vision-language models (VLMs) often underperform on evidence intensive tasks because decisive visual evidence are small, localized, and easy to overlook, leading to failures in evidence readout even when high-level reasoning is intact. Prior inference-time visual interventions can improve grounding without retraining, but they are largely open-loop and lack a mechanism to verify whether highlighted evidence is actually used. We study answer-span prediction entropy as a model-internal feedback signal and show that naive entropy minimization is ambiguous, since low entropy may arise from evidence-grounded confidence or shortcut collapse. To resolve this ambiguity, we introduce low-entropy anchors and an entropy-shaping objective that reduces answer uncertainty while preserving baseline high-confidence tokens. We instantiate this principle in SPOT-E, a plug-and-play test-time method that produces question-conditioned spotlights, optimized per instance via light-weight tuning based on Group Relative Policy Optimization (GRPO). Across all benchmarks and different VLM families, SPOT-E yields consistent gains and improved robustness under visual corruptions. Code is publicly available at: https://github.com/YinBo0927/SPOT-E</p>
+      <p class="abs-zh">视觉语言模型（VLM）通常在证据密集型任务中表现不佳，因为决定性的视觉证据很小、局部化且容易被忽视，即使高级推理完好无损，也会导致证据读出失败。先前的推理时间视觉干预可以在无需重新训练的情况下改善基础，但它们在很大程度上是开环的，并且缺乏验证突出证据是否实际使用的机制。我们研究答案跨度预测熵作为模型内部反馈信号，并表明朴素熵最小化是不明确的，因为低熵可能来自基于证据的置信度或捷径崩溃。为了解决这种模糊性，我们引入了低熵锚和熵整形目标，可以减少答案的不确定性，同时保留基线高置信度标记。我们在 SPOT-E 中实例化了这一原理，这是一种即插即用的测试时间方法，可生成问题条件聚光灯，并通过基于组相对策略优化 (GRPO) 的轻量级调整对每个实例进行优化。在所有基准测试和不同的 VLM 系列中，SPOT-E 都能产生一致的增益并提高视觉损坏情况下的鲁棒性。代码公开于：https://github.com/YinBo0927/SPOT-E</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="机器人视觉" style="border-left:4px solid #27ae60">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.19752v2" target="_blank">Temporal Self-Imitation Learning</a></h3>
+  <p  class="title-zh">时间自模仿学习</p>
+  <p  class="authors">Yinsen Jia、Boyuan Chen</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.19752v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.19752v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.19752v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Long-horizon robot manipulation policies trained with reward shaping can still achieve high return through inefficient interactions, while rare efficient behaviors discovered during training may be forgotten. We argue that temporal efficiency itself provides a powerful and underutilized source of self-supervision for reinforcement learning. We introduce Temporal Self-Imitation Learning (TSIL), a reinforcement learning framework that mines temporally efficient successful trajectories generated during learning and converts them into reusable supervision for future policy improvement. TSIL progressively refines learning using configuration-conditioned adaptive temporal targets derived from fast successful trajectories, while preserving and replaying efficient behaviors through efficiency-weighted self-imitation learning. Across 15 distinct long-horizon manipulation tasks, TSIL consistently improves learning efficiency, task-completion efficiency, revisitation of fast successful behaviors, and robustness to unstable training conditions. More broadly, our results suggest that the temporal structure of successful behavior itself provides a scalable self-supervisory signal for reinforcement learning beyond manually engineered reward shaping alone.</p>
+      <p class="abs-zh">经过奖励塑造训练的长视野机器人操纵策略仍然可以通过低效交互获得高回报，而在训练过程中发现的罕见有效行为可能会被遗忘。我们认为，时间效率本身为强化学习提供了强大且未充分利用的自我监督来源。我们引入了时间自模仿学习（TSIL），这是一种强化学习框架，可以挖掘学习过程中生成的时间有效的成功轨迹，并将其转换为可重用的监督，以供未来的政策改进。 TSIL 使用源自快速成功轨迹的配置条件自适应时间目标逐步完善学习，同时通过效率加权自模仿学习保留和重放高效行为。在 15 种不同的长视野操作任务中，TSIL 持续提高学习效率、任务完成效率、快速成功行为的回顾以及对不稳定训练条件的鲁棒性。更广泛地说，我们的结果表明，成功行为的时间结构本身为强化学习提供了可扩展的自我监督信号，而不仅仅是手动设计的奖励塑造。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|生成模型/扩散" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#9b59b6">生成模型/扩散</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.20083v2" target="_blank">Holo-World: Unified Camera, Object and Weather Control for Video World Model</a></h3>
+  <p  class="title-zh">Holo-World：视频世界模型的统一相机、对象和天气控制</p>
+  <p  class="authors">Xiangchen Yin、Wenzhang Sun、Jiahui Yuan、Zijie Liu、Yinda Chen 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.20083v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.20083v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.20083v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Video world models are moving toward preserving an observed world under controllable camera and object motion while allowing its environmental state to change. Yet these controls remain isolated, and weather generation typically relies on a source video or reconstructed scene that already specifies future structure. We study a first-frame-anchored source-to-state setting, where the model starts from a single image and follows explicit camera and object controls and an optional weather instruction, then generates a video that either preserves the source world or transfers it to a target weather state. To address these challenges, we first build HoloStateData, a state video dataset that turns diverse videos into unified control samples for camera, object, and weather supervision. Second, we introduce Holo-World, a unified controllable video world model that jointly controls scene from a single image. Its Unified Scene Adapter factorizes world preservation and weather transfer into distinct parameter subspaces, using rendered background, geometry buffers, and object controls to maintain controlled scene structure while modeling weather-dependent appearance and particle effects. Additionally, Scene-Weather Decomposed CFG guides scene and weather residuals separately, strengthening target weather effects without over-amplifying the full condition. Quantitative and qualitative experiments demonstrate that Holo-World maintains precise camera and object control with consistent scene structure while transferring scenes into diverse target weather state, outperforming video-to-video weather editing baselines on weather-state generation. Our project page is available at https://xiangchenyin.github.io/Holo-World/</p>
+      <p class="abs-zh">视频世界模型正在朝着在可控相机和物体运动下保存观察到的世界的方向发展，同时允许其环境状态发生变化。然而，这些控制仍然是孤立的，天气生成通常依赖于源视频或已经指定未来结构的重建场景。我们研究了第一帧锚定的源到状态设置，其中模型从单个图像开始，遵循明确的相机和对象控制以及可选的天气指令，然后生成一个视频，该视频要么保留源世界，要么将其传输到目标天气状态。为了应对这些挑战，我们首先构建 HoloStateData，这是一个状态视频数据集，可将不同的视频转换为用于摄像机、物体和天气监控的统一控制样本。其次，我们介绍Holo-World，一种统一的可控视频世界模型，可以共同控制单个图像的场景。其统一场景适配器将世界保存和天气传输分解为不同的参数子空间，使用渲染的背景、几何缓冲区和对象控件来维护受控的场景结构，同时对天气相关的外观和粒子效果进行建模。此外，场景-天气分解CFG分别引导场景和天气残差，增强目标天气效果，而不会过度放大完整条件。定量和定性实验表明，Holo-World 保持精确的相机和对象控制以及一致的场景结构，同时将场景转换为不同的目标天气状态，在天气状态生成方面优于视频到视频天气编辑基线。我们的项目页面位于 https://yangchenyin.github.io/Holo-World/</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="目标检测/分割|多模态/VLM|医学图像" style="border-left:4px solid #e74c3c">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#e74c3c">目标检测/分割</span><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#e91e63">医学图像</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.20115v2" target="_blank">When Calibration Fails the Vulnerable Hospital: Federated Conformal Risk Control via Risk-Curve Shrinkage</a></h3>
+  <p  class="title-zh">当校准失败时，脆弱的医院：通过风险曲线收缩进行联合保形风险控制</p>
+  <p  class="authors">Nafis Fuad Shahid</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.20115v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.20115v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.20115v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Conformal risk control (CRC) provides distribution-free guarantees on segmentation quality by calibrating a prediction-set threshold on held-out data. In federated deployments, the standard approach pools calibration scores across sites into a single threshold. We provide the first quantification, on real multi-institutional brain tumor data (FeTS-2022, 1,251 subjects, 20 institutions), showing that this naive pooled CRC protects the average hospital but violates coverage at 40% of individual institutions, with the worst site exceeding the target false-negative rate by 7.8 percentage points. The naive alternative, per-site local CRC, largely restores coverage but inflates prediction sets by 83x, rendering them clinically useless. We propose a shrinkage-based federated CRC protocol: each site transmits only its empirical risk curve (G scalars) to a server, which computes a shrinkage-regularized threshold per site. A single hyperparameter n0 smoothly trades worst-case coverage for prediction-set efficiency; leave-one-site-out sensitivity analysis identifies n0=19, achieving 2.7/20 violations at 2.0x stretch. We further show that direct Lagrangian optimization of coverage budgets fails, concentrating risk on vulnerable hospitals, and that the finite-sample correction term is essential: removing it triples violations. The marginal CRC guarantee is preserved by construction under the stated site-mixture assumption; per-site coverage is validated across four targets with three seeds. No patient-level images, masks, or per-volume scores leave any site.</p>
+      <p class="abs-zh">保形风险控制 (CRC) 通过校准保留数据的预测集阈值，为分割质量提供无分布保证。在联合部署中，标准方法将跨站点的校准分数汇集到单个阈值中。我们对真实的多机构脑肿瘤数据（FeTS-2022，1,251 名受试者，20 个机构）进行了首次量化，结果表明，这种简单的汇总 CRC 保护了一般医院，但违反了 40% 个别机构的覆盖范围，其中最差的站点超出了目标假阴性率 7.8 个百分点。简单的替代方案，即每个站点的本地 CRC，在很大程度上恢复了覆盖范围，但将预测集扩大了 83 倍，使它们在临床上毫无用处。我们提出了一种基于收缩的联合 CRC 协议：每个站点仅将其经验风险曲线（G 标量）传输到服务器，服务器计算每个站点的收缩正则化阈值。单个超参数 n0 平稳地用最坏情况覆盖率换取预测集效率；留一站点敏感性分析确定 n0=19，在 2.0 倍拉伸下实现 2.7/20 违规。我们进一步表明，直接拉格朗日优化保险范围预算失败，将风险集中在脆弱的医院上，并且有限样本修正项至关重要：删除它会使违规行为增加三倍。在规定的场地混合假设下，通过建设保留边际 CRC 保证；每个站点的覆盖范围通过三个种子的四个目标进行验证。患者级别的图像、掩模或每卷分数都不会离开任何站点。</p>
+    </div>
+  </div>
+</div>
+
+<div class="card" data-cats="多模态/VLM|生成模型/扩散|3D视觉|视频理解|机器人视觉" style="border-left:4px solid #3498db">
+  <div class="card-head">
+    <div class="tags"><span class="tag" style="background:#3498db">多模态/VLM</span><span class="tag" style="background:#9b59b6">生成模型/扩散</span><span class="tag" style="background:#1abc9c">3D视觉</span><span class="tag" style="background:#e67e22">视频理解</span><span class="tag" style="background:#27ae60">机器人视觉</span></div>
+    <span class="pub-date">2026-06-18</span>
+  </div>
+  <h3 class="title-en"><a href="https://arxiv.org/abs/2606.20118v2" target="_blank">Pose6DAug: Physically Plausible Multi-view Object Swapping for Robot Data Augmentation</a></h3>
+  <p  class="title-zh">Pose6DAug：用于机器人数据增强的物理上合理的多视图对象交换</p>
+  <p  class="authors">Jonghoon Lee、Seong Hyeon Park、Byungwoo Jeon、Minha Lee、Jinwoo Shin 等</p>
+  <div class="actions">
+    <a href="https://arxiv.org/abs/2606.20118v2" target="_blank" class="btn btn-abs">论文页面</a>
+    <a href="https://arxiv.org/pdf/2606.20118v2"   target="_blank" class="btn btn-pdf">PDF</a>
+    <a href="https://ar5iv.labs.arxiv.org/html/2606.20118v2"       target="_blank" class="btn btn-html">HTML 版本</a>
+    <span class="no-github">暂无开源</span>
+  </div>
+  <div class="abs-wrap">
+    <button class="toggle" onclick="toggle(this)">展开摘要 ▾</button>
+    <div class="abs-body" hidden>
+      <p class="abs-en">Vision-language-action (VLA) policies have shown strong potential for general-purpose manipulation, yet they often fail on novel, out-of-distribution objects whose appearance or geometry deviates from the training distribution. The standard remedy is to collect multi-view teleoperation data for every failure case, but this scales poorly in both cost and time. We introduce Pose6DAug, a failure-driven data augmentation framework that turns a policy's own successful episodes into targeted demonstrations for its failure modes, without any new data collection. Our key insight is that each successful episode already encodes a physically valid action trajectory together with calibrated multi-view observations. By swapping only the manipulated object while preserving this trajectory, we obtain new and physically grounded demonstrations. However, naive 2D video editing breaks multi-view consistency and physical plausibility, particularly under heavy occlusion and egocentric viewpoints. Our method instead operates directly in 3D, anchoring the target object with an explicit mesh driven by a temporally coherent 6D pose trajectory, ensuring geometrically consistent renderings across all camera views. Fine-tuning a VLA on data augmented by our method improves success rates by 16.5% relative to the state-of-the-art baseline on novel objects, while preserving in-distribution performance. These results show that multi-view and physically consistent augmentation is a practical path to scalable VLA generalization.</p>
+      <p class="abs-zh">视觉-语言-动作（VLA）策略在通用操作方面表现出了强大的潜力，但它们经常在外观或几何形状偏离训练分布的新颖的、分布外的对象上失败。标准的补救措施是收集每个故障案例的多视图远程操作数据，但这在成本和时间方面都表现不佳。我们引入了 Pose6DAug，这是一个失败驱动的数据增强框架，可以将策略自身的成功事件转化为其失败模式的有针对性的演示，而无需收集任何新的数据。我们的主要见解是，每个成功的事件都已经编码了物理上有效的动作轨迹以及校准的多视图观察。通过仅交换被操纵的对象，同时保留该轨迹，我们获得了新的且基于物理的演示。然而，简单的 2D 视频编辑破坏了多视图一致性和物理合理性，特别是在严重遮挡和以自我为中心的视点下。相反，我们的方法直接在 3D 中运行，通过由时间连贯的 6D 位姿轨迹驱动的显式网格来锚定目标对象，确保所有相机视图中的几何渲染一致。相对于新颖对象的最新基线，对通过我们的方法增强的数据微调 VLA 可将成功率提高 16.5%，同时保持分布内性能。这些结果表明，多视图和物理一致的增强是可扩展 VLA 泛化的实用途径。</p>
+    </div>
+  </div>
+</div></div>
+  <div class="no-result" id="empty" style="display:none">没有找到匹配的论文</div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════
+   地球 + 卫星背景动画
+═══════════════════════════════════════════ */
+(function(){
+  var cv=document.getElementById('bg');
+  if(!cv)return;
+  var ctx=cv.getContext('2d');
+  var W,H,ER,ECX,ECY;
+
+  function resize(){
+    W=cv.width=innerWidth; H=cv.height=innerHeight;
+    ER=Math.min(W,H)*0.30;
+    ECX=W*0.58; ECY=H*0.50;
+  }
+  resize(); window.addEventListener('resize',resize);
+
+  /* 星场 */
+  var stars=[];
+  for(var i=0;i<200;i++) stars.push({
+    x:Math.random(),y:Math.random(),
+    r:Math.random()*1.4+0.3,
+    a:Math.random()*0.75+0.15,
+    da:(Math.random()-0.5)*0.009
+  });
+
+  /* 卫星定义：轨道相对地球半径的倍数，倾角，初始角，颜色 */
+  var sats=[
+    {ang:0.0, spd:0.0055, rm:1.42, tilt:-28, r:9, col:'#38b6ff', bcol:'rgba(56,182,255,'},
+    {ang:2.2, spd:-0.004, rm:1.72, tilt: 40, r:7, col:'#ff9a42', bcol:'rgba(255,154,66,'},
+    {ang:4.1, spd:0.003,  rm:2.05, tilt: 10, r:8, col:'#34d399', bcol:'rgba(52,211,153,'},
+  ];
+
+  var eRot=0; /* 地球自转角 */
+
+  /* ── 绘制地球 ── */
+  function drawEarth(){
+    eRot+=0.0008;
+    var r=ER,cx=ECX,cy=ECY,toR=Math.PI/180;
+
+    /* 大气外晕（更亮、更大） */
+    var atm=ctx.createRadialGradient(cx,cy,r*0.85,cx,cy,r*1.28);
+    atm.addColorStop(0,'rgba(72,168,255,0.16)');
+    atm.addColorStop(0.5,'rgba(40,128,230,0.07)');
+    atm.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.beginPath();ctx.arc(cx,cy,r*1.28,0,Math.PI*2);ctx.fillStyle=atm;ctx.fill();
+
+    /* 海洋（明亮蓝色） */
+    var ocean=ctx.createRadialGradient(cx-r*0.22,cy-r*0.18,0,cx,cy,r);
+    ocean.addColorStop(0,'#1e90e0');
+    ocean.addColorStop(0.45,'#1460b5');
+    ocean.addColorStop(0.80,'#0c3d88');
+    ocean.addColorStop(1,'#081f50');
+    ctx.save();
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=ocean;ctx.fill();ctx.clip();
+
+    /* 大陆 - 球面正射投影（经纬度真实位置） */
+    var lands=[
+      [48,-100,75,42,'rgba(55,145,78,0.90)'],
+      [-12,-54,42,52,'rgba(40,128,65,0.90)'],
+      [50,10,46,32,'rgba(62,152,82,0.88)'],
+      [5,22,52,66,'rgba(46,132,68,0.90)'],
+      [38,88,96,50,'rgba(50,138,72,0.86)'],
+      [-24,134,38,30,'rgba(152,108,50,0.82)'],
+      [-82,0,180,8,'rgba(215,232,248,0.52)'],
+      [73,-42,36,20,'rgba(198,218,238,0.52)'],
+    ];
+    lands.sort(function(a,b){
+      return Math.cos(a[0]*toR)*Math.cos(a[1]*toR+eRot)
+            -Math.cos(b[0]*toR)*Math.cos(b[1]*toR+eRot);
+    });
+    lands.forEach(function(c){
+      var latR=c[0]*toR,lonE=c[1]*toR+eRot;
+      var dep=Math.cos(latR)*Math.cos(lonE);
+      if(dep<-0.15)return;
+      var sx=cx+r*Math.cos(latR)*Math.sin(lonE);
+      var sy=cy-r*Math.sin(latR);
+      var sxW=r*Math.cos(latR)*(c[2]/2*toR)*Math.max(0.05,Math.abs(Math.cos(lonE)));
+      var syH=r*(c[3]/2*toR)*Math.cos(latR);
+      var fade=Math.min(1,(dep+0.15)*3.5);
+      ctx.save();ctx.globalAlpha=fade;ctx.translate(sx,sy);
+      ctx.beginPath();ctx.ellipse(0,0,Math.max(2,sxW),Math.max(2,syH),0,0,Math.PI*2);
+      ctx.fillStyle=c[4];ctx.fill();ctx.globalAlpha=1;ctx.restore();
+    });
+
+    /* 经纬线 */
+    ctx.strokeStyle='rgba(140,210,255,0.16)';ctx.lineWidth=0.65;
+    [-60,-30,0,30,60].forEach(function(d){
+      var lr=d*toR,ylat=cy-r*Math.sin(lr),xlat=r*Math.cos(lr);
+      ctx.beginPath();ctx.moveTo(cx-xlat,ylat);ctx.lineTo(cx+xlat,ylat);ctx.stroke();
+    });
+    for(var li=0;li<7;li++){
+      var lonM=(li/7)*Math.PI+eRot*0.1;
+      var xm=Math.abs(Math.sin(lonM))*r;
+      if(xm<r*0.05)continue;
+      ctx.save();ctx.translate(cx,cy);
+      ctx.beginPath();ctx.ellipse(0,0,xm,r,0,-Math.PI/2,Math.PI/2);
+      ctx.stroke();ctx.restore();
+    }
+
+    /* 云层 */
+    var cR=eRot*0.55;
+    [[0.10,-0.24,0.26,0.055],[-0.22,0.08,0.22,0.048],[0.25,0.12,0.19,0.042],
+     [-0.06,-0.06,0.15,0.040],[0.04,0.30,0.18,0.045]
+    ].forEach(function(cl,i){
+      ctx.save();ctx.translate(cx+cl[0]*r,cy+cl[1]*r);ctx.rotate(cR+i*1.2);
+      ctx.beginPath();ctx.ellipse(0,0,cl[2]*r,cl[3]*r,0,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,0.16)';ctx.fill();ctx.restore();
+    });
+
+    ctx.restore();
+
+    /* 夜侧阴影（稍浅） */
+    ctx.save();
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.clip();
+    var shd=ctx.createLinearGradient(cx+r*0.06,cy,cx+r*0.88,cy);
+    shd.addColorStop(0,'rgba(0,0,0,0)');
+    shd.addColorStop(0.58,'rgba(0,5,22,0.52)');
+    shd.addColorStop(1,'rgba(0,2,14,0.76)');
+    ctx.fillStyle=shd;ctx.fillRect(cx-r,cy-r,r*2,r*2);ctx.restore();
+
+    /* 大气边缘光（更亮） */
+    var rim=ctx.createRadialGradient(cx,cy,r*0.84,cx,cy,r*1.06);
+    rim.addColorStop(0,'rgba(60,150,255,0)');
+    rim.addColorStop(0.55,'rgba(75,172,255,0.18)');
+    rim.addColorStop(0.82,'rgba(118,200,255,0.30)');
+    rim.addColorStop(1,'rgba(165,222,255,0.05)');
+    ctx.beginPath();ctx.arc(cx,cy,r*1.06,0,Math.PI*2);ctx.fillStyle=rim;ctx.fill();
+
+    /* 高光（更亮） */
+    var spec=ctx.createRadialGradient(cx-r*0.33,cy-r*0.30,0,cx-r*0.12,cy-r*0.10,r*0.70);
+    spec.addColorStop(0,'rgba(255,255,255,0.30)');
+    spec.addColorStop(0.38,'rgba(255,255,255,0.07)');
+    spec.addColorStop(1,'rgba(0,0,0,0)');
+    ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.fillStyle=spec;ctx.fill();
+  }
+
+  /* ── 绘制单颗卫星（含太阳能板）── */
+  function drawSat(wx,wy,sz,col,bcol,velAng){
+    /* 扫描光束（朝向地球） */
+    var toEx=ECX-wx, toEy=ECY-wy;
+    var beamLen=Math.sqrt(toEx*toEx+toEy*toEy)*0.55;
+    var ba=Math.atan2(toEy,toEx);
+    var hw=0.22; /* 半角 */
+    ctx.save();
+    ctx.translate(wx,wy); ctx.rotate(ba);
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(beamLen*Math.cos(hw), beamLen*Math.sin(hw));
+    ctx.lineTo(beamLen*Math.cos(-hw),beamLen*Math.sin(-hw));
+    ctx.closePath();
+    var bg2=ctx.createLinearGradient(0,0,beamLen,0);
+    bg2.addColorStop(0,bcol+'0.18)');
+    bg2.addColorStop(1,bcol+'0)');
+    ctx.fillStyle=bg2; ctx.fill();
+    ctx.restore();
+
+    /* 卫星本体 */
+    ctx.save();
+    ctx.translate(wx,wy); ctx.rotate(velAng);
+    var pw=sz*2.6, ph=sz*0.5;
+    /* 太阳能板 */
+    ctx.fillStyle=bcol+'0.55)';
+    ctx.fillRect(-sz/2-pw,-ph/2,pw,ph);
+    ctx.fillRect(sz/2,    -ph/2,pw,ph);
+    /* 板格线 */
+    ctx.strokeStyle=bcol+'0.3)'; ctx.lineWidth=0.6;
+    for(var gi=1;gi<3;gi++){
+      ctx.beginPath();
+      ctx.moveTo(-sz/2-pw+gi*pw/3,-ph/2);
+      ctx.lineTo(-sz/2-pw+gi*pw/3, ph/2); ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(sz/2+gi*pw/3,-ph/2);
+      ctx.lineTo(sz/2+gi*pw/3, ph/2); ctx.stroke();
+    }
+    /* 主体 */
+    ctx.fillStyle=col;
+    ctx.fillRect(-sz/2,-sz/2,sz,sz);
+    /* 天线 */
+    ctx.strokeStyle=bcol+'0.8)'; ctx.lineWidth=1.2;
+    ctx.beginPath(); ctx.moveTo(0,-sz/2); ctx.lineTo(0,-sz*1.8); ctx.stroke();
+    ctx.beginPath(); ctx.arc(0,-sz*1.8,1.5,0,Math.PI*2);
+    ctx.fillStyle=col; ctx.fill();
+    ctx.restore();
+
+    /* 卫星光晕 */
+    var g=ctx.createRadialGradient(wx,wy,0,wx,wy,sz*4.5);
+    g.addColorStop(0,bcol+'0.45)');
+    g.addColorStop(1,bcol+'0)');
+    ctx.beginPath(); ctx.arc(wx,wy,sz*4.5,0,Math.PI*2);
+    ctx.fillStyle=g; ctx.fill();
+  }
+
+  /* ── 绘制所有卫星 ── */
+  function drawSatellites(){
+    sats.forEach(function(s){
+      s.ang+=s.spd;
+      var orx=ER*s.rm, ory=orx*0.34;
+      var tiltR=s.tilt*Math.PI/180;
+
+      /* 轨道路径 */
+      ctx.save();
+      ctx.translate(ECX,ECY); ctx.rotate(tiltR);
+      ctx.beginPath(); ctx.ellipse(0,0,orx,ory,0,0,Math.PI*2);
+      ctx.strokeStyle=s.bcol+'0.13)'; ctx.lineWidth=1.2;
+      ctx.setLineDash([4,6]); ctx.stroke(); ctx.setLineDash([]);
+      ctx.restore();
+
+      /* 卫星世界坐标 */
+      var lx=Math.cos(s.ang)*orx, ly=Math.sin(s.ang)*ory;
+      var cosT=Math.cos(tiltR), sinT=Math.sin(tiltR);
+      var wx=ECX+lx*cosT-ly*sinT;
+      var wy=ECY+lx*sinT+ly*cosT;
+      var velAng=Math.atan2(
+        (-Math.sin(s.ang)*ory)*cosT+( Math.cos(s.ang)*orx)*sinT,
+        (-Math.sin(s.ang)*ory)*(-sinT)+( Math.cos(s.ang)*orx)*cosT
+      );
+      drawSat(wx,wy,s.r,s.col,s.bcol,velAng);
+    });
+  }
+
+  /* ── 主循环 ── */
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    /* 星场 */
+    stars.forEach(function(s){
+      s.a+=s.da; if(s.a>0.88||s.a<0.1) s.da*=-1;
+      ctx.beginPath(); ctx.arc(s.x*W,s.y*H,s.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(200,215,255,'+s.a+')'; ctx.fill();
+    });
+    drawEarth();
+    drawSatellites();
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+
+/* ── 筛选 & 搜索 ── */
+var curFilter='all',curSearch='';
+function filterBy(cat,btn){
+  curFilter=cat;
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active'); apply();
+}
+function onSearch(q){curSearch=q.trim().toLowerCase(); apply();}
+function apply(){
+  var cards=document.querySelectorAll('.card'),shown=0;
+  cards.forEach(function(c){
+    var matchCat=curFilter==='all'||c.dataset.cats.split('|').indexOf(curFilter)>=0;
+    var t=c.querySelector('.title-en').textContent.toLowerCase()
+         +c.querySelector('.title-zh').textContent.toLowerCase();
+    var show=matchCat&&(!curSearch||t.indexOf(curSearch)>=0);
+    c.style.display=show?'':'none'; if(show)shown++;
+  });
+  document.getElementById('cnt').textContent='显示 '+shown+' 篇论文';
+  document.getElementById('empty').style.display=shown?'none':'block';
+}
+function toggle(btn){
+  var body=btn.nextElementSibling,open=!body.hidden;
+  body.hidden=open; btn.textContent=open?'展开摘要 ▾':'收起摘要 ▴';
+}
+</script>
+</body>
+</html>
