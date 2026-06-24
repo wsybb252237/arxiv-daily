@@ -1903,5 +1903,128 @@
         "stars": 220311
       }
     ]
+  },
+  "20260624": {
+    "total": 13,
+    "file": "github-trending/trending_20260624.html",
+    "top_repos": [
+      {
+        "full_name": "calesthio/OpenMontage",
+        "url": "https://github.com/calesthio/OpenMontage",
+        "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+        "description_zh": "世界上第一个开源的代理视频制作系统。 12条管道、52种工具、500+座席技能。将您的人工智能编码助手变成一个完整的视频制作工作室。",
+        "language": "Python",
+        "stars_today": 3703,
+        "stars": 18450
+      },
+      {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "description_zh": "LLM驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动自主，支持零定时运行。LLM驱动的多市场股票智能分析系统，具有多源市场数据、实时新闻、决策仪表板、自动通知和免费计划运行。",
+        "language": "Python",
+        "stars_today": 1461,
+        "stars": 48233
+      },
+      {
+        "full_name": "apple/container",
+        "url": "https://github.com/apple/container",
+        "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon.",
+        "description_zh": "一种在 Mac 上使用轻量级虚拟机创建和运行 Linux 容器的工具。它是用 Swift 编写的，并针对 Apple 芯片进行了优化。",
+        "language": "Swift",
+        "stars_today": 1746,
+        "stars": 41740
+      },
+      {
+        "full_name": "interviewstreet/hiring-agent",
+        "url": "https://github.com/interviewstreet/hiring-agent",
+        "description": "AI agent to evaluate and score resumes.",
+        "description_zh": "人工智能代理对简历进行评估和评分。",
+        "language": "Python",
+        "stars_today": 152,
+        "stars": 1984
+      },
+      {
+        "full_name": "JCodesMore/ai-website-cloner-template",
+        "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+        "description": "Clone any website with one command using AI coding agents",
+        "description_zh": "使用 AI 编码代理通过一个命令克隆任何网站",
+        "language": "TypeScript",
+        "stars_today": 693,
+        "stars": 19097
+      },
+      {
+        "full_name": "revfactory/harness",
+        "url": "https://github.com/revfactory/harness",
+        "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+        "description_zh": "一种元技能，用于设计特定领域的代理团队、定义专业代理并生成他们使用的技能。",
+        "language": "HTML",
+        "stars_today": 274,
+        "stars": 7638
+      },
+      {
+        "full_name": "flutter/flutter",
+        "url": "https://github.com/flutter/flutter",
+        "description": "Flutter makes it easy and fast to build beautiful apps for mobile and beyond",
+        "description_zh": "Flutter 让您可以轻松快速地为移动设备及其他领域构建精美的应用程序",
+        "language": "Dart",
+        "stars_today": 44,
+        "stars": 177198
+      },
+      {
+        "full_name": "andreknieriem/headunit-revived",
+        "url": "https://github.com/andreknieriem/headunit-revived",
+        "description": "Headunit App for displaying Android Auto",
+        "description_zh": "用于显示 Android Auto 的主机应用程序",
+        "language": "Kotlin",
+        "stars_today": 79,
+        "stars": 1377
+      },
+      {
+        "full_name": "stablyai/orca",
+        "url": "https://github.com/stablyai/orca",
+        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+        "description_zh": "Orca 是与一组并行代理一起工作的 ADE。使用您自己的订阅运行任何编码代理。可在桌面和移动设备上使用。",
+        "language": "TypeScript",
+        "stars_today": 265,
+        "stars": 6601
+      },
+      {
+        "full_name": "google-labs-code/design.md",
+        "url": "https://github.com/google-labs-code/design.md",
+        "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+        "description_zh": "用于向编码代理描述视觉标识的格式规范。 DESIGN.md 使代理能够对设计系统有持久的、结构化的理解。",
+        "language": "TypeScript",
+        "stars_today": 504,
+        "stars": 16999
+      },
+      {
+        "full_name": "Flowseal/zapret-discord-youtube",
+        "url": "https://github.com/Flowseal/zapret-discord-youtube",
+        "description": "",
+        "description_zh": "",
+        "language": "Batchfile",
+        "stars_today": 103,
+        "stars": 29994
+      },
+      {
+        "full_name": "kunchenguid/no-mistakes",
+        "url": "https://github.com/kunchenguid/no-mistakes",
+        "description": "git push no-mistakes",
+        "description_zh": "git推送无错误",
+        "language": "Go",
+        "stars_today": 182,
+        "stars": 1852
+      },
+      {
+        "full_name": "NousResearch/hermes-agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "description": "The agent that grows with you",
+        "description_zh": "与您共同成长的代理商",
+        "language": "Python",
+        "stars_today": 1174,
+        "stars": 201786
+      }
+    ]
   }
 }
