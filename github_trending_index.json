@@ -2776,5 +2776,173 @@
         "stars": 10412
       }
     ]
+  },
+  "20260630": {
+    "total": 18,
+    "file": "github-trending/trending_20260630.html",
+    "top_repos": [
+      {
+        "full_name": "usestrix/strix",
+        "url": "https://github.com/usestrix/strix",
+        "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+        "description_zh": "开源人工智能渗透测试工具，用于查找并修复应用程序的漏洞。",
+        "language": "Python",
+        "stars_today": 395,
+        "stars": 27843
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "url": "https://github.com/msitarzewski/agency-agents",
+        "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "description_zh": "触手可及的完整人工智能机构 - 从前端向导到 Reddit 社区忍者，从奇思妙想的注入者到现实检查者。每个代理都是一位具有个性、流程和经过验证的可交付成果的专业专家。",
+        "language": "Shell",
+        "stars_today": 1793,
+        "stars": 120413
+      },
+      {
+        "full_name": "altic-dev/FluidVoice",
+        "url": "https://github.com/altic-dev/FluidVoice",
+        "description": "FluidVoice - Fastest macOS Offline Dictation app - Voice to Text fully Local. One ⭐ takes us a long way :))",
+        "description_zh": "FluidVoice - 最快的 macOS 离线听写应用程序 - 完全本地化的语音到文本。一个⭐让我们走了很长的路:))",
+        "language": "Swift",
+        "stars_today": 586,
+        "stars": 4786
+      },
+      {
+        "full_name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free AI gateway: one endpoint, 160+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline &amp; Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+        "description_zh": "永远不要停止编码。免费AI网关：一个端点，160+提供商（50+免费），连接Claude Code、Codex、Cursor、Cline &amp; FREE Claude/GPT/Gemini 的副驾驶。 RTK+Caveman 堆叠压缩可节省 15-95% 的令牌、智能自动回退、MCP/A2A、多模式 API、桌面/PWA。",
+        "language": "TypeScript",
+        "stars_today": 459,
+        "stars": 8277
+      },
+      {
+        "full_name": "browser-use/video-use",
+        "url": "https://github.com/browser-use/video-use",
+        "description": "Edit videos with coding agents",
+        "description_zh": "使用编码代理编辑视频",
+        "language": "Python",
+        "stars_today": 722,
+        "stars": 12421
+      },
+      {
+        "full_name": "xbtlin/ai-berkshire",
+        "url": "https://github.com/xbtlin/ai-berkshire",
+        "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
+        "description_zh": "AI时代的伯克希尔：基于Claude Code / Codex的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论+多Agent毛研究。| AI时代的伯克希尔：为Claude Code / Codex构建的价值投资研究框架。 4种大师方法论+多智能体对抗分析。",
+        "language": "Python",
+        "stars_today": 966,
+        "stars": 7387
+      },
+      {
+        "full_name": "Mebus/cupp",
+        "url": "https://github.com/Mebus/cupp",
+        "description": "Common User Passwords Profiler (CUPP)",
+        "description_zh": "通用用户密码分析器 (CUPP)",
+        "language": "Python",
+        "stars_today": 18,
+        "stars": 6047
+      },
+      {
+        "full_name": "ripienaar/free-for-dev",
+        "url": "https://github.com/ripienaar/free-for-dev",
+        "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+        "description_zh": "具有 devops 和 infradev 感兴趣的免费级别的 SaaS、PaaS 和 IaaS 产品列表",
+        "language": "HTML",
+        "stars_today": 740,
+        "stars": 127211
+      },
+      {
+        "full_name": "google/agents-cli",
+        "url": "https://github.com/google/agents-cli",
+        "description": "The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud.",
+        "description_zh": "CLI 和技能可将任何编码助理转变为在 Google Cloud 上创建、评估和部署 AI 代理的专家。",
+        "language": "Python",
+        "stars_today": 433,
+        "stars": 3967
+      },
+      {
+        "full_name": "roboflow/supervision",
+        "url": "https://github.com/roboflow/supervision",
+        "description": "We write your reusable computer vision tools. 💜",
+        "description_zh": "我们为您编写可重复使用的计算机视觉工具。 💜",
+        "language": "Python",
+        "stars_today": 336,
+        "stars": 45805
+      },
+      {
+        "full_name": "ogulcancelik/herdr",
+        "url": "https://github.com/ogulcancelik/herdr",
+        "description": "agent multiplexer that lives in your terminal.",
+        "description_zh": "位于您终端中的代理多路复用器。",
+        "language": "Rust",
+        "stars_today": 485,
+        "stars": 8834
+      },
+      {
+        "full_name": "simplex-chat/simplex-chat",
+        "url": "https://github.com/simplex-chat/simplex-chat",
+        "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps 📱!",
+        "description_zh": "SimpleX - 第一个无需任何类型的用户标识符即可运行的消息传递网络 - 设计为 100% 私密！ iOS、Android 和桌面应用程序📱！",
+        "language": "Haskell",
+        "stars_today": 1229,
+        "stars": 17250
+      },
+      {
+        "full_name": "CoreBunch/Instatic",
+        "url": "https://github.com/CoreBunch/Instatic",
+        "description": "Instatic is a modern self-hosted visual CMS - get it running in 1 minute",
+        "description_zh": "Instatic 是一个现代的自托管视觉 CMS - 1 分钟内即可运行",
+        "language": "TypeScript",
+        "stars_today": 351,
+        "stars": 1353
+      },
+      {
+        "full_name": "microsoft/AI-For-Beginners",
+        "url": "https://github.com/microsoft/AI-For-Beginners",
+        "description": "12 Weeks, 24 Lessons, AI for All!",
+        "description_zh": "12 周，24 节课，全民人工智能！",
+        "language": "Jupyter Notebook",
+        "stars_today": 180,
+        "stars": 49073
+      },
+      {
+        "full_name": "facebook/astryx",
+        "url": "https://github.com/facebook/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "description_zh": "完全可定制且可供代理使用的开源设计系统",
+        "language": "TypeScript",
+        "stars_today": 399,
+        "stars": 1569
+      },
+      {
+        "full_name": "HKUDS/Vibe-Trading",
+        "url": "https://github.com/HKUDS/Vibe-Trading",
+        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+        "description_zh": "“Vibe-Trading：您的个人交易代理”",
+        "language": "Python",
+        "stars_today": 719,
+        "stars": 15624
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 884,
+        "stars": 242251
+      },
+      {
+        "full_name": "Robbyant/lingbot-map",
+        "url": "https://github.com/Robbyant/lingbot-map",
+        "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+        "description_zh": "用于从流数据重建场景的前馈 3D 基础模型",
+        "language": "Python",
+        "stars_today": 465,
+        "stars": 8750
+      }
+    ]
   }
 }
