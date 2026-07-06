@@ -3829,5 +3829,155 @@
         "stars": 24596
       }
     ]
+  },
+  "20260706": {
+    "total": 16,
+    "file": "github-trending/trending_20260706.html",
+    "top_repos": [
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+        "description_zh": "从 Anthropic 中提取的系统提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思维、GPT 5.5 即时、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。",
+        "language": "JavaScript",
+        "stars_today": 1386,
+        "stars": 51065
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "Shell",
+        "stars_today": 1114,
+        "stars": 70520
+      },
+      {
+        "full_name": "Zackriya-Solutions/meetily",
+        "url": "https://github.com/Zackriya-Solutions/meetily",
+        "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS &amp; Windows.",
+        "description_zh": "隐私第一，AI 会议助手具有 4 倍快的 Parakeet/Whisper 实时转录、发言者分类和基于 Rust 构建的 Ollama 摘要。 100%本地加工。无需云。 Meetily（Meetly Ai - https://meetily.ai）是适用于 macOS 和 Windows 操作系统的排名第一的自托管开源人工智能会议记录工具。视窗。",
+        "language": "Rust",
+        "stars_today": 2493,
+        "stars": 18861
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "π RuView 将商用 WiFi 信号转化为实时空间智能、生命体征监测和存在检测 - 所有这些都无需视频像素。",
+        "language": "Rust",
+        "stars_today": 471,
+        "stars": 77220
+      },
+      {
+        "full_name": "Leonxlnx/taste-skill",
+        "url": "https://github.com/Leonxlnx/taste-skill",
+        "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop",
+        "description_zh": "品味技能 - 给你的人工智能良好的品味。阻止人工智能产生无聊的、通用的斜坡",
+        "language": "JavaScript",
+        "stars_today": 1453,
+        "stars": 58623
+      },
+      {
+        "full_name": "alirezarezvani/claude-skills",
+        "url": "https://github.com/alirezarezvani/claude-skills",
+        "description": "337 Claude Code skills &amp; agent skills &amp; plugins (30+ Agents, 70+ custom commands, 330+ skills, customizable references, scripts)for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory, research, business operations, commercial &amp; finance, and your daily productivity skills.",
+        "description_zh": "第337章 克劳德代码技能&amp;代理技巧与适用于 Claude Code、Codex、Gemini CLI、Cursor 和另外 8 个编码代理的插件（30 多个代理、70 多个自定义命令、330 多个技能、可自定义参考、脚本） - 工程、营销、产品、合规、C 级咨询、研究、业务运营、商业和应用财务，以及您的日常生产力技能。",
+        "language": "Python",
+        "stars_today": 611,
+        "stars": 21022
+      },
+      {
+        "full_name": "openai/codex-plugin-cc",
+        "url": "https://github.com/openai/codex-plugin-cc",
+        "description": "Use Codex from Claude Code to review code or delegate tasks.",
+        "description_zh": "使用 Claude Code 的 Codex 来审查代码或委派任务。",
+        "language": "JavaScript",
+        "stars_today": 910,
+        "stars": 26153
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "description_zh": "AI 代理技能可研究 Reddit、X、YouTube、HN、Polymarket 和网络上的任何主题，然后综合得出有依据的摘要",
+        "language": "Python",
+        "stars_today": 511,
+        "stars": 49601
+      },
+      {
+        "full_name": "ogulcancelik/herdr",
+        "url": "https://github.com/ogulcancelik/herdr",
+        "description": "agent multiplexer that lives in your terminal.",
+        "description_zh": "位于您终端中的代理多路复用器。",
+        "language": "Rust",
+        "stars_today": 783,
+        "stars": 12678
+      },
+      {
+        "full_name": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "description_zh": "让克劳德能够观看任何视频。 /watch 下载、提取帧、转录，然后将其全部交给 Claude。",
+        "language": "Python",
+        "stars_today": 539,
+        "stars": 4009
+      },
+      {
+        "full_name": "karakeep-app/karakeep",
+        "url": "https://github.com/karakeep-app/karakeep",
+        "description": "A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",
+        "description_zh": "一个自托管的书签应用程序（链接、注释和图像），具有基于人工智能的自动标记和全文搜索",
+        "language": "TypeScript",
+        "stars_today": 178,
+        "stars": 26765
+      },
+      {
+        "full_name": "firecrawl/firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "description": "The API to search, scrape, and interact with the web at scale. 🔥",
+        "description_zh": "用于大规模搜索、抓取网络并与网络交互的 API。 🔥",
+        "language": "TypeScript",
+        "stars_today": 834,
+        "stars": 145918
+      },
+      {
+        "full_name": "steipete/CodexBar",
+        "url": "https://github.com/steipete/CodexBar",
+        "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login.",
+        "description_zh": "显示 OpenAI Codex 和 Claude Code 的使用统计信息，无需登录。",
+        "language": "Swift",
+        "stars_today": 598,
+        "stars": 16647
+      },
+      {
+        "full_name": "alibaba/zvec",
+        "url": "https://github.com/alibaba/zvec",
+        "description": "A lightweight, lightning-fast, in-process vector database",
+        "description_zh": "轻量级、快如闪电的进程内矢量数据库",
+        "language": "C++",
+        "stars_today": 355,
+        "stars": 13274
+      },
+      {
+        "full_name": "sindresorhus/awesome",
+        "url": "https://github.com/sindresorhus/awesome",
+        "description": "😎 Awesome lists about all kinds of interesting topics",
+        "description_zh": "😎 关于各种有趣主题的精彩列表",
+        "language": "",
+        "stars_today": 393,
+        "stars": 482114
+      },
+      {
+        "full_name": "gastownhall/gastown",
+        "url": "https://github.com/gastownhall/gastown",
+        "description": "Gas Town - multi-agent workspace manager",
+        "description_zh": "Gas Town - 多代理工作区管理器",
+        "language": "Go",
+        "stars_today": 293,
+        "stars": 16598
+      }
+    ]
   }
 }
