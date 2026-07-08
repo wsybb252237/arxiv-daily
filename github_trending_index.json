@@ -4093,5 +4093,155 @@
         "stars": 48927
       }
     ]
+  },
+  "20260708": {
+    "total": 16,
+    "file": "github-trending/trending_20260708.html",
+    "top_repos": [
+      {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+        "description_zh": "基于 Claude Code 构建的人工智能驱动的职位申请框架。叉开它，填写你的个人资料，让克劳德评估工作，定制简历，写求职信，并为你的面试做好准备。",
+        "language": "TypeScript",
+        "stars_today": 5071,
+        "stars": 14327
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 1322,
+        "stars": 73305
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "π RuView 将商用 WiFi 信号转化为实时空间智能、生命体征监测和存在检测 - 所有这些都无需视频像素。",
+        "language": "Rust",
+        "stars_today": 793,
+        "stars": 78934
+      },
+      {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+        "description_zh": "腾讯数据库代理内存通过 4 层渐进式管道为 AI 代理提供完全本地的长期内存，且外部 API 依赖性为零。",
+        "language": "TypeScript",
+        "stars_today": 351,
+        "stars": 7453
+      },
+      {
+        "full_name": "prisma/prisma",
+        "url": "https://github.com/prisma/prisma",
+        "description": "Next-generation ORM for Node.js &amp; TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+        "description_zh": "Node.js 和 Node.js 的下一代 ORM打字稿 | PostgreSQL、MySQL、MariaDB、SQL Server、SQLite、MongoDB 和 CockroachDB",
+        "language": "TypeScript",
+        "stars_today": 30,
+        "stars": 46446
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "description_zh": "AI 代理技能可研究 Reddit、X、YouTube、HN、Polymarket 和网络上的任何主题，然后综合得出有依据的摘要",
+        "language": "Python",
+        "stars_today": 373,
+        "stars": 50576
+      },
+      {
+        "full_name": "argoproj/argo-cd",
+        "url": "https://github.com/argoproj/argo-cd",
+        "description": "Declarative Continuous Deployment for Kubernetes",
+        "description_zh": "Kubernetes 声明式持续部署",
+        "language": "Go",
+        "stars_today": 20,
+        "stars": 23387
+      },
+      {
+        "full_name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "description_zh": "OfficeCLI 是第一个也是最好的 Office 套件，专为 AI 代理构建，用于读取、编辑和自动化 Word、Excel 和 PowerPoint 文件。免费、开源、单一二进制文件，无需安装 Office。",
+        "language": "C#",
+        "stars_today": 1712,
+        "stars": 11339
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+        "description_zh": "从 Anthropic 中提取的系统提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思维、GPT 5.5 即时、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。",
+        "language": "JavaScript",
+        "stars_today": 1226,
+        "stars": 53815
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 999,
+        "stars": 249579
+      },
+      {
+        "full_name": "alibaba/zvec",
+        "url": "https://github.com/alibaba/zvec",
+        "description": "A lightweight, lightning-fast, in-process vector database",
+        "description_zh": "轻量级、快如闪电的进程内矢量数据库",
+        "language": "C++",
+        "stars_today": 685,
+        "stars": 14288
+      },
+      {
+        "full_name": "Diolinux/PhotoGIMP",
+        "url": "https://github.com/Diolinux/PhotoGIMP",
+        "description": "A Patch for GIMP 3+ for Photoshop Users",
+        "description_zh": "面向 Photoshop 用户的 GIMP 3+ 补丁",
+        "language": "CSS",
+        "stars_today": 2031,
+        "stars": 14836
+      },
+      {
+        "full_name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "description_zh": "这是 Claude 的 MCP 服务器，为其提供终端控制、文件系统搜索和 diff 文件编辑功能",
+        "language": "TypeScript",
+        "stars_today": 20,
+        "stars": 6318
+      },
+      {
+        "full_name": "huxingyi/autoremesher",
+        "url": "https://github.com/huxingyi/autoremesher",
+        "description": "Automatic quad remeshing tool",
+        "description_zh": "自动四边形重新网格化工具",
+        "language": "C++",
+        "stars_today": 292,
+        "stars": 1868
+      },
+      {
+        "full_name": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "description_zh": "让克劳德能够观看任何视频。 /watch 下载、提取帧、转录，然后将其全部交给 Claude。",
+        "language": "Python",
+        "stars_today": 948,
+        "stars": 5834
+      },
+      {
+        "full_name": "TencentCloud/CubeSandbox",
+        "url": "https://github.com/TencentCloud/CubeSandbox",
+        "description": "Instant, Concurrent, Secure &amp; Lightweight Sandbox for AI Agents.",
+        "description_zh": "即时、并发、安全和适用于 AI 代理的轻量级沙箱。",
+        "language": "Rust",
+        "stars_today": 555,
+        "stars": 8807
+      }
+    ]
   }
 }
