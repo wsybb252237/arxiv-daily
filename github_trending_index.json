@@ -4243,5 +4243,146 @@
         "stars": 8807
       }
     ]
+  },
+  "20260709": {
+    "total": 15,
+    "file": "github-trending/trending_20260709.html",
+    "top_repos": [
+      {
+        "full_name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "AI-powered job application framework built on Claude Code. Fork it, fill in your profile, and let Claude evaluate jobs, tailor CVs, write cover letters, and prepare you for interviews.",
+        "description_zh": "基于 Claude Code 构建的人工智能驱动的职位申请框架。叉开它，填写你的个人资料，让克劳德评估工作，定制简历，写求职信，并为你的面试做好准备。",
+        "language": "TypeScript",
+        "stars_today": 3728,
+        "stars": 17917
+      },
+      {
+        "full_name": "SmartlyDressedGames/U3-SDK",
+        "url": "https://github.com/SmartlyDressedGames/U3-SDK",
+        "description": "Source code for Unturned, a free open-world zombie survival sandbox game.",
+        "description_zh": "Unturned 的源代码，一款免费的开放世界僵尸生存沙盒游戏。",
+        "language": "C#",
+        "stars_today": 541,
+        "stars": 1880
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 2582,
+        "stars": 75619
+      },
+      {
+        "full_name": "VoltAgent/awesome-design-md",
+        "url": "https://github.com/VoltAgent/awesome-design-md",
+        "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+        "description_zh": "流行品牌设计系统的 DESIGN.md 文件分析集合。将一个项目放入您的项目中，让编码代理生成匹配的 UI。",
+        "language": "",
+        "stars_today": 1569,
+        "stars": 99310
+      },
+      {
+        "full_name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "description_zh": "OfficeCLI 是第一个也是最好的 Office 套件，专为 AI 代理构建，用于读取、编辑和自动化 Word、Excel 和 PowerPoint 文件。免费、开源、单一二进制文件，无需安装 Office。",
+        "language": "C#",
+        "stars_today": 1923,
+        "stars": 13130
+      },
+      {
+        "full_name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "description_zh": "这是 Claude 的 MCP 服务器，为其提供终端控制、文件系统搜索和 diff 文件编辑功能",
+        "language": "TypeScript",
+        "stars_today": 185,
+        "stars": 6510
+      },
+      {
+        "full_name": "anthropics/claude-cookbooks",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "description_zh": "一系列笔记本/食谱展示了一些有趣且有效的使用克劳德的方法。",
+        "language": "Jupyter Notebook",
+        "stars_today": 194,
+        "stars": 46988
+      },
+      {
+        "full_name": "vxcontrol/pentagi",
+        "url": "https://github.com/vxcontrol/pentagi",
+        "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+        "description_zh": "完全自主的人工智能代理系统能够执行复杂的渗透测试任务",
+        "language": "Go",
+        "stars_today": 454,
+        "stars": 19205
+      },
+      {
+        "full_name": "unclecode/crawl4ai",
+        "url": "https://github.com/unclecode/crawl4ai",
+        "description": "🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler &amp; Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN",
+        "description_zh": "🚀🤖 Crawl4AI：开源 LLM 友好的网络爬虫和网络爬虫刮刀。不要害羞，加入这里：https://discord.gg/jP8KfhDhyN",
+        "language": "Python",
+        "stars_today": 195,
+        "stars": 71702
+      },
+      {
+        "full_name": "imthenachoman/How-To-Secure-A-Linux-Server",
+        "url": "https://github.com/imthenachoman/How-To-Secure-A-Linux-Server",
+        "description": "An evolving how-to guide for securing a Linux server.",
+        "description_zh": "不断发展的保护 Linux 服务器的操作指南。",
+        "language": "",
+        "stars_today": 399,
+        "stars": 28933
+      },
+      {
+        "full_name": "huxingyi/autoremesher",
+        "url": "https://github.com/huxingyi/autoremesher",
+        "description": "Automatic quad remeshing tool",
+        "description_zh": "自动四边形重新网格化工具",
+        "language": "C++",
+        "stars_today": 405,
+        "stars": 2256
+      },
+      {
+        "full_name": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "description_zh": "让克劳德能够观看任何视频。 /watch 下载、提取帧、转录，然后将其全部交给 Claude。",
+        "language": "Python",
+        "stars_today": 727,
+        "stars": 6509
+      },
+      {
+        "full_name": "prisma/prisma",
+        "url": "https://github.com/prisma/prisma",
+        "description": "Next-generation ORM for Node.js &amp; TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+        "description_zh": "Node.js 和 Node.js 的下一代 ORM打字稿 | PostgreSQL、MySQL、MariaDB、SQL Server、SQLite、MongoDB 和 CockroachDB",
+        "language": "TypeScript",
+        "stars_today": 373,
+        "stars": 46805
+      },
+      {
+        "full_name": "kyutai-labs/pocket-tts",
+        "url": "https://github.com/kyutai-labs/pocket-tts",
+        "description": "A TTS that fits in your CPU (and pocket)",
+        "description_zh": "适合您 CPU（和口袋）的 TTS",
+        "language": "Python",
+        "stars_today": 273,
+        "stars": 6832
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "url": "https://github.com/asgeirtj/system_prompts_leaks",
+        "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+        "description_zh": "从 Anthropic 中提取的系统提示 - Claude Fable 5、Opus 4.8、Claude Code、Claude Design。 OpenAI - ChatGPT 5.5 思维、GPT 5.5 即时、Codex。 Google - Gemini 3.5 Flash、3.1 Pro、反重力。 xAI - Grok、Cursor、Copilot、VS Code、Perplexity 等。定期更新。",
+        "language": "JavaScript",
+        "stars_today": 1135,
+        "stars": 54904
+      }
+    ]
   }
 }
