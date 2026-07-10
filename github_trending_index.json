@@ -4384,5 +4384,182 @@
         "stars": 54904
       }
     ]
+  },
+  "20260710": {
+    "total": 19,
+    "file": "github-trending/trending_20260710.html",
+    "top_repos": [
+      {
+        "full_name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "description_zh": "这是 Claude 的 MCP 服务器，为其提供终端控制、文件系统搜索和 diff 文件编辑功能",
+        "language": "TypeScript",
+        "stars_today": 349,
+        "stars": 7014
+      },
+      {
+        "full_name": "oven-sh/bun",
+        "url": "https://github.com/oven-sh/bun",
+        "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+        "description_zh": "令人难以置信的快速 JavaScript 运行时、捆绑器、测试运行器和包管理器 – 全部合而为一",
+        "language": "Rust",
+        "stars_today": 307,
+        "stars": 94043
+      },
+      {
+        "full_name": "abseil/abseil-cpp",
+        "url": "https://github.com/abseil/abseil-cpp",
+        "description": "Abseil Common Libraries (C++)",
+        "description_zh": "Abseil 通用库 (C++)",
+        "language": "C++",
+        "stars_today": 106,
+        "stars": 17486
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents.",
+        "description_zh": "AI 编码代理的生产级工程技能。",
+        "language": "JavaScript",
+        "stars_today": 1114,
+        "stars": 76598
+      },
+      {
+        "full_name": "jbeder/yaml-cpp",
+        "url": "https://github.com/jbeder/yaml-cpp",
+        "description": "A YAML parser and emitter in C++",
+        "description_zh": "C++ 中的 YAML 解析器和发射器",
+        "language": "C++",
+        "stars_today": 65,
+        "stars": 6062
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .claude directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .claude 目录。",
+        "language": "Shell",
+        "stars_today": 1728,
+        "stars": 164278
+      },
+      {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "An agentic skills framework &amp; software development methodology that works.",
+        "description_zh": "代理技能框架和有效的软件开发方法。",
+        "language": "Shell",
+        "stars_today": 1096,
+        "stars": 251598
+      },
+      {
+        "full_name": "microsoft/TypeScript",
+        "url": "https://github.com/microsoft/TypeScript",
+        "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+        "description_zh": "TypeScript 是 JavaScript 的超集，可编译为干净的 JavaScript 输出。",
+        "language": "TypeScript",
+        "stars_today": 166,
+        "stars": 109713
+      },
+      {
+        "full_name": "catchorg/Catch2",
+        "url": "https://github.com/catchorg/Catch2",
+        "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+        "description_zh": "用于单元测试、TDD 和 BDD 的现代 C++ 原生测试框架 - 使用 C++14、C++17 及更高版本（C++11 支持位于 v2.x 分支，C++03 支持 Catch1.x 分支）",
+        "language": "C++",
+        "stars_today": 69,
+        "stars": 20579
+      },
+      {
+        "full_name": "chriskohlhoff/asio",
+        "url": "https://github.com/chriskohlhoff/asio",
+        "description": "Asio C++ Library",
+        "description_zh": "Asio C++ 库",
+        "language": "C++",
+        "stars_today": 87,
+        "stars": 6046
+      },
+      {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+        "description_zh": "腾讯数据库代理内存通过 4 层渐进式管道为 AI 代理提供完全本地的长期内存，且外部 API 依赖性为零。",
+        "language": "TypeScript",
+        "stars_today": 134,
+        "stars": 8131
+      },
+      {
+        "full_name": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates",
+        "description": "CLI tool for configuring and monitoring Claude Code",
+        "description_zh": "用于配置和监控 Claude Code 的 CLI 工具",
+        "language": "Python",
+        "stars_today": 104,
+        "stars": 28696
+      },
+      {
+        "full_name": "zeux/meshoptimizer",
+        "url": "https://github.com/zeux/meshoptimizer",
+        "description": "Mesh optimization library that makes meshes smaller and faster to render",
+        "description_zh": "网格优化库，使网格更小、渲染速度更快",
+        "language": "C++",
+        "stars_today": 86,
+        "stars": 7989
+      },
+      {
+        "full_name": "tailscale/tailscale",
+        "url": "https://github.com/tailscale/tailscale",
+        "description": "The easiest, most secure way to use WireGuard and 2FA.",
+        "description_zh": "使用 WireGuard 和 2FA 的最简单、最安全的方法。",
+        "language": "Go",
+        "stars_today": 183,
+        "stars": 33525
+      },
+      {
+        "full_name": "google-labs-code/stitch-skills",
+        "url": "https://github.com/google-labs-code/stitch-skills",
+        "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "description_zh": "旨在与 Stitch MCP 服务器配合使用的代理技能库。每个技能都遵循 Agent Skills 开放标准，以便与 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理兼容。",
+        "language": "TypeScript",
+        "stars_today": 101,
+        "stars": 6624
+      },
+      {
+        "full_name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "description_zh": "OfficeCLI 是第一个也是最好的 Office 套件，专为 AI 代理构建，用于读取、编辑和自动化 Word、Excel 和 PowerPoint 文件。免费、开源、单一二进制文件，无需安装 Office。",
+        "language": "C#",
+        "stars_today": 1210,
+        "stars": 14235
+      },
+      {
+        "full_name": "hashicorp/terraform",
+        "url": "https://github.com/hashicorp/terraform",
+        "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+        "description_zh": "Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源可用的工具，可将 API 编码为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、进行编辑、审查和版本控制。",
+        "language": "Go",
+        "stars_today": 168,
+        "stars": 49088
+      },
+      {
+        "full_name": "grpc/grpc",
+        "url": "https://github.com/grpc/grpc",
+        "description": "C++ based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)",
+        "description_zh": "基于 C++ 的 gRPC（C++、Python、Ruby、Objective-C、PHP、C#）",
+        "language": "C++",
+        "stars_today": 68,
+        "stars": 45095
+      },
+      {
+        "full_name": "vercel/next.js",
+        "url": "https://github.com/vercel/next.js",
+        "description": "The React Framework",
+        "description_zh": "反应框架",
+        "language": "JavaScript",
+        "stars_today": 176,
+        "stars": 140596
+      }
+    ]
   }
 }
