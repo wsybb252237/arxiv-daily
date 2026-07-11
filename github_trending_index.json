@@ -4561,5 +4561,191 @@
         "stars": 140596
       }
     ]
+  },
+  "20260711": {
+    "total": 20,
+    "file": "github-trending/trending_20260711.html",
+    "top_repos": [
+      {
+        "full_name": "catchorg/Catch2",
+        "url": "https://github.com/catchorg/Catch2",
+        "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
+        "description_zh": "用于单元测试、TDD 和 BDD 的现代 C++ 原生测试框架 - 使用 C++14、C++17 及更高版本（C++11 支持位于 v2.x 分支，C++03 支持 Catch1.x 分支）",
+        "language": "C++",
+        "stars_today": 117,
+        "stars": 20787
+      },
+      {
+        "full_name": "abseil/abseil-cpp",
+        "url": "https://github.com/abseil/abseil-cpp",
+        "description": "Abseil Common Libraries (C++)",
+        "description_zh": "Abseil 通用库 (C++)",
+        "language": "C++",
+        "stars_today": 120,
+        "stars": 17646
+      },
+      {
+        "full_name": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates",
+        "description": "CLI tool for configuring and monitoring Claude Code",
+        "description_zh": "用于配置和监控 Claude Code 的 CLI 工具",
+        "language": "Python",
+        "stars_today": 230,
+        "stars": 28902
+      },
+      {
+        "full_name": "google-labs-code/stitch-skills",
+        "url": "https://github.com/google-labs-code/stitch-skills",
+        "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+        "description_zh": "旨在与 Stitch MCP 服务器配合使用的代理技能库。每个技能都遵循 Agent Skills 开放标准，以便与 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理兼容。",
+        "language": "TypeScript",
+        "stars_today": 338,
+        "stars": 6932
+      },
+      {
+        "full_name": "hashicorp/terraform",
+        "url": "https://github.com/hashicorp/terraform",
+        "description": "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.",
+        "description_zh": "Terraform 使您能够安全且可预测地创建、更改和改进基础设施。它是一个源可用的工具，可将 API 编码为声明性配置文件，这些文件可以在团队成员之间共享、视为代码、进行编辑、审查和版本控制。",
+        "language": "Go",
+        "stars_today": 229,
+        "stars": 49282
+      },
+      {
+        "full_name": "zeux/meshoptimizer",
+        "url": "https://github.com/zeux/meshoptimizer",
+        "description": "Mesh optimization library that makes meshes smaller and faster to render",
+        "description_zh": "网格优化库，使网格更小、渲染速度更快",
+        "language": "C++",
+        "stars_today": 111,
+        "stars": 8092
+      },
+      {
+        "full_name": "openai/plugins",
+        "url": "https://github.com/openai/plugins",
+        "description": "OpenAI Plugins",
+        "description_zh": "OpenAI 插件",
+        "language": "JavaScript",
+        "stars_today": 112,
+        "stars": 4329
+      },
+      {
+        "full_name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "description_zh": "这是 Claude 的 MCP 服务器，为其提供终端控制、文件系统搜索和 diff 文件编辑功能",
+        "language": "TypeScript",
+        "stars_today": 900,
+        "stars": 7690
+      },
+      {
+        "full_name": "chriskohlhoff/asio",
+        "url": "https://github.com/chriskohlhoff/asio",
+        "description": "Asio C++ Library",
+        "description_zh": "Asio C++ 库",
+        "language": "C++",
+        "stars_today": 75,
+        "stars": 6113
+      },
+      {
+        "full_name": "oven-sh/bun",
+        "url": "https://github.com/oven-sh/bun",
+        "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+        "description_zh": "令人难以置信的快速 JavaScript 运行时、捆绑器、测试运行器和包管理器 – 全部合而为一",
+        "language": "Rust",
+        "stars_today": 654,
+        "stars": 94499
+      },
+      {
+        "full_name": "actions/checkout",
+        "url": "https://github.com/actions/checkout",
+        "description": "Action for checking out a repo",
+        "description_zh": "检查存储库的操作",
+        "language": "TypeScript",
+        "stars_today": 8,
+        "stars": 8434
+      },
+      {
+        "full_name": "home-assistant/core",
+        "url": "https://github.com/home-assistant/core",
+        "description": "🏡 Open source home automation that puts local control and privacy first.",
+        "description_zh": "🏡 开源家庭自动化，将本地控制和隐私放在首位。",
+        "language": "Python",
+        "stars_today": 125,
+        "stars": 88515
+      },
+      {
+        "full_name": "microsoft/PowerToys",
+        "url": "https://github.com/microsoft/PowerToys",
+        "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "description_zh": "Microsoft PowerToys 是一系列实用程序，可提高 Windows 上的工作效率和自定义功能",
+        "language": "C",
+        "stars_today": 65,
+        "stars": 136356
+      },
+      {
+        "full_name": "cypress-io/cypress",
+        "url": "https://github.com/cypress-io/cypress",
+        "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+        "description_zh": "对浏览器中运行的任何内容进行快速、简单且可靠的测试。",
+        "language": "TypeScript",
+        "stars_today": 75,
+        "stars": 50551
+      },
+      {
+        "full_name": "vercel/next.js",
+        "url": "https://github.com/vercel/next.js",
+        "description": "The React Framework",
+        "description_zh": "反应框架",
+        "language": "JavaScript",
+        "stars_today": 331,
+        "stars": 140866
+      },
+      {
+        "full_name": "DayuanJiang/next-ai-draw-io",
+        "url": "https://github.com/DayuanJiang/next-ai-draw-io",
+        "description": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
+        "description_zh": "next.js Web 应用程序将 AI 功能与 draw.io 图表集成在一起。该应用程序允许您通过自然语言命令和人工智能辅助可视化来创建、修改和增强图表。",
+        "language": "TypeScript",
+        "stars_today": 74,
+        "stars": 33203
+      },
+      {
+        "full_name": "malisper/pgrust",
+        "url": "https://github.com/malisper/pgrust",
+        "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+        "description_zh": "Postgres 用 Rust 重写，现已通过 100% 的 Postgres 回归测试",
+        "language": "Rust",
+        "stars_today": 789,
+        "stars": 1832
+      },
+      {
+        "full_name": "dotnet/aspnetcore",
+        "url": "https://github.com/dotnet/aspnetcore",
+        "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "description_zh": "ASP.NET Core 是一个跨平台 .NET 框架，用于在 Windows、Mac 或 Linux 上构建基于云的现代 Web 应用程序。",
+        "language": "C#",
+        "stars_today": 69,
+        "stars": 38281
+      },
+      {
+        "full_name": "prisma/prisma",
+        "url": "https://github.com/prisma/prisma",
+        "description": "Next-generation ORM for Node.js &amp; TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+        "description_zh": "Node.js 和 Node.js 的下一代 ORM打字稿 | PostgreSQL、MySQL、MariaDB、SQL Server、SQLite、MongoDB 和 CockroachDB",
+        "language": "TypeScript",
+        "stars_today": 284,
+        "stars": 47146
+      },
+      {
+        "full_name": "anthropics/claude-cookbooks",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "description_zh": "一系列笔记本/食谱展示了一些有趣且有效的使用克劳德的方法。",
+        "language": "Jupyter Notebook",
+        "stars_today": 476,
+        "stars": 47740
+      }
+    ]
   }
 }
