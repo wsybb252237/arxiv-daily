@@ -4747,5 +4747,164 @@
         "stars": 47740
       }
     ]
+  },
+  "20260712": {
+    "total": 17,
+    "file": "github-trending/trending_20260712.html",
+    "top_repos": [
+      {
+        "full_name": "Dicklesworthstone/destructive_command_guard",
+        "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
+        "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
+        "description_zh": "破坏性命令防护 (dcg) 用于阻止代理执行危险的 git 和 shell 命令。",
+        "language": "Rust",
+        "stars_today": 444,
+        "stars": 2485
+      },
+      {
+        "full_name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "description_zh": "这是 Claude 的 MCP 服务器，为其提供终端控制、文件系统搜索和 diff 文件编辑功能",
+        "language": "TypeScript",
+        "stars_today": 207,
+        "stars": 7890
+      },
+      {
+        "full_name": "HKUDS/Vibe-Trading",
+        "url": "https://github.com/HKUDS/Vibe-Trading",
+        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+        "description_zh": "“Vibe-Trading：您的个人交易代理”",
+        "language": "Python",
+        "stars_today": 776,
+        "stars": 20191
+      },
+      {
+        "full_name": "PrefectHQ/prefect",
+        "url": "https://github.com/PrefectHQ/prefect",
+        "description": "Prefect is a workflow orchestration framework for building resilient data pipelines in Python.",
+        "description_zh": "Prefect 是一个工作流程编排框架，用于在 Python 中构建弹性数据管道。",
+        "language": "Python",
+        "stars_today": 55,
+        "stars": 23039
+      },
+      {
+        "full_name": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "description": "100+ AI Agent &amp; RAG apps you can actually run — clone, customize, ship.",
+        "description_zh": "100+人工智能代理和您可以实际运行的 RAG 应用程序 — 克隆、定制、发布。",
+        "language": "Python",
+        "stars_today": 549,
+        "stars": 118308
+      },
+      {
+        "full_name": "anthropics/claude-cookbooks",
+        "url": "https://github.com/anthropics/claude-cookbooks",
+        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+        "description_zh": "一系列笔记本/食谱展示了一些有趣且有效的使用克劳德的方法。",
+        "language": "Jupyter Notebook",
+        "stars_today": 464,
+        "stars": 48197
+      },
+      {
+        "full_name": "home-assistant/core",
+        "url": "https://github.com/home-assistant/core",
+        "description": "🏡 Open source home automation that puts local control and privacy first.",
+        "description_zh": "🏡 开源家庭自动化，将本地控制和隐私放在首位。",
+        "language": "Python",
+        "stars_today": 404,
+        "stars": 88890
+      },
+      {
+        "full_name": "Crosstalk-Solutions/project-nomad",
+        "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+        "description": "Project N.O.M.A.D, is a self-contained, offline survival computer packed with critical tools, knowledge, and AI to keep you informed and empowered—anytime, anywhere.",
+        "description_zh": "N.O.M.A.D 项目是一款独立的离线生存计算机，配备了关键工具、知识和人工智能，可让您随时随地了解情况并获得授权。",
+        "language": "TypeScript",
+        "stars_today": 122,
+        "stars": 33647
+      },
+      {
+        "full_name": "ColeMurray/background-agents",
+        "url": "https://github.com/ColeMurray/background-agents",
+        "description": "An open-source background agents coding system",
+        "description_zh": "一个开源的后台代理编码系统",
+        "language": "TypeScript",
+        "stars_today": 9,
+        "stars": 2177
+      },
+      {
+        "full_name": "k1tbyte/Wand-Enhancer",
+        "url": "https://github.com/k1tbyte/Wand-Enhancer",
+        "description": "Advanced UX and interoperability extension for Wand (WeMod) app",
+        "description_zh": "Wand (WeMod) 应用程序的高级用户体验和互操作性扩展",
+        "language": "C#",
+        "stars_today": 661,
+        "stars": 6660
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 79,
+        "stars": 13655
+      },
+      {
+        "full_name": "virattt/ai-hedge-fund",
+        "url": "https://github.com/virattt/ai-hedge-fund",
+        "description": "An AI Hedge Fund Team",
+        "description_zh": "人工智能对冲基金团队",
+        "language": "Python",
+        "stars_today": 109,
+        "stars": 61259
+      },
+      {
+        "full_name": "chen08209/FlClash",
+        "url": "https://github.com/chen08209/FlClash",
+        "description": "A multi-platform proxy client based on ClashMeta,simple and easy to use, open-source and ad-free.",
+        "description_zh": "一款基于ClashMeta的多平台代理客户端，简单易用，开源无广告。",
+        "language": "Dart",
+        "stars_today": 151,
+        "stars": 45142
+      },
+      {
+        "full_name": "davila7/claude-code-templates",
+        "url": "https://github.com/davila7/claude-code-templates",
+        "description": "CLI tool for configuring and monitoring Claude Code",
+        "description_zh": "用于配置和监控 Claude Code 的 CLI 工具",
+        "language": "Python",
+        "stars_today": 274,
+        "stars": 29161
+      },
+      {
+        "full_name": "par274/sharpemu",
+        "url": "https://github.com/par274/sharpemu",
+        "description": "An experimental PlayStation 5 emulator project.",
+        "description_zh": "实验性 PlayStation 5 模拟器项目。",
+        "language": "C#",
+        "stars_today": 436,
+        "stars": 1050
+      },
+      {
+        "full_name": "malisper/pgrust",
+        "url": "https://github.com/malisper/pgrust",
+        "description": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+        "description_zh": "Postgres 用 Rust 重写，现已通过 100% 的 Postgres 回归测试",
+        "language": "Rust",
+        "stars_today": 518,
+        "stars": 2312
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "description_zh": "Claude Code、Cursor、Codex 的防 AI 设计技巧。",
+        "language": "CSS",
+        "stars_today": 210,
+        "stars": 4012
+      }
+    ]
   }
 }
