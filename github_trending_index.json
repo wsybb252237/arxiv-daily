@@ -5434,5 +5434,137 @@
         "stars": 206333
       }
     ]
+  },
+  "20260717": {
+    "total": 14,
+    "file": "github-trending/trending_20260717.html",
+    "top_repos": [
+      {
+        "full_name": "codecrafters-io/build-your-own-x",
+        "url": "https://github.com/codecrafters-io/build-your-own-x",
+        "description": "Master programming by recreating your favorite technologies from scratch.",
+        "description_zh": "通过从头开始重新创建您最喜欢的技术来掌握编程。",
+        "language": "Markdown",
+        "stars_today": 1070,
+        "stars": 526977
+      },
+      {
+        "full_name": "PostHog/posthog",
+        "url": "https://github.com/PostHog/posthog",
+        "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+        "description_zh": "🦔 PostHog 是构建自动驾驶产品的领先平台。我们的开发人员工具——人工智能可观察性、分析、会话重放、标记、实验、错误跟踪、日志等——捕获代理诊断问题、发现机会和发布修复所需的所有上下文。从 Slack、Web、桌面或 MCP 掌控一切。",
+        "language": "Python",
+        "stars_today": 437,
+        "stars": 36076
+      },
+      {
+        "full_name": "HenryNdubuaku/maths-cs-ai-compendium",
+        "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
+        "description": "Become a cracked AI/ML Research Engineer",
+        "description_zh": "成为一名出色的 AI/ML 研究工程师",
+        "language": "TypeScript",
+        "stars_today": 248,
+        "stars": 6455
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "description_zh": "Claude Code、Cursor、Codex 的防 AI 设计技巧。",
+        "language": "CSS",
+        "stars_today": 1486,
+        "stars": 11726
+      },
+      {
+        "full_name": "github/copilot-sdk",
+        "url": "https://github.com/github/copilot-sdk",
+        "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+        "description_zh": "用于将 GitHub Copilot Agent 集成到应用程序和服务中的多平台 SDK",
+        "language": "Java",
+        "stars_today": 234,
+        "stars": 9758
+      },
+      {
+        "full_name": "anthropics/cwc-workshops",
+        "url": "https://github.com/anthropics/cwc-workshops",
+        "description": "",
+        "description_zh": "",
+        "language": "TypeScript",
+        "stars_today": 37,
+        "stars": 1519
+      },
+      {
+        "full_name": "PrismML-Eng/Bonsai-demo",
+        "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+        "description": "Bonsai Demo",
+        "description_zh": "盆景演示",
+        "language": "Shell",
+        "stars_today": 279,
+        "stars": 1672
+      },
+      {
+        "full_name": "protocolbuffers/protobuf",
+        "url": "https://github.com/protocolbuffers/protobuf",
+        "description": "Protocol Buffers - Google's data interchange format",
+        "description_zh": "Protocol Buffers - Google 的数据交换格式",
+        "language": "C++",
+        "stars_today": 11,
+        "stars": 71516
+      },
+      {
+        "full_name": "tirth8205/code-review-graph",
+        "url": "https://github.com/tirth8205/code-review-graph",
+        "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "description_zh": "MCP 和 CLI 的本地优先代码智能图。构建代码库的持久地图，以便 AI 编码工具仅读取重要内容，并在评论和大型存储库工作流程上进行基准上下文缩减。",
+        "language": "Python",
+        "stars_today": 57,
+        "stars": 19648
+      },
+      {
+        "full_name": "docusealco/docuseal",
+        "url": "https://github.com/docusealco/docuseal",
+        "description": "Open source DocuSign alternative. Create, fill, and sign digital documents ✍️",
+        "description_zh": "开源 DocuSign 替代方案。创建、填写和签署数字文档 ✍️",
+        "language": "Ruby",
+        "stars_today": 152,
+        "stars": 17737
+      },
+      {
+        "full_name": "openinterpreter/openinterpreter",
+        "url": "https://github.com/openinterpreter/openinterpreter",
+        "description": "A coding agent for open models like Kimi K3",
+        "description_zh": "适用于 Kimi K3 等开放模型的编码代理",
+        "language": "Rust",
+        "stars_today": 431,
+        "stars": 66240
+      },
+      {
+        "full_name": "RyanCodrai/turbovec",
+        "url": "https://github.com/RyanCodrai/turbovec",
+        "description": "A vector index built on TurboQuant, written in Rust with Python bindings",
+        "description_zh": "基于 TurboQuant 构建的向量索引，使用 Rust 编写并结合 Python 绑定",
+        "language": "Python",
+        "stars_today": 280,
+        "stars": 13194
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+        "description_zh": "DeepTutor：终身个性化辅导。 https://deeptutor.info/。",
+        "language": "Python",
+        "stars_today": 528,
+        "stars": 27221
+      },
+      {
+        "full_name": "OpenCut-app/OpenCut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "description": "The open-source CapCut alternative",
+        "description_zh": "开源 CapCut 替代方案",
+        "language": "TypeScript",
+        "stars_today": 1077,
+        "stars": 74624
+      }
+    ]
   }
 }
