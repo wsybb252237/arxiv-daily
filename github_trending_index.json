@@ -6025,5 +6025,191 @@
         "stars": 9580
       }
     ]
+  },
+  "20260721": {
+    "total": 20,
+    "file": "github-trending/trending_20260721.html",
+    "top_repos": [
+      {
+        "full_name": "koala73/worldmonitor",
+        "url": "https://github.com/koala73/worldmonitor",
+        "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+        "description_zh": "实时全球情报仪表板。在统一的态势感知界面中进行人工智能驱动的新闻聚合、地缘政治监控和基础设施跟踪",
+        "language": "TypeScript",
+        "stars_today": 1167,
+        "stars": 64157
+      },
+      {
+        "full_name": "bojieli/ai-agent-book",
+        "url": "https://github.com/bojieli/ai-agent-book",
+        "description": "《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库：全书正文、编译版 PDF 与按章配套代码",
+        "description_zh": "《深入理解AI Agent：设计原理与工程实践》（李博杰着）开源主仓库：全书正文、编译版PDF与按章安装代码",
+        "language": "Python",
+        "stars_today": 4434,
+        "stars": 13885
+      },
+      {
+        "full_name": "tirth8205/code-review-graph",
+        "url": "https://github.com/tirth8205/code-review-graph",
+        "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "description_zh": "MCP 和 CLI 的本地优先代码智能图。构建代码库的持久地图，以便 AI 编码工具仅读取重要内容，并在评论和大型存储库工作流程上进行基准上下文缩减。",
+        "language": "Python",
+        "stars_today": 1921,
+        "stars": 24325
+      },
+      {
+        "full_name": "ayghri/i-have-adhd",
+        "url": "https://github.com/ayghri/i-have-adhd",
+        "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+        "description_zh": "您的编码代理可以阻止其隐藏答案的技能。多动症友好的输出。",
+        "language": "",
+        "stars_today": 1846,
+        "stars": 6293
+      },
+      {
+        "full_name": "earthtojake/text-to-cad",
+        "url": "https://github.com/earthtojake/text-to-cad",
+        "description": "A collection of agent skills for CAD, robotics and hardware design",
+        "description_zh": "CAD、机器人和硬件设计的代理技能集合",
+        "language": "JavaScript",
+        "stars_today": 297,
+        "stars": 8900
+      },
+      {
+        "full_name": "1jehuang/jcode",
+        "url": "https://github.com/1jehuang/jcode",
+        "description": "The most intelligent agent harness for code",
+        "description_zh": "最智能的代码代理工具",
+        "language": "Rust",
+        "stars_today": 835,
+        "stars": 10144
+      },
+      {
+        "full_name": "oblien/openship",
+        "url": "https://github.com/oblien/openship",
+        "description": "Self-hosted deployment platform",
+        "description_zh": "自托管部署平台",
+        "language": "TypeScript",
+        "stars_today": 1556,
+        "stars": 5732
+      },
+      {
+        "full_name": "AstrBotDevs/AstrBot",
+        "url": "https://github.com/AstrBotDevs/AstrBot",
+        "description": "AI Agent Assistant &amp; development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨",
+        "description_zh": "AI代理助理&amp;集成了大量 IM 平台、LLM、插件和 AI 功能的开发框架，可以成为您的 openclaw 替代方案。 ✨",
+        "language": "Python",
+        "stars_today": 416,
+        "stars": 37369
+      },
+      {
+        "full_name": "every-app/open-seo",
+        "url": "https://github.com/every-app/open-seo",
+        "description": "Open source alternative to Semrush and Ahrefs",
+        "description_zh": "Semrush 和 Ahrefs 的开源替代方案",
+        "language": "TypeScript",
+        "stars_today": 850,
+        "stars": 6391
+      },
+      {
+        "full_name": "tradesdontlie/tradingview-mcp",
+        "url": "https://github.com/tradesdontlie/tradingview-mcp",
+        "description": "AI-assisted TradingView chart analysis — connect Claude Code to your TradingView Desktop for personal workflow automation",
+        "description_zh": "AI 辅助 TradingView 图表分析 — 将 Claude Code 连接到您的 TradingView 桌面以实现个人工作流程自动化",
+        "language": "JavaScript",
+        "stars_today": 28,
+        "stars": 4686
+      },
+      {
+        "full_name": "AlexsJones/llmfit",
+        "url": "https://github.com/AlexsJones/llmfit",
+        "description": "Hundreds of models &amp; providers. One command to find what runs on your hardware.",
+        "description_zh": "数百种模型和提供商。一个命令即可查找您的硬件上运行的内容。",
+        "language": "Rust",
+        "stars_today": 247,
+        "stars": 30045
+      },
+      {
+        "full_name": "hyprwm/Hyprland",
+        "url": "https://github.com/hyprwm/Hyprland",
+        "description": "Hyprland is an independent, highly customizable, dynamic tiling Wayland compositor that doesn't sacrifice on its looks.",
+        "description_zh": "Hyprland 是一个独立的、高度可定制的、动态平铺 Wayland 合成器，并且不会牺牲其外观。",
+        "language": "C++",
+        "stars_today": 88,
+        "stars": 36899
+      },
+      {
+        "full_name": "chrislgarry/Apollo-11",
+        "url": "https://github.com/chrislgarry/Apollo-11",
+        "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+        "description_zh": "用于命令和登月舱的原始阿波罗 11 号制导计算机 (AGC) 源代码。",
+        "language": "Assembly",
+        "stars_today": 1195,
+        "stars": 69692
+      },
+      {
+        "full_name": "DioxusLabs/dioxus",
+        "url": "https://github.com/DioxusLabs/dioxus",
+        "description": "Fullstack app framework for web, desktop, and mobile.",
+        "description_zh": "适用于 Web、桌面和移动设备的全栈应用程序框架。",
+        "language": "Rust",
+        "stars_today": 261,
+        "stars": 37514
+      },
+      {
+        "full_name": "langchain-ai/open_deep_research",
+        "url": "https://github.com/langchain-ai/open_deep_research",
+        "description": "",
+        "description_zh": "",
+        "language": "Python",
+        "stars_today": 14,
+        "stars": 12124
+      },
+      {
+        "full_name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline &amp; Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+        "description_zh": "永远不要停止编码。免费 MIT AI 网关：一个端点、268 多个提供商（50 多个免费）、500 多个模型 — Claude、GPT、Gemini、Kimi K3、GLM、DeepSeek。适用于 Claude Code、Codex、Cursor、Cline 和 Claude Code。副驾驶。配额感知自动回退、RTK+Caveman 压缩可节省 15-95% 的令牌、MCP/A2A、多模式、桌面/PWA。由 500 多名贡献者构建。",
+        "language": "TypeScript",
+        "stars_today": 2040,
+        "stars": 22998
+      },
+      {
+        "full_name": "schollz/croc",
+        "url": "https://github.com/schollz/croc",
+        "description": "Easily and securely send things from one computer to another 🐊 📦",
+        "description_zh": "轻松安全地将内容从一台计算机发送到另一台计算机🐊📦",
+        "language": "Go",
+        "stars_today": 396,
+        "stars": 36548
+      },
+      {
+        "full_name": "microsoft/Ontology-Playground",
+        "url": "https://github.com/microsoft/Ontology-Playground",
+        "description": "Free, open-source web app for learning about ontologies and Microsoft Fabric IQ. Explore a catalogue of pre-built ontologies, design your own visually, export as RDF/XML, and share interactive diagrams. Zero backend, fully static.",
+        "description_zh": "免费的开源 Web 应用程序，用于了解本体和 Microsoft Fabric IQ。探索预构建本体的目录，设计您自己的可视化本体，导出为 RDF/XML，并共享交互式图表。零后端，完全静态。",
+        "language": "TypeScript",
+        "stars_today": 355,
+        "stars": 1924
+      },
+      {
+        "full_name": "dottxt-ai/outlines",
+        "url": "https://github.com/dottxt-ai/outlines",
+        "description": "Structured Outputs",
+        "description_zh": "结构化输出",
+        "language": "Python",
+        "stars_today": 49,
+        "stars": 14703
+      },
+      {
+        "full_name": "KnockOutEZ/wigolo",
+        "url": "https://github.com/KnockOutEZ/wigolo",
+        "description": "The go-to web for your AI coding agent — local-first search, fetch, crawl &amp; research over MCP. No API keys, no cloud, $0/query. Public beta.",
+        "description_zh": "AI 编码代理的首选网络 — 本地优先搜索、获取、抓取和检索MCP 的研究。没有 API 密钥，没有云，每次查询 0 美元。公开测试版。",
+        "language": "TypeScript",
+        "stars_today": 641,
+        "stars": 2962
+      }
+    ]
   }
 }
