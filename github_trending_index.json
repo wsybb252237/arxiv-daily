@@ -6538,5 +6538,155 @@
         "stars": 54633
       }
     ]
+  },
+  "20260724": {
+    "total": 16,
+    "file": "github-trending/trending_20260724.html",
+    "top_repos": [
+      {
+        "full_name": "block/buzz",
+        "url": "https://github.com/block/buzz",
+        "description": "A hive mind communication platform",
+        "description_zh": "蜂巢思维交流平台",
+        "language": "Rust",
+        "stars_today": 3274,
+        "stars": 8968
+      },
+      {
+        "full_name": "koala73/worldmonitor",
+        "url": "https://github.com/koala73/worldmonitor",
+        "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+        "description_zh": "实时全球情报仪表板。在统一的态势感知界面中进行人工智能驱动的新闻聚合、地缘政治监控和基础设施跟踪",
+        "language": "TypeScript",
+        "stars_today": 2194,
+        "stars": 72916
+      },
+      {
+        "full_name": "ComposioHQ/awesome-claude-skills",
+        "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+        "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+        "description_zh": "用于定制 Claude AI 工作流程的精彩 Claude 技能、资源和工具的精选列表",
+        "language": "Python",
+        "stars_today": 662,
+        "stars": 69855
+      },
+      {
+        "full_name": "Pumpkin-MC/Pumpkin",
+        "url": "https://github.com/Pumpkin-MC/Pumpkin",
+        "description": "Empowering everyone to host fast and efficient Minecraft servers.",
+        "description_zh": "使每个人都能托管快速高效的 Minecraft 服务器。",
+        "language": "Rust",
+        "stars_today": 472,
+        "stars": 9215
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "description_zh": "Kronos：金融市场语言的基础模型",
+        "language": "Python",
+        "stars_today": 506,
+        "stars": 33382
+      },
+      {
+        "full_name": "Automattic/harper",
+        "url": "https://github.com/Automattic/harper",
+        "description": "Offline, privacy-first grammar checker. Fast, open-source, Rust-powered",
+        "description_zh": "离线、隐私优先的语法检查器。快速、开源、由 Rust 驱动",
+        "language": "Rust",
+        "stars_today": 877,
+        "stars": 12819
+      },
+      {
+        "full_name": "likec4/likec4",
+        "url": "https://github.com/likec4/likec4",
+        "description": "Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code",
+        "description_zh": "使用代码中始终真实的实时图表来可视化、协作和发展软件架构",
+        "language": "TypeScript",
+        "stars_today": 339,
+        "stars": 4917
+      },
+      {
+        "full_name": "citrolabs/ego-lite",
+        "url": "https://github.com/citrolabs/ego-lite",
+        "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+        "description_zh": "AI 代理运行 Web 自动化最快的浏览器，专为与您的 AI 代理（如 Codex 或 Claude Code）共享您登录的浏览器状态而构建，而不会打扰您。零成本，零配置。",
+        "language": "JavaScript",
+        "stars_today": 884,
+        "stars": 2258
+      },
+      {
+        "full_name": "yorukot/superfile",
+        "url": "https://github.com/yorukot/superfile",
+        "description": "Pretty fancy and modern terminal file manager",
+        "description_zh": "非常漂亮和现代的终端文件管理器",
+        "language": "Go",
+        "stars_today": 312,
+        "stars": 19285
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+        "description_zh": "π RuView 将商用 WiFi 信号转化为实时空间智能、生命体征监测和存在检测 - 所有这些都无需视频像素。",
+        "language": "Rust",
+        "stars_today": 1021,
+        "stars": 85709
+      },
+      {
+        "full_name": "CoreBunch/Instatic",
+        "url": "https://github.com/CoreBunch/Instatic",
+        "description": "The open-source alternative to Webflow, Framer and WordPress. Agentic self-hosted visual CMS outputting clean static pages. Users, roles, plugins, content, database, it's all there.",
+        "description_zh": "Webflow、Framer 和 WordPress 的开源替代品。代理自托管可视化 CMS，输出干净的静态页面。用户、角色、插件、内容、数据库，一切都在那里。",
+        "language": "TypeScript",
+        "stars_today": 179,
+        "stars": 4108
+      },
+      {
+        "full_name": "chrislgarry/Apollo-11",
+        "url": "https://github.com/chrislgarry/Apollo-11",
+        "description": "Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules.",
+        "description_zh": "用于命令和登月舱的原始阿波罗 11 号制导计算机 (AGC) 源代码。",
+        "language": "Assembly",
+        "stars_today": 409,
+        "stars": 71316
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .agents directory.",
+        "description_zh": "真正工程师的技能。直接来自我的 .agents 目录。",
+        "language": "Shell",
+        "stars_today": 2224,
+        "stars": 186212
+      },
+      {
+        "full_name": "Lordog/dive-into-llms",
+        "url": "https://github.com/Lordog/dive-into-llms",
+        "description": "《动手学大模型Dive into LLMs》系列编程实践教程",
+        "description_zh": "《动手学大模型深入LLM》系列编程实践教程",
+        "language": "Jupyter Notebook",
+        "stars_today": 654,
+        "stars": 44911
+      },
+      {
+        "full_name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free MIT AI gateway: one endpoint, 290+ providers (90+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline &amp; Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
+        "description_zh": "永远不要停止编码。免费 MIT AI 网关：一个端点、290 多个提供商（90 多个免费）、500 多个模型 — Kimi、Claude、GPT、OpenAI、Gemini、GLM、DeepSeek、MiniMax。适用于 Claude Code、Codex、Cursor、OpenCode、Cline 和 Claude Code。副驾驶。配额感知自动回退、RTK+Caveman 压缩可节省 15-95% 的令牌、MCP/A2A、桌面/PWA。由 500 多名贡献者构建",
+        "language": "TypeScript",
+        "stars_today": 1843,
+        "stars": 28299
+      },
+      {
+        "full_name": "OtterMind/Chat2DB",
+        "url": "https://github.com/OtterMind/Chat2DB",
+        "description": "🔥🔥🔥 AI-driven database tool and SQL client, The hottest GUI client, supporting MySQL, Oracle, PostgreSQL, DB2, SQL Server, DB2, SQLite, H2, ClickHouse, and more.",
+        "description_zh": "🔥🔥🔥 AI驱动的数据库工具和SQL客户端，最热门的GUI客户端，支持MySQL、Oracle、PostgreSQL、DB2、SQL Server、DB2、SQLite、H2、ClickHouse等。",
+        "language": "Java",
+        "stars_today": 173,
+        "stars": 26203
+      }
+    ]
   }
 }
